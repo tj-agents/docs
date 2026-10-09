@@ -56,14 +56,24 @@ or branch-protection change is authorized or attempted. Settings evidence is sav
 Shared core delivery-runtime tests passed (28); shared delivery-binding tests passed (30). Core ships the shared delivery-binding gate and common workflow resources. Native host enforcement is still uneven: Claude has merge-review and enqueue hooks, while Codex has no equivalent native merge-review/enqueue path. Shared resolver packaging does not prove both hosts enforce the same reviews and required checks. Isolated policy checkouts are being prepared by one
 serialized mechanical writer. All twelve candidates are now committed, clean and accepted by the
 current policy schema; a regular source path resolves to auto and an explicit human-gate label stops.
-The parent retains review and delivery decisions. Next action: independently review the frozen policy candidates, then publish and observe exact-head checks before authorized merging.
+The parent retains review and delivery decisions. The frozen policy reviews are complete. Eleven
+non-docs PRs are published; docs is held for this canonical progress correction and incremental review.
+Next action: diagnose the failed verification jobs and deliver only candidates with terminal green gates.
 
-Current source-owned follow-ups are tracked in [the both-host agent changes plan](C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-BothHostAgentChanges/plans/both-host-agent-changes/PLAN.md), whose native-session pickup was verified in session `01a122e6`, and [the scoped agent delivery goal](C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-ScopedAgentDelivery/plans/scoped-agent-delivery/GOAL.md), which is prepared and ready for an L4 implementation worker. The scoped-delivery implementation has not begun. These plans retain their existing core source ownership.
+Current source-owned follow-ups are tracked in [the both-host agent changes plan](C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-BothHostAgentChanges/plans/both-host-agent-changes/PLAN.md)
+and [the scoped agent delivery goal](C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-ScopedAgentDelivery/plans/scoped-agent-delivery/GOAL.md).
+Both implementations are committed and undergoing independent review. The general repair adds
+mechanical host-evidence checks to planning, review and preflight. The independent delivery slice adds
+native Codex merge-review and enqueue enforcement, preserving the existing authority schema and all
+six fixed stop classes. Focused local checks passed; source fixtures and package generation establish
+source verification, while exact-head CI and installed-profile activation remain separate evidence.
+Sensitive-class exemptions were rejected before application and await Tommy's explicit decision.
+These goals retain their existing core source ownership.
 
 Configuration alone does not fulfill unattended standards delivery: current fixed stop classes match
 authored contract skills and permission tools. Some native review/merge hooks are Claude-only, so
-shared resolver packaging is not proof of equivalent native enforcement. Core source diagnosis owns
-these gaps. A separate bounded core source workstream is being launched for the general future-plan
+shared resolver packaging is not proof of equivalent native enforcement. Core source delivery owns
+these gaps. The separate bounded core source workstream owns the general future-plan
 both-host requirement; it must implement, validate and deliver the shared rule, not merely add a local
 reminder. The live configurable-auto-merge checkout must remain intact. The Rust discovery goal remains
 separate from this policy rollout.

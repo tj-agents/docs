@@ -14,6 +14,21 @@ Tommy authorized standing agent merging in his `tj-agents` repositories after re
 
 The twelve policy candidates are committed at their recorded heads. Eleven non-docs candidates are clean and have canonical immutable review descriptors. The canonical cross-repository plan, progress and roadmap are committed in the docs candidate. The docs candidate is frozen by its Git-private immutable descriptor before review; any later content change requires a replacement descriptor. The parent owns every review work order, finding, delivery decision and exact-head check result.
 
+## Verification blocker and recovery
+
+Exact-head CI verification failed in the dotnet, rust, react, nvim and kit policy PRs. A dedicated
+read-only diagnosis owns the failure signatures and baseline provenance in the root continuation
+evidence. Failed jobs are not retried or bypassed. The C++ and marketplace policy checks passed and
+their candidates remain eligible for the final merge gates. The full delivery and check identities
+are in `tj-agents-auto-merge-deliveries.json` and `tj-agents-auto-merge-ci-results.json` beside the
+existing absolute review-results evidence below.
+
+The canonical docs checkout now has one initialized, foreground-claimed continuation owner and a
+verified Windows scheduler registration. Its goal remains this plan, and its actions exclude billing,
+visibility, branch-protection changes, unrelated PRs, normal-profile installation and the rejected
+sensitive-scope proposal. The current foreground writer retains the lease; it must checkpoint and
+yield before a scheduled successor may write. The original Rust continuation remains separate.
+
 ## Reviews
 
 The eleven initial policy candidates completed parent native-general fallback and independent L2
