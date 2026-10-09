@@ -9,6 +9,7 @@ This is the shared documentation home; each source repository owns its implement
 | --- | --- | --- | --- |
 | Scoped standards composition | [Proposal](plans/standards-composition/STANDARDS_COMPOSITION_PLAN.md) | [Current state and next action](plans/standards-composition/STANDARDS_COMPOSITION_PROGRESS.md) | [Remaining outcome](plans/standards-composition/STANDARDS_COMPOSITION_ROADMAP.md) |
 | Durable plan persistence | [Proposal](plans/plan-persistence/PLAN_PERSISTENCE_PLAN.md) | [Current state and next action](plans/plan-persistence/PLAN_PERSISTENCE_PROGRESS.md) | [Remaining outcome](plans/plan-persistence/PLAN_PERSISTENCE_ROADMAP.md) |
+| Reviewed auto-merge rollout | [Rollout plan](plans/tj-agents-auto-merge/PLAN.md) | [Current state and next action](plans/tj-agents-auto-merge/PROGRESS.md) | [Remaining outcome](plans/tj-agents-auto-merge/ROADMAP.md) |
 
 The standards-composition proposal awaits a design decision. Publishing or moving it does not approve runtime implementation.
 
