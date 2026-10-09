@@ -10,7 +10,7 @@ Source repositories own implementation plans and operational documentation. tj-a
 
 ## Requirements
 
-- Create every future plan and progress record in its owning repository's existing ordinary main checkout. Commit, push and verify initial publication before implementation or handoff. Do not create a planning branch or worktree.
+- Create every future plan and progress record, plus any associated roadmap changes, in its owning repository's existing ordinary main checkout. Commit, push and verify initial publication before implementation or handoff. Do not mandate a roadmap where the selected lifecycle does not require one; do not create a planning branch or worktree.
 - Keep source implementation plans and roadmaps in their source repository. Implementation branches inherit the tracked local plan and progress; source repositories link to global designs in tj-agents/docs.
 - Publish global docs plan amendments immediately to docs main. Publish substantive source-plan-only amendments immediately to the current canonical owner branch: source main before execution begins, then the active delivery branch during execution. When code accompanies a plan/progress update, include all of it in the same substantive commit. Do not maintain a parallel live copy on source main during delivery.
 - Retain plans through intermediate PRs and until the entire outcome is implemented and verified. A failed or abandoned PR leaves its plan on main.
