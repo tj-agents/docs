@@ -8,6 +8,7 @@ This is the shared documentation home; each source repository owns its implement
 | Topic | Design | Progress | Roadmap |
 | --- | --- | --- | --- |
 | Scoped standards composition | [Proposal](plans/standards-composition/STANDARDS_COMPOSITION_PLAN.md) | [Current state and next action](plans/standards-composition/STANDARDS_COMPOSITION_PROGRESS.md) | [Remaining outcome](plans/standards-composition/STANDARDS_COMPOSITION_ROADMAP.md) |
+| Durable plan persistence | [Proposal](plans/plan-persistence/PLAN_PERSISTENCE_PLAN.md) | [Current state and next action](plans/plan-persistence/PLAN_PERSISTENCE_PROGRESS.md) | [Remaining outcome](plans/plan-persistence/PLAN_PERSISTENCE_ROADMAP.md) |
 
 The standards-composition proposal awaits a design decision. Publishing or moving it does not approve runtime implementation.
 
