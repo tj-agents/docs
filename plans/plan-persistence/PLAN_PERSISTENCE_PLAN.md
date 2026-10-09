@@ -6,13 +6,13 @@ Draft: owner-local and global plan lifecycles reconciled; publication, closeout 
 
 ## Scope
 
-Source repositories own implementation plans and operational documentation. tj-agents/docs owns global designs and cross-repository plans. This plan proposes lifecycle rules only; it does not authorize runtime, policy, workflow or CI changes.
+Source repositories own implementation plans and operational documentation. tj-agents/docs owns global designs and cross-repository plans. Non-repository standalone tasks remain under their existing task-directory contract and are outside this repository-publication proposal; they do not need an invented repository owner. This plan proposes lifecycle rules only; it does not authorize runtime, policy, workflow or CI changes.
 
 ## Requirements
 
 - Create every future plan and progress record in its owning repository's existing ordinary main checkout. Commit, push and verify initial publication before implementation or handoff. Do not create a planning branch or worktree.
 - Keep source implementation plans and roadmaps in their source repository. Implementation branches inherit the tracked local plan and progress; source repositories link to global designs in tj-agents/docs.
-- Publish global docs plans directly to docs main. Publish source-plan progress and content updates at immediate, stable checkpoints on the active source implementation branch, in the same substantive commit as the related code change.
+- Publish global docs plan amendments immediately to docs main. Publish substantive source-plan-only amendments immediately to the current canonical owner branch: source main before execution begins, then the active delivery branch during execution. When code accompanies a plan/progress update, include all of it in the same substantive commit. Do not maintain a parallel live copy on source main during delivery.
 - Retain plans through intermediate PRs and until the entire outcome is implemented and verified. A failed or abandoned PR leaves its plan on main.
 - In the final source implementation PR, remove the source-local plan and progress after verifying the whole outcome. Keep and tick the roadmap. The deletion reaches main when the final PR merges; do not require an impossible MERGED state before preparing that PR.
 - Link global-plan retirement to the final implementation delivery, then delete the plan and progress in the owning docs repository. Keep and tick its roadmap.
@@ -20,7 +20,7 @@ Source repositories own implementation plans and operational documentation. tj-a
 
 ## Source evidence
 
-As of 2026-10-09, base plan-artifacts assigns plans to source repositories or standalone task directories; engineering plans assigns active delivery branches to source ownership and docs-PR publication; plan-checkpoint correlates plans with source checkouts and forbids transport-only updates. Reconcile those clauses while preserving whole-plan retention, meaningful checkpoints and code-review gates. Require a standalone task to identify its owning repository before implementation.
+As of 2026-10-09, base plan-artifacts assigns plans to source repositories or standalone task directories; engineering plans assigns active delivery branches to source ownership and docs-PR publication; plan-checkpoint correlates plans with source checkouts and forbids transport-only updates. Reconcile repository-owned plan publication while preserving the existing non-repository standalone task-directory contract, whole-plan retention, meaningful checkpoints and code-review gates.
 
 The existing source-rooted RepositoryStateProvider, validate_checkpoint and _repository_path_key in [workflow_runtime.py](https://github.com/tj-agents/core/blob/main/.agents/workflows/workflow_runtime.py), source plan discovery in [workflow_ops.py](https://github.com/tj-agents/core/blob/main/.agents/workflows/workflow_ops.py), same-repository --root behavior in [plan_graph.py](https://github.com/tj-agents/core/blob/main/.agents/hooks/plan_graph.py), and source-local ledger selection in [plan_handoff_stop.py](https://github.com/tj-agents/core/blob/main/.agents/hooks/plan_handoff_stop.py) are valid defaults for source-owned plans. They are not defects in local-plan support. Any global-doc artifact resolution is a bounded separate concern; never weaken source containment or leases to implement it.
 
@@ -31,20 +31,20 @@ Core currently has no CI path classifier: [.github/workflows/ci.yml](https://git
 ## Mechanism constraints
 
 - Keep source-plan identity rooted in its owning source repository. A global plan directly consumed by a source workflow may need an approved docs-repository identity and repo-relative goal directory, distinct from execution identity (source repo, worktree, branch and PR). Design that integration only if needed; exact schema/provider fields and code examples remain open.
-- Initial publication uses the owner's existing ordinary main checkout. Global docs updates publish directly to docs main. Source plan updates publish at immediate stable checkpoints on the active source implementation branch together with the related code in one substantive commit.
+- Initial publication uses the owning repository's existing ordinary main checkout. Substantive source plan-only amendments publish immediately to the current canonical branch: source main before execution, then the active delivery branch during execution. When code accompanies the amendment, plan, progress and code share the same substantive commit. Global docs amendments publish immediately to docs main; no parallel live source-main plan copy is maintained during delivery.
 - Serialize publishers and stage only owned plan, progress and roadmap files. Verify origin, branch, ancestry and artifact contents after a normal non-force push. Accept a harmless later remote commit only when ancestry and content still prove publication. Reconcile same-plan conflicts explicitly; failed/offline/non-fast-forward publication retains local work and blocks dependent work.
 - Design a narrow, tested docs-only classifier allowlist for plans/** and qualifying prose docs/**, evaluated over the entire pushed range or PR merge-base and both paths of renames. Plan-only changes may skip expensive code suites and package regeneration while retaining cheap checks. Mixed or behavior-affecting paths, and missing change evidence, run the required full validation. Exclude .agents/skills Markdown from any blanket docs exemption.
 - Preserve code checks for mixed runtime, skills, schema, hooks and CI changes. Do not claim CI optimization is implemented.
 
 ## Delivery and retirement
 
-For a source plan, check fresh completion evidence for every declared repository, PR and exact head, plus pending work and acceptance gates, before preparing deletion in the final implementation PR. Re-read the plan and delivered heads; changed revisions or new work block deletion. Intermediate PRs retain the plan. Failed or abandoned delivery leaves it on main. Merge of the verified final PR delivers source-local plan and progress deletion; the roadmap tick and history remain.
+For a source plan, pre-merge checks cover implementation, tests, review, pending work, acceptance gates and other non-merge prerequisites. Re-read the plan and delivered heads; changed revisions or new work block preparing deletion. Do not require a MERGED completion_check before the final PR can be prepared. Include plan and progress deletion in the final implementation PR only after the pre-merge checks pass; the plan stays on main until that verified PR merges. Run the terminal merge completion_check after the final source PR merges. Intermediate PRs retain the plan; failed or abandoned delivery leaves it on main. Keep and tick the roadmap.
 
 A global docs plan is retired by its owning repository after final source delivery is verified. Link the docs deletion to that delivery because the source PR cannot delete a file in docs. This separate owner action applies only to global plans.
 
 ## Acceptance
 
-Cover new source and standalone plans in owner main and global plans in docs main; no planning branch/worktree; verified initial publication; source plan and code updates together at stable active-branch checkpoints; unrelated dirty/staged file preservation; concurrent remote advance, same-plan conflict and failed transport; source-root containment and lease protection; intermediate, failed, abandoned and completed multi-PR closeout; linked global-plan retirement; and docs-only versus mixed CI behavior.
+Cover repository-owned source plans in owner main and global plans in docs main; retain the existing task-directory contract for non-repository standalone tasks; no planning branch/worktree; verified initial publication; immediate source plan-only publication on the current canonical branch; same-commit plan/progress/code updates when code accompanies them; unrelated dirty/staged file preservation; concurrent remote advance, same-plan conflict and failed transport; source-root containment and lease protection; pre-merge gates, post-merge terminal completion_check, intermediate/failed/abandoned PR retention and completed multi-PR closeout; linked global-plan retirement; and docs-only versus mixed CI behavior.
 
 The CI classifier must test plan add/update/delete, prose-doc updates, mixed behavior paths, renames using both old and new paths, and missing-base/change evidence. Keep packaged and fresh-host evidence distinct from generation.
 
