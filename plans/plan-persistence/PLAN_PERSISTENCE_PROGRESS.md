@@ -10,22 +10,20 @@
 
 ## Current state
 
-Initial requirements record; existing runtime unchanged.
+Initial requirements were published directly to main at 10a43945bcd9128a2e981d03d486281f442bd110; that exact main tip was verified before implementation or handoff. Source investigation has now recorded the existing ownership conflict, runtime seams, artifact identity boundary, publication constraints, closeout gate and acceptance owners. Runtime remains unchanged.
 
 ## Next Steps
 
 Scope: current slice only; full plan remains incomplete.
-Current slice: author and publish a reviewed lifecycle proposal.
+Current slice: publish a reviewed, source-grounded lifecycle proposal.
 Remaining scope: implementation, enforcement and host qualification after approved design.
 Done when: the concrete proposal is published on main and the next authorized action is resolved.
 
-## Next action
-
-Design the persistence, publication, recovery and closeout mechanisms while the cleanup choice remains pending.
+Next action: resolve the pending cleanup choice and design the exact artifact-repository schema fields, provider changes and code examples before claiming implementation readiness.
 
 ## Verification
 
-Initial verification: none. No checks run and no push is claimed.
+Initial plan graph check: 0 errors, 0 warnings. Initial exact main tip verified: 10a43945bcd9128a2e981d03d486281f442bd110. This update's plan graph check: 0 errors, 0 warnings. Whitespace check: passed. No implementation tests run; no update push is claimed.
 
 ## Reviews
 
