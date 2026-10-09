@@ -14,12 +14,21 @@ The reviewed ownership correction was published to docs main at 017ede2a47acda8c
 
 ## Next Steps
 
-Scope: current slice only; full plan remains incomplete.
-Current slice: hand off lifecycle design to one Codex successor.
-Remaining scope: bounded design of publication, closeout recovery, global artifact support and docs-aware CI.
-Done when: one successor acknowledges ownership in this progress record and resumes design.
+Scope: current slice only; full plan remains incomplete because only planning design, review, publication and handoff are authorized.
+Current slice: finish the implementation-ready lifecycle design, complete its required review and publish it directly to docs main.
+Remaining scope: runtime and CI implementation and host qualification; each requires explicit authorization after the design is ready.
+Done when: concrete mechanism design, code examples and failure cases are reviewed and published, and the explicit next decision is recorded.
 
-Next action: transfer design to ONE Codex successor in the existing ordinary docs checkout on main (L3: bounded unresolved publication, closeout and CI design). Successor: pending; no launch or pickup is claimed. Before any plan writes, acknowledge ownership in this progress record, read the plan and its source evidence, then complete implementation-ready design including tests and failure recovery. Review and publish material amendments immediately to docs main, without a planning branch or worktree, using normal mechanical delegates and phase-lane selections. The current predecessor thread is 01a12151-aeac-7543-809f-2bf07f3e8b8e. Authorization covers plan design, review, direct-main publication and handoff only; it does not authorize runtime/CI implementation or approve standards-composition runtime work.
+Next action: acknowledge this one successor's ownership in this progress record with a distinct native session ID; then read the existing plan and its source evidence and finish the bounded design. Do not launch another successor.
+
+## Handoff ownership
+
+Successor: one Codex successor, pending parent launch; no launch or pickup is claimed.
+Successor native session ID: pending; record the distinct ID here when ownership is acknowledged, before any plan writes.
+Checkout: existing ordinary tj-agents/docs main checkout; no branch or worktree.
+Lane and reason: L3 for bounded unresolved publication, closeout and CI design.
+Predecessor thread: 01a12151-aeac-7543-809f-2bf07f3e8b8e.
+Authority: plan design, review, direct-main publication and handoff only. No runtime or CI implementation authority and no approval of standards-composition runtime work.
 
 ## Verification
 
