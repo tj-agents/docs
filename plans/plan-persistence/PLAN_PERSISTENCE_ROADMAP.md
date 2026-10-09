@@ -1,3 +1,3 @@
 # Plan persistence roadmap
 
-- [ ] Design and qualify durable central plan storage, immediate main publication, recovery, and delivery-linked retirement. `plan-persistence/durable-lifecycle`
+- [ ] Design and qualify owner-local and global plan persistence, publication, recovery, and delivery-linked retirement. `plan-persistence/durable-lifecycle`
