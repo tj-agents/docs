@@ -246,8 +246,9 @@ def verified_snapshot(root, record, forge, paths):
                 raise CompletionError("retired artifact is present")
     entries = {entry["path"]: entry for entry in record["snapshot_entries"]}
     for path, entry in entries.items():
-        blob = git(root, "rev-parse", f"{snapshot}:{path}").decode().strip()
-        if blob != entry["blob"]:
+        actual = git(root, "ls-tree", "-z", snapshot, "--", path)
+        expected_entry = f"{entry['mode']} blob {entry['blob']}\t{path}\0".encode("utf-8")
+        if actual != expected_entry:
             raise CompletionError("snapshot object differs from record")
     return git(root, "show", f"{snapshot}:{record['goal_path']}").decode("utf-8")
 ```
@@ -338,12 +339,15 @@ def release_for_correction(owner_path, state, recovery_path, recovery, scheduler
 Resolve scheduler_script through the existing packaged helper/registration identity, never an arbitrary record command. In the existing Remove-OwnedTask, retain its receipt/task identity checks and ShouldProcess guard, and require the following absent-task check before deleting scheduler.json. Also apply that check to its no-receipt return path so a missing receipt with a remaining deterministic task blocks release. It uses the already derived taskName; no second task-name implementation is introduced.
 
 ```powershell
-if (@(Get-ScheduledTask -TaskName $taskName -TaskPath '\' -ErrorAction SilentlyContinue).Count) {
+$remaining = @(Get-ScheduledTask -ErrorAction Stop | Where-Object {
+    $_.TaskName -ceq $taskName -and $_.TaskPath -ceq '\'
+})
+if ($remaining.Count) {
     throw 'Continuation task removal is unverified; preserve recovery and registration evidence.'
 }
 ```
 
-Recovery identity/authority and the old merged delivery must be validated before release_for_correction. New init/register is a separate subsequent action after correction binding; it cannot be hidden inside remove. Repeating release is idempotent; repeating init requires the same correction identity and authority. Add tests for a changed PR, failed task removal, a crash between release and init, old-writer liveness, finite-budget exhaustion, and verified new-owner pickup. finish.ps1 and its cleanup receipt are unaffected by this bounded scheduler-release verification.
+The query enumerates successfully before filtering the exact task, so verified absence is distinct from a failed task-service lookup; any query error terminates release and preserves scheduler.json/recovery evidence. Recovery identity/authority and the old merged delivery must be validated before release_for_correction. New init/register is a separate subsequent action after correction binding; it cannot be hidden inside remove. Repeating release is idempotent; repeating init requires the same correction identity and authority. Add tests for a changed PR, failed task removal/query, a crash between release and init, old-writer liveness, finite-budget exhaustion, and verified new-owner pickup. finish.ps1 and its cleanup receipt are unaffected by this bounded scheduler-release verification.
 
 For this global design, core deliveries use source-local execution plans linked here. Once all declared core deliveries and host qualification pass, docs owns a separate linked deletion of this plan/progress and ticks its roadmap. Docs closeout validates the source retirement evidence and final source delivery identities before its own publication. It cannot occur merely because a source PR merged. The global plan stays open until all owner slices ship. finish.ps1 and cleanup_proof.py keep their host/worktree interface; the merge workflow must establish authenticated goal retirement before invoking them, and preserve the recovery bundle outside any removed worktree.
 
