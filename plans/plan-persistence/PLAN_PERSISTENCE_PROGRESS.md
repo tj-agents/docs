@@ -32,11 +32,11 @@ Authority: plan design, review, direct-main publication and handoff only. No run
 
 ## Verification
 
-Candidate plan graph: 0 errors, 0 warnings; whitespace check passed. Ten Python examples, one YAML block and one PowerShell block parse. Forty-eight temporary prototype checks passed: classification/range/rename/mode failures, unrelated staged-file preservation, gate failure/cancellation, snapshot archive/idempotence, stale delivery/restored goal rejection, current-main roadmap rejection and unrelated-item preservation. Validation script: C:/Users/TommySeery/AppData/Local/Temp/tj-agents-plan-persistence-handoff/validate_design.py. These are example checks, not runtime integration, Actions or fresh-host qualification. Docs origin/main was observed at 424a9fdd67b5df5b9a23ec11873ab84c49b38a74 before this slice. Final incremental review and publication remain.
+Candidate plan graph: 0 errors, 0 warnings; whitespace check passed. Ten Python examples, one YAML block and one PowerShell block parse. Fifty Python/Git/gate prototype checks and three simulated scheduler-lookup checks passed, including malformed object IDs, saved-mode mismatch, exact roadmap transition, stale/restored goal rejection, archive idempotence, full-range classification, unrelated staged-file preservation and gate failure/cancellation. Scripts: C:/Users/TommySeery/AppData/Local/Temp/tj-agents-plan-persistence-handoff/{validate_design.py,validate_scheduler_example.ps1}. These are example checks, not runtime integration, Actions or fresh-host qualification. Final tiny correction review and publication remain.
 
 ## Reviews
 
-Initial docs-review at edca3c37126fda50fc4b6874bdcbcc0efecb1ff6 completed with two independent and two parent findings; all have correction evidence. Native specialist unavailability used the installed L4 reviewer fallback; its corrected Workflow v2 result validated. Current work order: reviews/main.md. Final incremental review of the corrections is required before the implementation-readiness verdict; detailed findings stay in that work order.
+Two independent L4 passes completed at edca3c37126fda50fc4b6874bdcbcc0efecb1ff6 and f5dcf1a4e5983cc298b7a70c4af5bef7ae260bd9; four independent and two parent findings have correction evidence. The second pass's saved-mode and scheduler-query findings are fixed and qualified by focused prototypes. Both Workflow v2 results validated. The preferred specialist was unavailable; the final small testable delta uses the supported parent native-general fallback. Work order: reviews/main.md. Final correction review is pending before readiness/publication.
 
 ## Execution readiness
 
