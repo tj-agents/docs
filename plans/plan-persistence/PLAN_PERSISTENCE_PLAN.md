@@ -67,7 +67,7 @@ All proposed implementation belongs to core. Before writing these examples, core
 | Intended paths | Standards and responsibility |
 | --- | --- |
 | `.agents/base/policy/plan-artifacts/SKILL.md`, `.agents/engineering/convention/plans/SKILL.md`, `.agents/engineering/contract/plan-checkpoint/SKILL.md`, merge workflow | Their named lifecycle contracts; reconcile publication and retention without adding a second rule owner |
-| `.agents/workflows/plan_publication.py`, proposed `plan_retirement.py`, `completion.py`, `continuation_runtime.py`, `workflow_ops.py` | Core AGENTS.md/README.md; existing repository containment, writer leases, portable v2 contract and continuation lock |
+| `.agents/workflows/plan_publication.py`, proposed `plan_retirement.py`, `completion.py`, `continuation_runtime.py`, `workflow_ops.py`, persistent-workflow/scripts/delivery-continuation.ps1 | Core AGENTS.md/README.md; existing repository containment, writer leases, portable v2 contract, continuation lock and host scheduler ownership |
 | `.agents/hooks/plan_graph.py`, `plan_handoff_stop.py`, their tests | Core ownership; retain ordinary local graph validation and add only lifecycle-aware retirement entry points |
 | Proposed `scripts/classify_docs_changes.py`, `tests/test_classify_docs_changes.py`, `.github/workflows/ci.yml` | Core authored-source/generated-output boundary; existing CI jobs and generated-path guard |
 | `.agents/plugins/manifests/{codex,claude}/engineering*.json`, `.agents/plugins/sources.json` | Core packaging declarations; any new shipped utility, schema or hook must be included and tested in the same slice |
@@ -102,8 +102,9 @@ def commit_owned(root, paths, message):
 
 
 def verify_publication(root, branch, candidate, paths):
-    git(root, "fetch", "origin", f"refs/heads/{branch}")
-    remote = git(root, "rev-parse", "FETCH_HEAD").decode().strip()
+    tracking = f"refs/remotes/origin/{branch}"
+    git(root, "fetch", "origin", f"refs/heads/{branch}:{tracking}")
+    remote = git(root, "rev-parse", tracking).decode().strip()
     git(root, "merge-base", "--is-ancestor", candidate, remote)
     difference = git(root, "diff", "--name-only", "-z", candidate, remote, "--", *paths)
     if difference:
@@ -137,7 +138,33 @@ Proposed owner: `plan_retirement.py`, with a versioned private `plan-retirement/
 
 Snapshot C must contain the final verified goal/progress and completed acceptance evidence. Re-read the plan, every delivery head, review, E2E, CI, pending work and acceptance gates immediately before preparation. Earlier deliveries must already be MERGED. The final delivery need only be OPEN at the authorized head with green non-merge prerequisites; do not call the existing MERGED-only completion_check to prepare deletion. If new work or changed goal/delivery/evidence is observed, preparation fails. Commit any substantive acceptance/progress correction with its implementation before capturing C; never manufacture a transport-only snapshot commit.
 
-Persist the exact Git objects reachable from C in a private Git bundle and record their object identities before deleting anything; flush/atomically replace the record and verify the bundle. This preserves recovery through crashes and squash/rebase merges without requiring a second live plan or adding an archive to source main. Bind D only when C is its parent and the C..D diff consists exactly of the declared goal/progress deletions and the correct roadmap tick. No runtime edits or other plan changes may occur in D. The same final implementation PR includes C and D and still runs required E2E/CI and review against D; a passing C cannot stand in for a passing final head.
+Persist the exact Git objects reachable from C in a private Git bundle and record their object identities before deleting anything; flush/atomically replace the record and verify the bundle. Bind additionally archives D before sealing it, so the original PR's history remains recoverable after squash/rebase and branch cleanup. The directory key is SHA-256 of the canonical repository slug, one NUL byte, and the validated repository-relative goal path; it does not depend on worktree location. Snapshot entries cover exactly goal, progress and roadmap paths. This preserves recovery without requiring a second live plan or adding an archive to source main. Bind D only when its sole parent is C and the C..D diff consists exactly of the declared goal/progress deletions and the correct roadmap tick. No runtime edits or other plan changes may occur in D. The same final implementation PR includes C and D and still runs required E2E/CI and review against D; a passing C cannot stand in for a passing final head.
+
+Under the existing lease and retirement lock, create the private ref at C for prepare, and at D for bind. An existing ref is idempotent only at the same object; never replace a different retained proof. [Git bundles require a named ref](https://git-scm.com/docs/git-bundle), so the concrete archive operation uses a runtime-private ref, not a planning branch:
+
+```python
+import os
+import uuid
+
+
+def archive_retirement(root, directory, key, phase, commit):
+    ref = f"refs/agent-workflow/plan-retirement/{key}/{phase}/{commit}"
+    lookup = subprocess.run(["git", "rev-parse", "--verify", ref], cwd=root, capture_output=True)
+    old = lookup.stdout.decode().strip() if lookup.returncode == 0 else "0" * 40
+    if old not in {"0" * 40, commit}:
+        raise CompletionError("retirement archive ref changed")
+    git(root, "update-ref", ref, commit, old)
+    temporary = directory / f".{uuid.uuid4().hex}.bundle"
+    git(root, "bundle", "create", str(temporary), ref)
+    git(root, "bundle", "verify", str(temporary))
+    with temporary.open("r+b") as stream:
+        os.fsync(stream.fileno())
+    target = directory / f"{phase}-{commit}.bundle"
+    os.replace(temporary, target)
+    return target
+```
+
+Directory, phase and commit are validated before this helper. Save the flushed record only after the archive succeeds. Recovery imports the bundle into private object/ref storage, then rechecks its named head, C/D relationship and snapshot entries against authenticated forge evidence; neither a filename nor bundle validity establishes delivery. Retain both archives and private refs through failed correction and until authenticated retirement and host cleanup no longer need them.
 
 ### Completion and continuation integration
 
@@ -176,6 +203,18 @@ The loader must validate the original document first. Its final entry's recorded
 Within validate_retirement, the following Git proof runs after strict record validation and loading its authenticated final PR. `paths` contains all affected final-PR paths from its merge-base diff plus the closure artifacts; all paths have already passed repository containment. `forge` is a refreshed PR document with number, headRefOid, state and mergeCommit.oid, obtained by a new retirement forge adapter. The current completion.forge_state only requests number/head/state/body and must remain compatible; it cannot supply this merge proof unchanged.
 
 ```python
+import re
+
+
+def roadmap_line(root, revision, record):
+    body = git(root, "show", f"{revision}:{record['roadmap_path']}").decode("utf-8")
+    token = f"`{record['roadmap_item']}`"
+    lines = [line for line in body.splitlines() if token in line]
+    if len(lines) != 1 or not re.match(r"^- \[[ xX]\] ", lines[0]):
+        raise CompletionError("retirement roadmap item is missing or ambiguous")
+    return lines[0]
+
+
 def verified_snapshot(root, record, forge, paths):
     final = record["final_delivery"]
     candidate = record["candidate_head"]
@@ -184,13 +223,22 @@ def verified_snapshot(root, record, forge, paths):
             or forge["state"] != "MERGED"):
         raise CompletionError("retirement delivery identity or merge changed")
     merge = forge["mergeCommit"]["oid"]
-    git(root, "fetch", "origin", f"refs/heads/{record['default_branch']}")
-    remote = git(root, "rev-parse", "FETCH_HEAD").decode().strip()
+    tracking = f"refs/remotes/origin/{record['default_branch']}"
+    git(root, "fetch", "origin", f"refs/heads/{record['default_branch']}:{tracking}")
+    remote = git(root, "rev-parse", tracking).decode().strip()
     git(root, "merge-base", "--is-ancestor", merge, remote)
-    parent = git(root, "rev-parse", f"{candidate}^").decode().strip()
-    if parent != snapshot:
+    ancestry = git(root, "rev-list", "--parents", "-n", "1", candidate).decode().split()
+    if ancestry != [candidate, snapshot]:
         raise CompletionError("retirement snapshot parent changed")
-    if git(root, "diff", "--name-only", "-z", candidate, merge, "--", *paths):
+    before = roadmap_line(root, snapshot, record)
+    if not before.startswith("- [ ] "):
+        raise CompletionError("retirement roadmap item was already complete")
+    expected = before.replace("- [ ] ", "- [x] ", 1)
+    if any(roadmap_line(root, revision, record) != expected
+           for revision in (candidate, merge, remote)):
+        raise CompletionError("retirement roadmap transition changed")
+    content_paths = [path for path in paths if path != record["roadmap_path"]]
+    if git(root, "diff", "--name-only", "-z", candidate, merge, "--", *content_paths):
         raise CompletionError("merged affected content differs from verified head")
     for path in [record["goal_path"], *record["progress_paths"]]:
         for revision in (candidate, merge, remote):
@@ -204,7 +252,7 @@ def verified_snapshot(root, record, forge, paths):
     return git(root, "show", f"{snapshot}:{record['goal_path']}").decode("utf-8")
 ```
 
-Git nonzero exits and malformed/missing forge fields become explicit completion blockers at the boundary. The prepare/bind adapter additionally verifies modes, the exact closure path set and the one roadmap-item transition before this reader is reachable. Recheck that item on remote main, without requiring unrelated roadmap items or unrelated files to match D. If main advanced on an affected implementation path after M, rerun the acceptance gates for the current state or enter recovery; equality at M alone cannot approve a changed outcome.
+Git nonzero exits and malformed/missing forge fields become explicit completion blockers at the boundary. The prepare/bind adapter additionally verifies modes and the exact closure path set before this reader is reachable. The item comparison includes current main while permitting unrelated roadmap items to change. If main advanced on an affected implementation path after M, rerun the acceptance gates for the current state or enter recovery; equality at M alone cannot approve a changed outcome.
 
 Proposed consumer wiring in continuation_runtime.check_identity and apply_receipt is deliberately narrow:
 
@@ -215,19 +263,44 @@ def canonical_goal(state, root, record):
         return goal.read_text(encoding="utf-8"), None
     if record is None or record["phase"] not in {"retiring", "merged-unverified", "retired"}:
         raise Gate("canonical-goal-unavailable")
-    verified = validate_retirement(root, record, forge_state)
+    verified = validate_retirement(root, record, retirement_forge_state)
     return verified["body"], verified["final_delivery"]
 
 
 def complete_retiring_goal(state, root, record):
     body, final_delivery = canonical_goal(state, root, record)
+    if final_delivery is None:
+        raise Gate("retirement-completion-requires-verified-delivery")
     result = completion_check_text(body, final_delivery, root, final_delivery=final_delivery)
     if not result["ready"]:
         raise Gate("completion-unverified: " + "; ".join(result["blockers"]))
     return result
 ```
 
-Keep current repo/worktree/branch/head and delivery-binding checks before this loader. Resolve the record deterministically from the existing absolute goal path and repository identity; do not add arbitrary goal paths or artifact fields to portable v2 state. For a retiring OPEN PR, validate the snapshot/closure identity but return a delivery-wait state before calling canonical_goal; it cannot pass MERGED validation or launch an implementation child with a missing goal. A failed/ejected/abandoned PR enters restoration before wake can launch, and any repair action with a missing goal restores first. Existing scheduler/foreground writer ownership remains unchanged. Initialization still requires an actual goal file; fresh recovery of a deleted goal first reconstructs its retirement record from the recorded final PR and authenticated snapshot objects. If those are unavailable, restore the prior main goal and re-evaluate the outcome; never guess completion.
+Keep current repo/worktree/branch/head and delivery-binding checks before this loader. Extract them unchanged into `check_execution_identity`; `check_identity` calls it and then requires either a live canonical goal or a valid local retirement record whose current owner, C/D closure and freshly fetched PR identity match. That preliminary retirement check permits an OPEN final PR and does not certify completion. Resolve the record deterministically from the existing absolute goal path and repository identity; do not add arbitrary goal paths or artifact fields to portable v2 state.
+
+In wake, after the existing writer/deadline checks and check_identity but before ordinary observe/launch, call the deciding dispatcher below. `retirement_observation` validates that preliminary identity and returns `wait` for an OPEN PR with checks still pending/green, `restore` for failed/ejected/closed-unmerged or new work, and `merged` for the exact merged PR. Invalid/unavailable authentication raises Gate and cannot authorize a child. `restore_before_repair` restores the snapshot's goal/progress into the existing checkout under the existing writer lease and reverses only the owned roadmap tick, preserving HEAD and its delivery binding until the repair context makes the combined restoration/repair commit. It rejects newer owned contents and unauthorized recovery. The repair then uses the existing apply_receipt rebind.old/rebind.new mechanism for its new head.
+
+```python
+def wake_goal(state, root, record):
+    if Path(state["goal"]).is_file():
+        return True
+    action = retirement_observation(root, state, record)["action"]
+    if action == "wait":
+        transition(state, "waiting", "retirement-delivery-pending", "Verify final delivery")
+        return False
+    if action == "restore":
+        restore_before_repair(root, state, record)
+        transition(state, "waiting", "retirement-goal-restored", "Repair and rebind delivery")
+        return True
+    if action == "merged":
+        complete_retiring_goal(state, root, record)
+        transition(state, "complete", "authenticated-goal-retirement")
+        return False
+    raise Gate("retirement-observation-invalid")
+```
+
+The wake caller returns immediately when this returns False; it cannot fall through to launch. launch also independently requires the live canonical goal, as a backstop. In apply_receipt's `status == complete` branch, retain completion_check for a live goal with its original bound delivery, and call complete_retiring_goal for an absent goal. A retiring OPEN PR never calls the MERGED-only loader. Post-merge validation failure enters the corrective-owner path below rather than this before-merge restore helper. Initialization still requires an actual goal file; fresh recovery of a deleted goal first reconstructs its retirement record from the recorded final PR and authenticated snapshot objects. If those are unavailable, restore the prior main goal and re-evaluate the outcome; never guess completion. Existing scheduler and foreground writer ownership remain unchanged.
 
 Workflow v2 RepositoryStateProvider and graph validation remain source-rooted and require live artifacts for normal resolve/checkpoint. Retiring operations consume the separate typed record rather than resolve an absent ledger. Plan-handoff stop/wake adapters may suppress a missing-artifact error only for an authenticated retiring delivery, route to verify/restore, and retain their lease checks. Reusing an absolute external goal is already supported by continuation initialization; this proposal adds no external-ledger provider.
 
@@ -236,6 +309,41 @@ Workflow v2 RepositoryStateProvider and graph validation remain source-rooted an
 Before-merge failure restores goal/progress from C into the existing delivery checkout under its writer lease, reverses only this retirement's roadmap tick, commits that restoration with the repair where applicable, and rebinds the delivery/continuation to the new head before resumed work. Invalidation clears the sealed retirement candidate; a later retirement needs fresh preparation. A crash after deletion but before bind is recovered only when HEAD has parent C and the exact closure diff; otherwise restore or return conflict. Preserve newly edited/restored paths rather than overwriting them. Main still retains the goal because the failed final PR has not merged.
 
 After-merge validation failure sets recovery-required, blocks completion and cleanup, and restores goal/progress in the canonical owner through an authorized corrective source PR. Recovery is part of the approved implementation outcome when that authority exists; otherwise record a human authorization gate while preserving the snapshot. Restore the affected roadmap item to incomplete. Include the failed acceptance/next action in the restored progress. Fetch current main, avoid overwriting a newer canonical goal, re-review and run checks on the correction, and retain recovery storage until the correction lands. Network failure preserves recovery state and blocks terminal claims. No force push, branch rewind or unconditional write is permitted.
+
+Post-merge correction uses terminal release followed by fresh initialization, not the existing same-PR head rebind. Under the old continuation owner lock, first authenticate the old repo/worktree/branch/head and merged PR, require no live child/foreground writer, persist the failed acceptance and snapshot pointer, transition that owner to `blocked` with reason `retirement-recovery-transferred`, and save it without marking the outcome complete. The current Windows delivery-continuation remove operation unregisters its scheduled task; strengthen that operation to verify absence before discarding its receipt, as shown below. A failed release leaves the correction unscheduled and retains the old state; never register two active owners. Core currently supplies no non-Windows scheduler adapter: such a host keeps foreground recovery ownership and cannot claim autonomous corrective pickup without its own separately authorized adapter.
+
+Then select a corrective checkout from current owner main under git-branching, restore the canonical artifacts and failed next action, commit/publish the correction and bind its new PR identity. Only then run the existing continuation `init` against that actual restored goal and correction checkout. Preserve the original outcome/authority and remaining launch, failure and deadline budgets; exhausted budgets require renewed authority rather than resetting them. The new owner ID follows existing initialization's repo/worktree/goal fingerprint. Record its actual owner-state path and new delivery identity in the old private recovery record after verified pickup; an interrupted release-before-init is resumable from the retained snapshot and unscheduled old owner. No portable v2 fields change, and the old owner's branch/PR checks remain intact.
+
+The separate private recovery.json has a strict `plan-retirement-recovery/v1` shape: version, retirement_record_path, failed_acceptance (criterion IDs and evidence locators), previous_owner (owner_id, owner_path, repository, worktree, branch, head, pr), next_owner (null until pickup, then the same fields), phase (`release-pending`, `released`, `picked-up`), and remaining_budget (launches, failures, absolute deadline). Derive authority from the original validated owner/retirement record; this file cannot extend it. Persist release-pending before stopping the old owner, released only after scheduler absence, and picked-up only after new init/binding/register evidence. Re-entry validates these identities and completes the unfinished step without duplicating registration.
+
+The deciding release order, inside the proposed recovery adapter, is:
+
+```python
+def release_for_correction(owner_path, state, recovery_path, recovery, scheduler_script):
+    if any(record and alive(record) for record in writer_records(state)):
+        raise Gate("retirement-recovery-writer-still-alive")
+    recovery["phase"] = "release-pending"
+    atomic_json(recovery_path, recovery)
+    transition(state, "blocked", "retirement-recovery-transferred", "Initialize authorized corrective delivery")
+    save(owner_path, state, "retirement-recovery-release")
+    subprocess.run(
+        ["powershell.exe", "-NoProfile", "-NonInteractive", "-ExecutionPolicy", "Bypass",
+         "-File", str(scheduler_script), "remove", "-OwnerPath", str(owner_path),
+         "-Reason", "retirement recovery transfer"], check=True,
+    )
+    recovery["phase"] = "released"
+    atomic_json(recovery_path, recovery)
+```
+
+Resolve scheduler_script through the existing packaged helper/registration identity, never an arbitrary record command. In the existing Remove-OwnedTask, retain its receipt/task identity checks and ShouldProcess guard, and require the following absent-task check before deleting scheduler.json. Also apply that check to its no-receipt return path so a missing receipt with a remaining deterministic task blocks release. It uses the already derived taskName; no second task-name implementation is introduced.
+
+```powershell
+if (@(Get-ScheduledTask -TaskName $taskName -TaskPath '\' -ErrorAction SilentlyContinue).Count) {
+    throw 'Continuation task removal is unverified; preserve recovery and registration evidence.'
+}
+```
+
+Recovery identity/authority and the old merged delivery must be validated before release_for_correction. New init/register is a separate subsequent action after correction binding; it cannot be hidden inside remove. Repeating release is idempotent; repeating init requires the same correction identity and authority. Add tests for a changed PR, failed task removal, a crash between release and init, old-writer liveness, finite-budget exhaustion, and verified new-owner pickup. finish.ps1 and its cleanup receipt are unaffected by this bounded scheduler-release verification.
 
 For this global design, core deliveries use source-local execution plans linked here. Once all declared core deliveries and host qualification pass, docs owns a separate linked deletion of this plan/progress and ticks its roadmap. Docs closeout validates the source retirement evidence and final source delivery identities before its own publication. It cannot occur merely because a source PR merged. The global plan stays open until all owner slices ship. finish.ps1 and cleanup_proof.py keep their host/worktree interface; the merge workflow must establish authenticated goal retirement before invoking them, and preserve the recovery bundle outside any removed worktree.
 
@@ -251,6 +359,7 @@ The proposed deciding parser/classifier is complete for raw diff records:
 
 ```python
 from pathlib import PurePosixPath
+import re
 
 
 def allowed_prose(path):
@@ -279,7 +388,9 @@ def docs_only(raw):
             if any(mode not in {"000000", "100644", "100755"}
                    for mode in (old_mode[1:], new_mode)):
                 return False
-            if status[0] not in "AMDRC" or not old_oid or not new_oid:
+            if (status[0] not in "AMDRC"
+                    or any(not re.fullmatch(r"[0-9a-f]{40}", oid)
+                           for oid in (old_oid, new_oid))):
                 return False
             names = [fields.pop(0).decode("utf-8")]
             if status[0] in "RC":
