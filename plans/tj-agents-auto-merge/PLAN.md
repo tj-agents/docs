@@ -51,16 +51,14 @@ marketplace and cli. The private work, infonetica and docs repositories continue
 after an update. The organization is on GitHub Free, which lacks native auto-merge for private
 repositories; ordinary agent merging after terminal checks remains a separate supported path. No billing, visibility
 or branch-protection change is authorized or attempted. Settings evidence is saved at
-`.agents/continuation/tj-agents-auto-merge-settings.json`.
+`C:\Users\TommySeery\source\repos\tj-agents\rust\.worktrees\Fix-RustStandardDiscovery\.agents\continuation\tj-agents-auto-merge-settings.json`, `C:\Users\TommySeery\source\repos\tj-agents\rust\.worktrees\Fix-RustStandardDiscovery\.agents\continuation\tj-agents-auto-merge-candidates.json`, and `C:\Users\TommySeery\source\repos\tj-agents\rust\.worktrees\Fix-RustStandardDiscovery\.agents\continuation\tj-agents-auto-merge-review-descriptors.json`.
 
-Shared core delivery-runtime tests passed (28); shared delivery-binding tests passed (30). Both
-host hook manifests route through the shared delivery-binding and merge-review gates, and the
-package resources ship the common workflows. Isolated policy checkouts are being prepared by one
+Shared core delivery-runtime tests passed (28); shared delivery-binding tests passed (30). Core ships the shared delivery-binding gate and common workflow resources. Native host enforcement is still uneven: Claude has merge-review and enqueue hooks, while Codex has no equivalent native merge-review/enqueue path. Shared resolver packaging does not prove both hosts enforce the same reviews and required checks. Isolated policy checkouts are being prepared by one
 serialized mechanical writer. All twelve candidates are now committed, clean and accepted by the
 current policy schema; a regular source path resolves to auto and an explicit human-gate label stops.
-The parent retains review and delivery decisions. Next action: promote this cross-repository goal to
-the active docs delivery checkout, freeze the policy candidates, independently review them, then
-publish and observe exact-head checks before authorized merging.
+The parent retains review and delivery decisions. Next action: independently review the frozen policy candidates, then publish and observe exact-head checks before authorized merging.
+
+Current source-owned follow-ups are tracked in [the both-host agent changes plan](C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-BothHostAgentChanges/plans/both-host-agent-changes/PLAN.md), whose native-session pickup was verified in session `01a122e6`, and [the scoped agent delivery goal](C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-ScopedAgentDelivery/plans/scoped-agent-delivery/GOAL.md), which is prepared and ready for an L4 implementation worker. The scoped-delivery implementation has not begun. These plans retain their existing core source ownership.
 
 Configuration alone does not fulfill unattended standards delivery: current fixed stop classes match
 authored contract skills and permission tools. Some native review/merge hooks are Claude-only, so
@@ -72,8 +70,6 @@ separate from this policy rollout.
 
 ## Next Steps
 
-The parent retains rollout ownership. Publish the canonical cross-repository plan in docs, then finish
-the twelve exact-head policy reviews and deliveries. Bind each delayed PR to its own continuation,
-record real platform gates, and reconcile core source fixes before claiming the requested outcome.
+The parent retains rollout ownership. Finish the twelve exact-head policy reviews and deliveries. Bind each delayed PR to its own continuation, record real platform gates, and reconcile core source fixes before claiming the requested outcome.
 Lane L5 owns mechanical policy preparation; L4 owns ordinary review and delivery; L3 owns bounded
 source diagnosis; L2 owns authorization-security review where the descriptor requires it.
