@@ -70,6 +70,11 @@ separate from this policy rollout.
 
 ## Next Steps
 
-The parent retains rollout ownership. Finish the twelve exact-head policy reviews and deliveries. Bind each delayed PR to its own continuation, record real platform gates, and reconcile core source fixes before claiming the requested outcome.
+The parent retains rollout ownership. The companion PROGRESS.md owns the executable Next Steps and
+current source-approval gate. Finish the twelve exact-head policy reviews and deliveries. Bind each
+delayed PR to its own continuation, record real platform gates, and reconcile core source fixes before
+claiming the requested outcome. Configurable sensitive-class exceptions are proposed and await Tommy's
+explicit informed approval after automatic review rejected that patch. Native enforcement parity can
+proceed independently while every existing fixed stop remains active.
 Lane L5 owns mechanical policy preparation; L4 owns ordinary review and delivery; L3 owns bounded
 source diagnosis; L2 owns authorization-security review where the descriptor requires it.
