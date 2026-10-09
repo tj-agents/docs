@@ -10,21 +10,21 @@
 
 ## Current state
 
-Initial global-plan requirements were published directly to docs main at 10a43945bcd9128a2e981d03d486281f442bd110; that exact main tip was verified before implementation or handoff. This update reconciles repository-owned plans with the existing standalone task-directory contract: source repositories own implementation plans and delivery branches; tj-agents/docs owns global designs; non-repository standalone tasks remain outside this publication proposal. Source plan-only amendments publish immediately to the current canonical branch; plan/progress updates accompany code in the same substantive commit when code is changing. Global amendments publish immediately to docs main. Runtime, policy and CI remain unchanged.
+The reviewed ownership correction was published to docs main at 017ede2a47acda8cce320e056aafa4f35ad60d71; that exact origin/main tip was verified. This checkpoint records accepted closeout recovery and diff-based CI feedback. Source plans remain owner-local; global plans remain in docs; non-repository standalone tasks keep their existing contract. Runtime, policy and CI remain unchanged.
 
 ## Next Steps
 
 Scope: current slice only; full plan remains incomplete.
-Current slice: publish a reviewed, owner-aware lifecycle proposal.
-Remaining scope: implementation, enforcement, any bounded global artifact support and docs-aware CI design after approved specifications.
-Done when: the concrete proposal is published on main and the next authorized action is resolved.
+Current slice: hand off lifecycle design to one Codex successor.
+Remaining scope: bounded design of publication, closeout recovery, global artifact support and docs-aware CI.
+Done when: one successor acknowledges ownership in this progress record and resumes design.
 
-Next action: design immediate current-branch publication and pre-merge local closeout gates, with terminal merged-state verification after delivery; scope any needed global artifact support and docs-only CI classifier separately.
+Next action: transfer design to ONE Codex successor in the existing ordinary docs checkout on main (L3: bounded unresolved publication, closeout and CI design). Successor: pending; no launch or pickup is claimed. Before any plan writes, acknowledge ownership in this progress record, read the plan and its source evidence, then complete implementation-ready design including tests and failure recovery. Review and publish material amendments immediately to docs main, without a planning branch or worktree, using normal mechanical delegates and phase-lane selections. The current predecessor thread is 01a12151-aeac-7543-809f-2bf07f3e8b8e. Authorization covers plan design, review, direct-main publication and handoff only; it does not authorize runtime/CI implementation or approve standards-composition runtime work.
 
 ## Verification
 
-Initial plan graph check: 0 errors, 0 warnings. Initial exact docs main tip verified: 10a43945bcd9128a2e981d03d486281f442bd110. This update's plan graph check: 0 errors, 0 warnings. Whitespace check: passed. No implementation tests run; no update push is claimed.
+Initial plan graph check: 0 errors, 0 warnings. Latest published correction exact origin/main tip verified: 017ede2a47acda8cce320e056aafa4f35ad60d71. This update's plan graph check: 0 errors, 0 warnings. Whitespace check: passed. No implementation tests run; no update push is claimed.
 
 ## Reviews
 
-Ownership correction requires a bounded documentation review before publication. Detailed publication, provider, retirement and CI mechanisms remain draft and have no implementation-readiness approval.
+The ownership correction received a bounded L4 review; its one finding was resolved. This handoff checkpoint still needs bounded review before publication. Publication, provider, retirement and CI mechanisms remain draft and have no implementation-readiness approval.
