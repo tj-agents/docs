@@ -31,6 +31,38 @@ a second writer there. The work-plugin delivery remains a distinct existing work
 - The newer repository plugin setup decision was one-time setup and remained unfinished; merge
   permission alone cannot implement the missing configure-repo-plugins entry point.
 
+The shared standing-merge policy resolves the repository instruction, affected paths and hold labels before reviewed delivery proceeds. The source record below distinguishes source-level checks from pending Linux CI and installed-profile activation; it does not claim the approved exemption second slice or proposed configuration object exists.
+
+```agent-host-coverage
+{
+  "schema_version": 1,
+  "shared_source": ".agents/workflows/delivery_runtime.py and .agents/delivery-authorization.json",
+  "hosts": [
+    {
+      "host": "claude",
+      "behavior": "Resolve the repository standing-merge instruction for reviewed delivery; retain hold and stop-class decisions and require current review and terminal checks before merging.",
+      "source": ".agents/workflows/workflow_ops.py, .agents/hooks/delivery_binding_gate.py, .agents/hooks/merge_review_gate.py, and .agents/hooks/persistent_workflow_merge_gate.py",
+      "mapping": ".agents/plugins/manifests/claude/engineering-hooks.json wires the native hooks; .agents/plugins/harness/engineering.json declares their shared sources for Claude and Codex.",
+      "verification": {
+        "level": "source",
+        "result": "passed",
+        "evidence": "Shared delivery-runtime tests passed (28), delivery-binding tests passed (30), and all twelve current policy JSON files passed schema acceptance. Windows shared merge-gate source tests passed: 83 merge-review cases (one platform skip) and 32 persistent-workflow cases (seven POSIX-shim skips); Claude manifest, harness, package, and required-generation checks passed. Exact-head Linux CI and installed-profile activation for the strengthened source slice remain pending. No sensitive-exemption implementation or .agents/configuration.json contract is claimed."
+      }
+    },
+    {
+      "host": "codex",
+      "behavior": "Resolve the repository standing-merge instruction for reviewed delivery; retain hold and stop-class decisions and require current review and terminal checks before merging.",
+      "source": ".agents/workflows/workflow_ops.py, .agents/hooks/delivery_binding_gate.py, .agents/hooks/merge_review_gate.py, and .agents/hooks/persistent_workflow_merge_gate.py",
+      "mapping": ".agents/plugins/manifests/codex/engineering-hooks.json wires the native hooks; .agents/plugins/harness/engineering.json declares their shared sources for Claude and Codex.",
+      "verification": {
+        "level": "source",
+        "result": "passed",
+        "evidence": "Shared delivery-runtime tests passed (28), delivery-binding tests passed (30), and all twelve current policy JSON files passed schema acceptance. Windows shared merge-gate source tests passed: 83 merge-review cases (one platform skip) and 32 persistent-workflow cases (seven POSIX-shim skips); Claude manifest, harness, package, and required-generation checks passed. Exact-head Linux CI and installed-profile activation for the strengthened source slice remain pending. No sensitive-exemption implementation or .agents/configuration.json contract is claimed."
+      }
+    }
+  ]
+}
+```
 ## Execution
 
 1. Lane L5: enable GitHub's repository auto-merge capability for the exact targets and read it back.
