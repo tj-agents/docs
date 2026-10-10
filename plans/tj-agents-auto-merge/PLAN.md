@@ -21,7 +21,7 @@ a second writer there. The work-plugin delivery remains a distinct existing work
 
 - GitHub `allow_auto_merge` was inspected for all twelve targets. It is enabled on the nine public repositories; it remains false on private `work`, `infonetica` and `docs` because the organization plan does not provide that feature. No billing, visibility or protection change was made.
 - Core's merged runtime accepts `.agents/delivery-authorization.json` with `standing_authorization: auto` and a recorded instruction, while retaining review and required-check gates. The newer `auto_merge` boolean is not accepted by the merged schema.
-- The separate configurable-auto-merge source feature is at `a41bdace0d6757009519fb90c253bc78aed28970`, has a complete approved local review dated October 8, and has no PR. Its original owner PID 43300 remains registered and live, although the recorded lease expired at 1791573094.7468004. Read-only status checks do not transfer ownership; preserve that recovery dependency.
+- The separate configurable-auto-merge source feature's original historical pin was `a41bdace0d6757009519fb90c253bc78aed28970`; resumed PR188 candidate `98c2262` was observed only as a short identifier, and its rebased Linux shared-runtime suite failed two merge-gate contract tests; both are historical context. Independently owned PR188 subsequently merged at `8a2c87945c3665ba68ca012e1d045e42a22db1ec`; its own causal main run `38095228523` is in progress. No subsequent publication, release or cleanup is verified here, and Root has neither adopted nor merged the work. Read-only status checks do not transfer ownership or adopt its paths.
 - The repository-plugin setup decision was one-time setup and remains a separate unfinished workstream; merge permission alone cannot implement the missing `configure-repo-plugins` entry point.
 
 The shared standing-merge policy resolves the repository instruction, affected paths and hold labels before reviewed delivery proceeds. The source record below distinguishes source-level checks and exact-head CI from installed-profile activation; Core PR183 delivered the approved generic five-class capability, while repository activation and the configuration object remain unfinished.
@@ -39,7 +39,7 @@ The shared standing-merge policy resolves the repository instruction, affected p
       "verification": {
         "level": "source",
         "result": "limited",
-        "evidence": "Core183 generic five-class source capability, Core182 both-host handoff contracts, and Core184 shared Stop mechanism are merged with exact PR and causal main CI. Native enforcement c007490 remains changes-requested for SD08/SD10/SD11; 244 tests with9 skips passed, while one unchanged Windows wiring subcase timed out. Extractor preparation is paused for a reproduced generic binder timeout on exact base. Budget repair is bounded to a separate checked source goal; heartbeat source is released from the collaboration writer, while archived qualification and the resumed native candidate require parent reconciliation. Neither native-gate publication nor repository configuration activation is complete."
+        "evidence": "Core183 generic five-class source capability, Core182 both-host handoff contracts, and Core184 shared Stop mechanism are merged with exact PR and causal main CI. Native enforcement c007490 remains changes-requested for SD08/SD10/SD11; 244 tests with9 skips passed, while one unchanged Windows wiring subcase timed out. Extractor preparation remains paused pending budget-repair publication; the generic binder timeout is reproduced on exact base. Core PR189 exact PR CI `38094193442` passed completely on Windows, Linux and guard at head `67417dcba328c85b4a13b2d195887cea65c2e1e5`; it merged normally at `4e5b2e2b688374de5af57f3c528881384bf63e5f`. Its own causal main run `38095220544` is in progress with one active Root monitor. Source publication and safe cleanup remain unverified here. Heartbeat is merged and declared complete, but has no explicit durable path release; association source remains gated. Neither native-gate publication nor repository configuration activation is complete."
       },
       "exception": {
         "constraint_evidence": "Stop at202b330 resolves only the event checkout, so this native Rust session is not associated with its separate Docs controller. Reciprocal authenticated association design is accepted but not implemented. Both-host source delivery is distinct from normal-profile activation; the latter remains unverified.",
@@ -54,7 +54,7 @@ The shared standing-merge policy resolves the repository instruction, affected p
       "verification": {
         "level": "source",
         "result": "limited",
-        "evidence": "Core183 generic five-class source capability, Core182 both-host handoff contracts, and Core184 shared Stop mechanism are merged with exact PR and causal main CI. Native enforcement c007490 remains changes-requested for SD08/SD10/SD11; 244 tests with9 skips passed, while one unchanged Windows wiring subcase timed out. Extractor preparation is paused for a reproduced generic binder timeout on exact base. Budget repair is bounded to a separate checked source goal; heartbeat source is released from the collaboration writer, while archived qualification and the resumed native candidate require parent reconciliation. Neither native-gate publication nor repository configuration activation is complete."
+        "evidence": "Core183 generic five-class source capability, Core182 both-host handoff contracts, and Core184 shared Stop mechanism are merged with exact PR and causal main CI. Native enforcement c007490 remains changes-requested for SD08/SD10/SD11; 244 tests with9 skips passed, while one unchanged Windows wiring subcase timed out. Extractor preparation remains paused pending budget-repair publication; the generic binder timeout is reproduced on exact base. Core PR189 exact PR CI `38094193442` passed completely on Windows, Linux and guard at head `67417dcba328c85b4a13b2d195887cea65c2e1e5`; it merged normally at `4e5b2e2b688374de5af57f3c528881384bf63e5f`. Its own causal main run `38095220544` is in progress with one active Root monitor. Source publication and safe cleanup remain unverified here. Heartbeat is merged and declared complete, but has no explicit durable path release; association source remains gated. Neither native-gate publication nor repository configuration activation is complete."
       },
       "exception": {
         "constraint_evidence": "Stop at202b330 resolves only the event checkout, so this native Rust session is not associated with its separate Docs controller. Reciprocal authenticated association design is accepted but not implemented. Both-host source delivery is distinct from normal-profile activation; the latter remains unverified.",
@@ -104,7 +104,7 @@ Envelope validation requires exactly schema_version and configuration; version i
 
 Compatibility: the new file, when present, is authoritative. Missing core/key then means false; legacy true must not fill holes or override false. Only when the new file is wholly absent may a bounded compatibility window read the old strict auto_merge boolean from a fully validated delivery authority file. Explicit adoption preserves other namespaces and all authority fields while removing only the migrated legacy preference. Kit defaults auto_merge false in new templates and preserves existing configuration during updates.
 
-Implementation owner: Feature/ConfigurableAutoMerge owns delivery_policy.py, the guarded merge command and permission consumers. Its original native PID43300 and creation identity were reverified live on October10. A reader-only layer would be unconsumed; writing those consumers now would overlap its atomic source slice. Resume the Core configuration follow-on after that owner publishes its source slice or explicitly releases the affected paths. Then add the shared reader, migrate all behavioral consumers atomically, ship it to both hosts and preserve PR183's full authorized_stop_classes validation in the actual extracted validator. Follow with Kit allowance/template/check/update support and reviewed adoption in the twelve authorized tj-agents repositories.
+Implementation owner: Feature/ConfigurableAutoMerge owns delivery_policy.py, the guarded merge command and permission consumers. Its original native PID43300 and creation identity were reverified live on October10. Its original historical pin is a41bdace0d6757009519fb90c253bc78aed28970; resumed PR188 candidate98c2262 was observed only short, and its rebased Linux shared-runtime suite failed two merge-gate contract tests; those are historical contexts. Independently owned PR188 subsequently merged at8a2c87945c3665ba68ca012e1d045e42a22db1ec, with its own causal main run38095228523 in progress. No subsequent publication, release or cleanup is verified here, and Root has neither adopted nor merged the work. A reader-only layer would be unconsumed; writing those consumers now would overlap its atomic source slice. Resume the Core configuration follow-on after that owner publishes its source slice or explicitly releases the affected paths. Then add the shared reader, migrate all behavioral consumers atomically, ship it to both hosts and preserve PR183's full authorized_stop_classes validation in the actual extracted validator. Follow with Kit allowance/template/check/update support and reviewed adoption in the twelve authorized tj-agents repositories.
 
 Authoring gate: parent /root owns this global design and must promote the deciding mechanisms below into a Core-owned configuration implementation plan, then publish its immutable Git/PR reference. That execution plan is not yet promoted. The live Feature/ConfigurableAutoMerge owner must first publish or explicitly release its atomic paths. No scratch artifact is an execution or recovery prerequisite; the contract, path mapping, compatibility decisions and acceptance conditions in this document are the recoverable design.
 
@@ -402,7 +402,7 @@ The failure combined contradictory launcher instructions with a missing controll
 
 Accepted L1 design: add a token-validated associate-session operation to the existing shared continuation runtime, an exact-session keyed locator in the native checkout, and reciprocal owner metadata tied to native PID/creation identity and current lease generation. The locator is a lookup hint; Stop must authenticate the reciprocal controller before using its goal, binding and completion checks. Recheck generation at decision time, preserve the parent lease after side handoff, reject stale/forged/unrelated associations, and distinguish full-goal transfer from bounded side work. This does not relax base:cd or invent a native /cd interface.
 
-Own the follow-on atomically in five source paths: continuation_runtime.py, continuation_stop.py, their two existing test files, and persistent-workflow/SKILL.md. Core184 publication is verified; wait for the heartbeat source writer's reviewed publication/release before assigning this overlapping runtime lease. No duplicate Stop/runtime writer, owner scan, daemon or configuration/authority expansion. Authoring gate: parent /root must promote this embedded association contract and deciding mechanisms into a Core-owned implementation plan after heartbeat qualification/publication and source release, then publish an immutable Git/PR reference. No Core execution plan has been promoted yet; do not execute from a controller scratch draft.
+Own the follow-on atomically in five source paths: continuation_runtime.py, continuation_stop.py, their two existing test files, and persistent-workflow/SKILL.md. Core184 publication is verified. Heartbeat PR187 merged at3f07d82322f8fcbfea24158fb0e4aebc1ae05366 with full causal main CI38092630867 green and generatedb4e6f1020b4c1edcfea8e21d6dae2ba5ebdb8a5e naming that exact parent; SID01a12745 declared heartbeat complete, but its linked checkout remains and no explicit durable path release/completion update exists. Wait for that association source-release gate before assigning this overlapping runtime lease. No duplicate Stop/runtime writer, owner scan, daemon or configuration/authority expansion. Authoring gate: parent /root must promote this embedded association contract and deciding mechanisms into a Core-owned implementation plan after the durable source release, then publish an immutable Git/PR reference. No Core execution plan has been promoted yet; do not execute from a controller scratch draft.
 
 The proposed operation is `associate-session --owner CANONICAL_OWNER --token EXISTING_FOREGROUND_TOKEN --session-id HOST_SESSION_ID --session-cwd NATIVE_EVENT_CWD`; it is not currently available. Require the existing canonical root/owner lock, working state, exact current foreground token, live non-unknown PID creation identity and no competing child. Preserve goal, authority, lease and limits. Register one controller per resolved native cwd/session; exact repeat is idempotent and conflicting tuples cannot be forced.
 
@@ -646,14 +646,6 @@ def associated_owner(root, session, runtime):
         process = {"pid": hint["pid"], "identity": hint["identity"]}
         if not foreground_owns_current_process({"foreground": process}, runtime):
             return None
-        lease = owner.get("foreground")
-        if lease is not None and (
-            not isinstance(lease, dict) or not isinstance(lease.get("token"), str)
-            or association["released"] or lease["pid"] != hint["pid"]
-            or lease["identity"] != hint["identity"]
-            or runtime.hashlib.sha256(lease["token"].encode()).hexdigest() != hint["generation"]
-        ):
-            return None
         return path, controller, owner, association
     except (OSError, RuntimeError, ValueError, KeyError, TypeError):
         return None
@@ -688,11 +680,29 @@ def outcome(data):
         if any(owner.get(key) != association["binding"][key]
                for key in ("repo", "worktree", "branch", "goal")):
             reason = "Reconcile the canonical continuation owner: identity changed."
-        elif (not supervised(owner) and not owner.get("foreground")
-              and association["released"] is not True):
-            reason = "Reconcile the canonical continuation owner: release unverified."
         else:
-            reason = owner_outcome(data, controller)
+            lease = owner.get("foreground")
+            binding = association["binding"]
+            if lease is None:
+                reason = (owner_outcome(data, controller)
+                          if supervised(owner) or association["released"] is True
+                          else "Reconcile the canonical continuation owner: release unverified.")
+            elif association["released"] is not False:
+                reason = "Reconcile the canonical continuation owner: foreground release state invalid."
+            elif (not isinstance(lease, dict)
+                  or type(lease.get("pid")) is not int
+                  or not 0 < lease["pid"] < 2**31
+                  or not isinstance(lease.get("token"), str)
+                  or not lease["token"]
+                  or not isinstance(lease.get("identity"), str)
+                  or lease["identity"] in ("", "unknown")
+                  or lease["pid"] != binding["pid"]
+                  or lease["identity"] != binding["identity"]
+                  or runtime.hashlib.sha256(lease["token"].encode()).hexdigest()
+                     != binding["generation"]):
+                reason = "Reconcile the canonical continuation owner: foreground lease invalid."
+            else:
+                reason = owner_outcome(data, controller)
         refreshed = associated_owner(root, session, runtime)
         if refreshed == selected:
             return reason
@@ -701,7 +711,7 @@ def outcome(data):
         return owner_outcome(data)
     return "Reconcile the canonical continuation owner: association changed during Stop."
 ```
-The current native session ID and native root remain the control scope; controller root determines goal/binding/scheduler scope. A sparse or absent receipt cannot erase a valid association. Repeated Stop never gets a bypass. If a new claim invalidates the association during evaluation, normal local selection resumes. The final read is an observed snapshot, not a lock over external Git/scheduler work or a guarantee about changes after return.
+The selector authenticates only immutable locator, reciprocal and native-process proof. The wrapper alone validates mutable controller foreground state: released/absent pairing, lease shape, PID, token-derived generation and creation identity. Thus a proven changed token, malformed lease or absent unreleased lease returns a reconciliation reason before `owner_outcome`; a true validated release preserves the existing scheduler/wake behavior. A sparse or absent receipt cannot erase a valid association. A proved supervised child still reaches the existing selected-owner nonce/result check; no parent completion is inferred. Repeated Stop never gets a bypass. A forged or stale reciprocal, new claim invalidation, or failed PID/creation proof selects no controller and resumes local selection. The final reauthentication and its two evaluations bound concurrent churn; it is an observed snapshot, not a lock over external Git/scheduler work or a guarantee about changes after return.
 
 ### Representative disposable tests
 
@@ -729,7 +739,7 @@ runtime.associate_session(self.owner, token, "parent", native)
 with mock.patch.object(runtime, "atomic_json", side_effect=AssertionError("rewrite")):
     runtime.associate_session(self.owner, token, "parent", native)
 ```
-The following is a new method body in existing `ContinuationStopTests`, using its current disposable Git owner fixture. It covers both host labels, actual current-process identity, absent receipt and repeated Stop, forged pointer, actual token-authorized yield, missing/matching observed wake, and real claim invalidation. The lease is fixture data; `operate` performs the actual release/reclaim checks. No launcher or native host is used.
+The following is a new method body in existing `ContinuationStopTests`, using its current disposable Git owner fixture. It covers both host labels, actual current-process identity, absent receipt and repeated Stop, a proven changed token and malformed lease followed by valid restoration, forged-pointer fallback, actual token-authorized yield, missing/matching observed wake, and new-claim fallback. The lease is fixture data; `operate` performs the actual release/reclaim checks. No launcher or native host is used.
 
 ```python
 for host in ("claude", "codex"):
@@ -749,6 +759,16 @@ for host in ("claude", "codex"):
         for active in (False, True, True):
             self.assertIn("foreground ownership", continuation_stop.outcome(
                 dict(payload, stop_hook_active=active)))
+        changed = runtime.read(path)
+        changed["foreground"]["token"] = "changed-token"
+        runtime.atomic_json(path, changed)
+        self.assertIn("foreground lease invalid", continuation_stop.outcome(payload))
+        changed["foreground"] = {"pid": "malformed"}
+        runtime.atomic_json(path, changed)
+        self.assertIn("foreground lease invalid", continuation_stop.outcome(payload))
+        changed["foreground"] = lease
+        runtime.atomic_json(path, changed)
+        self.assertIn("foreground ownership", continuation_stop.outcome(payload))
         runtime.atomic_json(locator, dict(binding, owner_id="forged"))
         self.assertIsNone(continuation_stop.outcome(payload))
         runtime.atomic_json(locator, binding)
@@ -785,15 +805,15 @@ At this pinned source, scheduler_ready returns false on Linux. Running the Windo
 
 These examples are syntax-only proposals; source remains unimplemented, and runtime tests plus native acceptance remain outstanding.
 
-Heartbeat repair preserves the existing foreground lease while updating nonblank reason/next-action metadata after ownership checks. The first native turn failed before pickup; its later resumed turn produced a rebased candidate and a delivery gate. PROGRESS.md records that newly observed reconciliation boundary and immutable archived qualification. Parent must validate the actual current ownership, exact-head review and delivery; no direct owner JSON edit or release/reclaim workaround.
+Heartbeat PR187 merged at3f07d82322f8fcbfea24158fb0e4aebc1ae05366, its full causal main CI38092630867 is green, and generatedb4e6f1020b4c1edcfea8e21d6dae2ba5ebdb8a5e has that exact parent. Native SID01a12745 declared heartbeat complete, but the linked checkout remains and no explicit durable path-release/completion update exists; association source release remains a gate. Parent must validate the actual current ownership, exact-head review and delivery; no direct owner JSON edit or release/reclaim workaround.
 
-The delivery-binding budget repair is independent of the live configuration owner's atomic preference/guard layer. It reuses invocation-local authenticated Git context, derives fresh origin once, keeps both fresh paginated GitHub reads and all state containment/revalidation checks, simplifies the Windows fixture dispatch, and strengthens the original held-label success oracle. Owned-tree timeout drainage in existing hook_runtime.py is a separate useful follow-on; the observed surviving child and unproven historical lock owner must not be conflated. The active Core owner is `plans/delivery-binding-budget/GOAL.md` in branch `Fix/DeliveryBindingBudget` from8b656fb; parent /root owns its exact-head review, publication and subsequent immutable reference. This local source goal is not yet remotely published. The separate timeout-drain follow-on must likewise receive its own promoted Core plan before execution.
+The delivery-binding budget repair is independent of the live configuration owner's atomic preference/guard layer. It reuses invocation-local authenticated Git context, derives fresh origin once, keeps both fresh paginated GitHub reads and all state containment/revalidation checks, simplifies the Windows fixture dispatch, and strengthens the original held-label success oracle. Owned-tree timeout drainage in existing hook_runtime.py is a separate useful follow-on; the observed surviving child and unproven historical lock owner must not be conflated. Core PR189 exact PR CI38094193442 passed completely on Windows/Linux/guard at reviewed head67417dcba328c85b4a13b2d195887cea65c2e1e5; it merged normally at4e5b2e2b688374de5af57f3c528881384bf63e5f. Its own causal main run38095220544 is in progress with one active Root monitor. Source publication and safe cleanup remain unverified here. Stash893b44fd9a79aee6bfc08ce6f7d2ed24943b4ab6 plus the earlier stash remain retained. The separate timeout-drain follow-on must likewise receive its own promoted Core plan before execution.
 
 ## Next Steps
 
 Scope: retain the whole authorized twelve-repository rollout and both-host requirement.
-Current slice: qualify the recovered budget worker, diagnose heartbeat suite failures before review/delivery, and preserve paused extractor and live configuration owners.
+Current slice: own Core PR189's causal main publication and safe cleanup; finish the fresh Docs DD05 review/publication; then promote SourceGoal after actual releases. Extractor preparation remains paused until budget-repair publication. Further PR188 publication/release and cleanup remain with its independent owner; retain the association source-release gate.
 Remaining scope: publish budget repair; qualify and land extractor preparation then native wiring; deliver authenticated parent Stop association and timeout drainage; migrate configuration after its owner publishes/releases, then deliver Kit support and reviewed twelve-repo adoption.
 Done when: every authorized slice is delivered with truthful both-host evidence or has its concrete external/ownership gate, resolver and resume condition recorded; repository activation conditions are accounted for; the canonical terminal transition represents the whole goal.
 
-Follow PROGRESS.md for exact executable actions. A completed phase, side handoff, open PR, started CI or source merge never completes this parent. Preserve Work1/Infonetica9 billing holds without retry or bypass. Preserve the live Feature/ConfigurableAutoMerge owner; lease expiry is not release. Only that exact owner can publish or durably release its paths; no verified profile/app-server transport is currently available. After source publication/release, implement the selected namespaced migration atomically and preserve Core183's full strict authorized_stop_classes validation.
+Follow PROGRESS.md for exact executable actions. A completed phase, side handoff, open PR, started CI or source merge never completes this parent. Preserve Work1/Infonetica9 billing holds without retry or bypass. Preserve the independent Feature/ConfigurableAutoMerge owner and PR188 work: a41bdace0d6757009519fb90c253bc78aed28970, candidate98c2262, and the two rebased Linux failures are historical; PR188 subsequently merged at8a2c87945c3665ba68ca012e1d045e42a22db1ec with causal main run38095228523 in progress, while no subsequent publication/release/cleanup is verified here and Root has neither adopted nor merged it. After that owner publishes or durably releases its paths, implement the selected namespaced migration atomically and preserve Core183's full strict authorized_stop_classes validation.
