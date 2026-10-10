@@ -58,7 +58,7 @@ serialized mechanical writer. All twelve candidates are now committed, clean and
 current policy schema; a regular source path resolves to auto and an explicit human-gate label stops.
 The parent retains review and delivery decisions. The frozen policy reviews are complete. Eleven
 non-docs PRs are published; docs is held for this canonical progress correction and incremental review.
-Next action: diagnose the failed verification jobs and deliver only candidates with terminal green gates.
+Next action: reconcile the exact remaining PR/head states, keep blocked candidates bound to their own continuations, and deliver only after terminal green gates.
 
 Current source-owned follow-ups are tracked in [the both-host agent changes plan](C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-BothHostAgentChanges/plans/both-host-agent-changes/PLAN.md)
 and [the scoped agent delivery goal](C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-ScopedAgentDelivery/plans/scoped-agent-delivery/GOAL.md).
@@ -67,7 +67,7 @@ mechanical host-evidence checks to planning, review and preflight. The independe
 native Codex merge-review and enqueue enforcement, preserving the existing authority schema and all
 six fixed stop classes. Focused local checks passed; source fixtures and package generation establish
 source verification, while exact-head CI and installed-profile activation remain separate evidence.
-Sensitive-class exemptions were rejected before application and await Tommy's explicit decision.
+The initial sensitive-class exemption patch was automatically rejected before application. Tommy explicitly approved a separate second slice on 2026-10-10 for `ci-workflow`, `migration`, `auth`, `money`, and `published-contract` across the twelve tj-agents repositories, after reviews and required checks. Holds and authorization-policy self-changes remain stops; other defaults are unchanged. The approved second slice is not implemented. Native enforcement parity remains separate and preserves every current fixed stop.
 These goals retain their existing core source ownership.
 
 Configuration alone does not fulfill unattended standards delivery: current fixed stop classes match
@@ -78,13 +78,14 @@ both-host requirement; it must implement, validate and deliver the shared rule, 
 reminder. The live configurable-auto-merge checkout must remain intact. The Rust discovery goal remains
 separate from this policy rollout.
 
+
+## Proposed repository configuration placement
+
+A separate design investigation is considering one scalable repository configuration object shared by producers and consumers. The current proposal places it at `.agents/configuration.json` with a versioned object, for example `{"schema_version":1,"configuration":{"core":{"auto_merge":true}}}`. This is a placement proposal only: no file contract or implementation exists. Core would own the contract and both-host loader; kit would later scaffold and validate the released core contract; consumers such as Concertable would configure that same file. Future package namespaces (for example `dotnet`) would be owned by those packages. Current settings are core-only. This does not enable auto-merge in Concertable or authorize installation/migration. Coordinate with the existing `Feature-ConfigurableAutoMerge` owner; do not create a competing goal.
+
 ## Next Steps
 
-The parent retains rollout ownership. The companion PROGRESS.md owns the executable Next Steps and
-current source-approval gate. Finish the twelve exact-head policy reviews and deliveries. Bind each
-delayed PR to its own continuation, record real platform gates, and reconcile core source fixes before
-claiming the requested outcome. Configurable sensitive-class exceptions are proposed and await Tommy's
-explicit informed approval after automatic review rejected that patch. Native enforcement parity can
-proceed independently while every existing fixed stop remains active.
+The parent retains rollout ownership. The companion PROGRESS.md owns executable Next Steps and current source-approval gates. Reconcile exact PR/head states and retain each delayed delivery binding. Core #175 remote head `cd938` had green CI, then the existing owner integrated a newer candidate at `bd94fe2` that is under fresh review. Do not treat the earlier CI as acceptance of the integrated candidate or duplicate its owner. Core #174, cpp #38, marketplace #5, cli #2 and work #4 are recorded merged at exact landing heads in the Rust continuation ledger. Docs #2 remains a draft at `7fff64c2c45e80e39954959410f73e2563343eb9` and requires fresh incremental review after this update. The approved sensitive second slice is not implemented. The root cause of kit/dotnet/rust/react/nvim verification failures is kit 1.2.0's exact `.agents` allowlist omitting `.agents/delivery-authorization.json`; kit recovery is under review, and 1.2.1 is not published while consumers remain pinned to 1.2.0. Infonetica #9 verification did not start because GitHub reported failed account payments or a spending-limit issue; preserve the hold without retry.
+
 Lane L5 owns mechanical policy preparation; L4 owns ordinary review and delivery; L3 owns bounded
 source diagnosis; L2 owns authorization-security review where the descriptor requires it.
