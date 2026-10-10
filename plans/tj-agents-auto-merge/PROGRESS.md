@@ -11,23 +11,12 @@
 ## Current state
 
 
-The twelve policy candidates are committed at their recorded heads. Eleven non-docs candidates are clean and have canonical immutable review descriptors. The canonical cross-repository plan, progress and roadmap are committed in the docs candidate. The docs candidate is frozen by its Git-private immutable descriptor before review; any later content change requires a replacement descriptor. The parent owns every review work order, finding, delivery decision and exact-head check result.
+The twelve policy candidates are committed at their recorded heads. Core #174, cpp #38, marketplace #5, cli #2 and work #4 are recorded merged at their exact landing heads in `tj-agents-auto-merge-landings.json`. Core #175 remote head `cd938` had green CI; its owner integrated candidate `bd94fe2`, which is under fresh review. The earlier CI does not establish acceptance of that newer candidate. Docs #2 remains a draft at `7fff64c2c45e80e39954959410f73e2563343eb9`; this canonical plan/progress update requires fresh incremental review before publication. The parent owns every review work order, finding, delivery decision and exact-head check result.
 
 ## Verification blocker and recovery
 
-Exact-head CI verification failed in the dotnet, rust, react, nvim and kit policy PRs. A dedicated
-read-only diagnosis owns the failure signatures and baseline provenance in the root continuation
-evidence. Failed jobs are not retried or bypassed. The C++ and marketplace policy checks passed and
-their candidates remain eligible for the final merge gates. The full delivery and check identities
-are in `tj-agents-auto-merge-deliveries.json` and `tj-agents-auto-merge-ci-results.json` beside the
-existing absolute review-results evidence below.
 
-The canonical docs checkout now has one initialized, foreground-claimed continuation owner and a
-verified Windows scheduler registration. Its goal remains this plan, and its actions exclude billing,
-visibility, branch-protection changes, unrelated PRs, normal-profile installation and the rejected
-sensitive-scope proposal. The current foreground writer retains the lease; it must checkpoint and
-yield before a scheduled successor may write. The original Rust continuation remains separate.
-
+The docs checkout retains its foreground continuation owner and verified scheduler registration. Actions exclude billing, visibility, branch-protection changes, unrelated PRs and normal-profile installation. The approved sensitive second slice is not implemented.
 ## Reviews
 
 The eleven initial policy candidates completed parent native-general fallback and independent L2
@@ -39,18 +28,14 @@ did marketplace validation and CLI formatting, clippy and all 17 tests. GitHub o
 
 ## Source approval gate
 
-Automatic approval review rejected the proposed configurable exceptions for CI, auth/permission,
-migration, money and published-contract changes because it requires explicit approval of that sensitive
-scope. The rejected enforcement patch was not applied. Tommy has a pending approval question; the inert
-proposal and verbatim rejection are linked from the existing scoped-agent-delivery source goal.
-That source owner may implement the independent, stronger native merge-gate coverage while preserving
-all six fixed stop classes. The general both-host planning repair remains with its verified native owner.
+Automatic approval review rejected the original configurable-exemption patch before application; its verbatim rejection remains in the scoped source goal. On 2026-10-10 Tommy explicitly approved a separate second slice for exactly `ci-workflow`, `migration`, `auth`, `money`, and `published-contract` across the twelve tj-agents repositories, after reviews and required checks. Holds and authorization-policy self-changes remain stops; other defaults are unchanged. This approval is not implementation authorization for the first source slice, and no sensitive-class implementation has started. The first source slice preserves all six current fixed stop classes.
 
+The universal namespaced `.agents/configuration.json` placement is a separate read-only design investigation, not an accepted implementation or Concertable enablement.
 ## Next Steps
 
 Scope: whole plan through all remaining phases and terminal delivery.
-Current slice: twelve reviewed repository-policy deliveries and the independent core host-coverage repairs.
-Remaining scope: sensitive-class exceptions await Tommy's explicit decision; private native auto-merge remains unavailable on GitHub Free.
-Done when: all twelve policies are delivered or have concrete external gates, the authorized core repairs are delivered and verified for both hosts, and the remaining sensitive-class decision is resolved without bypassing reviews or checks.
+Current slice: twelve reviewed repository-policy deliveries and independent core host-coverage repairs. Core #175 remote head `cd938` had green CI; its owner integrated candidate `bd94fe2`, which is under fresh review. The earlier CI does not establish acceptance of that newer candidate.
+Remaining scope: the separately approved sensitive-class second slice is unimplemented; private native auto-merge remains unavailable on GitHub Free. Universal namespaced repository configuration is a placement proposal under read-only design investigation, not an accepted implementation or Concertable enablement.
+Done when: all twelve policies are delivered or have concrete external gates, authorized core repairs are delivered and verified for both hosts, and any separately approved follow-on is implemented and reviewed without bypassing required gates.
 
 Review the twelve frozen policy candidates, deliver only after required reviews and checks pass, and retain each exact candidate identity with its recovery evidence. Stop for actual review, check, or platform gates.
