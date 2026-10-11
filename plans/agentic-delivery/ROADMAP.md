@@ -47,7 +47,8 @@ These observations should be reconciled into the selected mistake convention wit
 
 ## Next Steps
 
-Finish the problem-skills scope and ownership, then hand off that bounded foundation. Keep priority/deferral
-recorded as its dependent. Reconcile every existing owner before starting any additional independent work.
-A submitted handoff is not acknowledged pickup, and neither proves completion. No new unattended
+The problem-skills foundation is scoped in `Feature/ProblemSkills` and its single native launch succeeded
+on codex-cli 0.163.0-alpha.1 at L3. Native session `01a12c10-0de6-7152-a9f2-9e5f374021f8` successfully read its goal and explicitly
+accepted the assignment at 17:44 UTC; implementation and delivery remain outstanding. Keep priority/deferral recorded as its dependent. Reconcile every existing owner before starting any additional independent work.
+Pickup is evidenced above; it does not prove completion. No new unattended
 orchestrator or monitor has been installed by this planning session.

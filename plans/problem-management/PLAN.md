@@ -71,5 +71,11 @@ in multiple files. Existing repository configuration and the merged convention a
 One isolated source owner is prepared on `Feature/ProblemSkills` from fresh main at `429ad567`.
 Its implementation goal is `core/.worktrees/Feature-ProblemSkills/plans/problem-skills/GOAL.md`.
 Use the compatible storage default above while preserving the pending consolidation preference; implement
-and validate the foundation. Native launch and pickup have not yet been observed at this checkpoint. The dependent handoff slice is owned by
+and validate the foundation. The normal launcher submitted exactly one native tab, `Core: bug and mistake skills`, on
+codex-cli 0.163.0-alpha.1, lane L3 (gpt-6.1-sol, high), with exit 0.
+The prompt is `core/.worktrees/Feature-ProblemSkills/plans/problem-skills/handoff.txt`.
+Native session `01a12c10-0de6-7152-a9f2-9e5f374021f8` read the goal successfully at 17:44:32 UTC
+and explicitly accepted its scope at 17:44:36 UTC. That is observed pickup from its native transcript;
+its goal header had not yet been updated at this check. Source implementation, validation and delivery
+remain with that successor. No second launch is permitted. The dependent handoff slice is owned by
 [the priority plan](../handoff-priority/PLAN.md). Do not launch that dependent implementation early.
