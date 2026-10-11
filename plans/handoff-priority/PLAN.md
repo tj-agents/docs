@@ -1,6 +1,6 @@
 # Handoff priority and deferral
 
-Status: requested follow-up, explicitly dependent on bug/mistake recording skills.
+Status: selected for execution; prerequisite PR #206 is merged and published. Existing native owner successfully resumed.
 Decision recorded: 2026-10-11. Source owner: tj-agents/core.
 
 ## Required behavior
@@ -25,8 +25,9 @@ as a bug just to put it in a backlog. Repeated reports and retries do not create
 ## Dependencies and implementation boundary
 
 The [bug/mistake/debt foundation](../problem-management/PLAN.md) must provide the record contract first.
-The existing self-repair and handoff-enforcement owners (#199 and #196 at this checkpoint) must be
-reconciled before changing their files. Replace unconditional same-turn dispatch and its host guards
+Owner reconciliation selected existing PR #199 and native session
+`01a12ad4-3f5b-7c72-ad11-ea65007cdd0c` for this slice. Its original goal excluded the cancelled #196
+receipt/wording work; preserve that exclusion and artifacts rather than restarting that PR. Replace unconditional same-turn dispatch and its host guards
 together: a verified deferred disposition retains the obligation and is accepted when launch cannot run.
 
 A saved blocker is only the foundation. Automatic resumption additionally needs a verified monitor or
@@ -45,8 +46,17 @@ alone resumes anything or install a competing polling loop. Use existing continu
 - Repeating an unchanged blocked condition does not produce an apology loop, duplicate records or
   recursive handoffs.
 
-## Next Steps
+## Execution owner and next action
 
-Complete the foundation and reconcile existing source owners, then implement one bounded priority and
-deferral slice. Full machine-wide admission and monitoring remain in
+Tommy requested the next handoff after foundation completion on 2026-10-11. Reuse the existing
+self-repair context `01a12ad4-3f5b-7c72-ad11-ea65007cdd0c`, observed non-live, and its checkout
+`core/.worktrees/Fix-SessionGuidanceHandoffCompliance` / PR #199. The updated canonical implementation goal
+is `plans/session-guidance-handoff-compliance/GOAL.md` within that checkout. It owns current scope,
+source-policy reconciliation, focused validation and delivery; the shared docs remain coordinator-owned.
+
+`machine:open-codex` reopened this exact native context with exit 0. Its native transcript records
+the new priority handoff at 20:41:31 UTC, an assistant response at 20:41:34, and successful handoff/goal
+reads by 20:41:55 on 2026-10-11. Resume and initial execution are observed; implementation and delivery
+remain outstanding. The coordinator has released source-path writes to that same existing owner. PR #199's old guard/Linux CI failures are part of that owner's reconciliation, not a reason to
+spawn another repair. Full machine-wide admission and monitoring remain in
 [the orchestration plan](../agent-orchestration/GAMEPLAN.md).

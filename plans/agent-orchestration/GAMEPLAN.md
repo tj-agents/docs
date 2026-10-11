@@ -1,6 +1,6 @@
 # Controlled agent orchestration
 
-Status: orchestration design proposal; problem skills selected next, then handoff priority/deferral.
+Status: orchestration design proposal; problem skills delivered, handoff priority/deferral selected now.
 Coordination: [shared roadmap](../agentic-delivery/ROADMAP.md). Updated: 2026-10-11.
 Owner: tj-agents/docs for the cross-repository design. Core owns implementation of common behavior,
 engineering workflows and machine runtime. Consumer repositories own adoption and their product defects.
@@ -290,8 +290,9 @@ The key proposed decisions are one orchestration workflow composing separate ski
 per repair, two active workers initially, dependency-based admission, queued automatic repairs, and
 installed-behavior acceptance. Orchestration implementation approval is still required.
 
-Immediate selected action: the [problem-skills foundation](../problem-management/PLAN.md), followed by
-[handoff priority/deferral](../handoff-priority/PLAN.md). Recovery acceptance and incident evidence merged
+The [problem-skills foundation](../problem-management/PLAN.md) merged and published in PR #206.
+Immediate selected action: [handoff priority/deferral](../handoff-priority/PLAN.md), reusing the existing
+self-repair owner rather than opening a duplicate context. Recovery acceptance and incident evidence merged
 in core PR #205 on 2026-10-11. That records the approved machine repair; it does not update this already
 running session's runtime. Existing repair and self-repair contexts retain ownership.
 

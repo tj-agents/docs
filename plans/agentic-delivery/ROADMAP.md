@@ -10,15 +10,15 @@ repair and successful fresh-launch probes, rather than shipping the upstream run
 Existing loaded sessions can still use their old runtime. Do not restart the completed diagnosis or
 interfere with its surviving CLI owners. The debt split is merged in PR #173.
 
-Tommy selected bug and mistake skills next, following the record/address debt pair. Handoff priority
-and deferral explicitly depend on those skills. Keep these two slices sequential. A request for useful
+The bug and mistake foundation merged in PR #206 and generated publication passed. Tommy then requested
+the next handoff: handoff priority and deferral, using the delivered record contract. A request for useful
 parallelism is not a request to open a tab for every idea or restart existing owners.
 
 | Workstream | Canonical design | Dependency / present disposition |
 | --- | --- | --- |
-| Bug, mistake and debt recording/addressing | [Problem skills](../problem-management/PLAN.md) | Selected next; one owner for shared conventions. |
-| Handoff priority, conflicts and blocked dispositions | [Priority and deferral](../handoff-priority/PLAN.md) | Follows the problem-recording contract; coordinate existing handoff/self-repair owners. |
-| Automatic source repair and recurrence reduction | [Self-improvement](../self-improvement/PLAN.md) | Preserve core PR #199 and #196; consume problem records and dispatch policy. |
+| Bug, mistake and debt recording/addressing | [Problem skills](../problem-management/PLAN.md) | Delivered in #206; generated publication verified. |
+| Handoff priority, conflicts and blocked dispositions | [Priority and deferral](../handoff-priority/PLAN.md) | Selected now; resume the existing #199 owner with the delivered record contract. |
+| Automatic source repair and recurrence reduction | [Self-improvement](../self-improvement/PLAN.md) | Reuse #199 for priority/deferral; preserve its explicit exclusion of cancelled #196 work. |
 | Multi-goal orchestration and monitoring | [Orchestration](../agent-orchestration/GAMEPLAN.md) | Compose independent skills; runtime ownership and capacity need detailed design. |
 | Model-only lanes, independent effort and fast | [Execution profiles](../execution-profiles/PLAN.md) | Independent investigation/discussion; no approved migration. |
 | Handoff/core workflow overhead | [Workflow efficiency](../workflow-efficiency/PLAN.md) | Select measured bottlenecks and reuse existing fixes. |
@@ -47,8 +47,8 @@ These observations should be reconciled into the selected mistake convention wit
 
 ## Next Steps
 
-The problem-skills foundation is scoped in `Feature/ProblemSkills` and its single native launch succeeded
-on codex-cli 0.163.0-alpha.1 at L3. Native session `01a12c10-0de6-7152-a9f2-9e5f374021f8` successfully read its goal and explicitly
-accepted the assignment at 17:44 UTC; implementation and delivery remain outstanding. Keep priority/deferral recorded as its dependent. Reconcile every existing owner before starting any additional independent work.
-Pickup is evidenced above; it does not prove completion. No new unattended
-orchestrator or monitor has been installed by this planning session.
+The foundation is delivered. The exact existing self-repair native session was reopened for the
+priority/deferral slice. Its native transcript confirms the new handoff and successful initial reads
+at 20:41 UTC. Its canonical goal in `Fix-SessionGuidanceHandoffCompliance` owns implementation and
+delivery; the coordinator no longer writes that checkout. Follow the [priority plan](../handoff-priority/PLAN.md) for the
+source owner and actual launch outcome. No new unattended orchestration monitor has been installed here.
