@@ -1,6 +1,6 @@
 # Automatic repair and improvement
 
-Status: requested design; existing core self-repair work retains ownership.
+Status: existing core self-repair owner selected for the priority/deferral follow-up after PR #206.
 Updated: 2026-10-11.
 
 ## Existing source owner
@@ -9,7 +9,9 @@ Core [PR #199](https://github.com/tj-agents/core/pull/199), branch
 `Fix/SessionGuidanceHandoffCompliance`, owns `self-repair`. Its recorded native session is
 `01a12ad4-3f5b-7c72-ad11-ea65007cdd0c`; verify identity and liveness before resuming.
 The directory called `Feature-SelfRepair` contains a stale unrelated goal and is not evidence of ownership.
-PR #196 owns related native-handoff enforcement. Reconcile both before changing shared policy.
+PR #196 contains related native-handoff enforcement, but #199 explicitly excludes that cancelled
+receipt/wording work. Preserve the exclusion and its artifacts. The coordinator selected this exact
+#199 native context for the next priority/deferral slice; its existing canonical goal is updated.
 
 ## Desired behavior
 

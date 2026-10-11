@@ -1,6 +1,6 @@
 # Bug, mistake and debt skills
 
-Status: Tommy selected bug and mistake skills as the next implementation slice on 2026-10-11.
+Status: foundation merged in PR #206 and generated publication verified on 2026-10-11.
 Shared design owner: tj-agents/docs. Implementation owner: tj-agents/core.
 
 ## Outcome
@@ -66,16 +66,15 @@ in multiple files. Existing repository configuration and the merged convention a
 - Focused source checks plus a disposable consumer demonstrate the convention. Installed-host acceptance
   is reported separately from source tests and merge status.
 
-## Next Steps
+## Delivered outcome and next action
 
-One isolated source owner is prepared on `Feature/ProblemSkills` from fresh main at `429ad567`.
-Its implementation goal is `core/.worktrees/Feature-ProblemSkills/plans/problem-skills/GOAL.md`.
-Use the compatible storage default above while preserving the pending consolidation preference; implement
-and validate the foundation. The normal launcher submitted exactly one native tab, `Core: bug and mistake skills`, on
-codex-cli 0.163.0-alpha.1, lane L3 (gpt-6.1-sol, high), with exit 0.
-The prompt is `core/.worktrees/Feature-ProblemSkills/plans/problem-skills/handoff.txt`.
-Native session `01a12c10-0de6-7152-a9f2-9e5f374021f8` read the goal successfully at 17:44:32 UTC
-and explicitly accepted its scope at 17:44:36 UTC. That is observed pickup from its native transcript;
-its goal header had not yet been updated at this check. Source implementation, validation and delivery
-remain with that successor. No second launch is permitted. The dependent handoff slice is owned by
-[the priority plan](../handoff-priority/PLAN.md). Do not launch that dependent implementation early.
+PR #206 merged at 2026-10-11T19:55:02Z with landing commit
+`d3fc4d49ca412d9e9811faa3b07aed4d43ff0f70`. Required Windows/Linux CI, generated-path guard and independent
+review passed. The causal publication run `38170019843` succeeded; publication commit
+`73f1fbcc24efdda8ed1c0b0ccf07dc4064e7782c` contains all eight host entries and the shared problem contract.
+The completed source goal is `core/.worktrees/Feature-ProblemSkills/plans/problem-skills/GOAL.md`;
+its owner recorded completion. Existing M001-M007 remain intact. No consumer profile installation is claimed.
+
+The four named skills and the shared record contract are delivered. The compatible storage defaults are
+now source behavior; long-term physical consolidation remains a separate preference, not unfinished
+foundation scope. Proceed to [handoff priority/deferral](../handoff-priority/PLAN.md) using those fields.

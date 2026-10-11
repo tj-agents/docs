@@ -22,3 +22,12 @@ the model or reduce required judgment.
 
 Investigate the supported combinations and propose defaults and migration before implementation. This
 design can be investigated independently of problem recording, but is not a blocker for those skills.
+
+## Observed resume control gap (2026-10-11)
+
+The supported open-codex helper accepts an explicit model but exposes no reasoning-effort argument.
+Reopening self-repair session `01a12ad4-3f5b-7c72-ad11-ea65007cdd0c` with the L3 table's model
+produced native turn context `effort: xhigh`, despite the previous recorded session effort being high.
+The dispatch selected the L3 model; it did not establish the intended L3 effort. Do not restart a live
+owner just to change this. Include exact native resume effort/fast controls in the separate profile
+investigation and verify the actual resumed context instead of assuming the stored setting survived.
