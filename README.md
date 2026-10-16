@@ -19,7 +19,7 @@ The standards-composition proposal awaits a design decision. Publishing or movin
 | --- | --- |
 | This repository | Global design, architecture decisions, shared terminology, cross-repository dependencies and acceptance criteria |
 | [core](https://github.com/tj-agents/core) | Common agent behavior, engineering process, machine utilities and their implementation plans |
-| [kit](https://github.com/tj-agents/kit) | Scaffolding, generators, templates and their implementation plans |
+| [template](https://github.com/tj-agents/template) | Scaffolding, generators, templates and their implementation plans |
 | Stack repositories such as [dotnet](https://github.com/tj-agents/dotnet), [react](https://github.com/tj-agents/react), [cpp](https://github.com/tj-agents/cpp) and [rust](https://github.com/tj-agents/rust) | Stack standards, package contracts, releases and their implementation plans |
 | Employer and product repositories | Their conventions, product decisions, private evidence and implementation details |
 
