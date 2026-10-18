@@ -1,0 +1,3 @@
+On 18 October 2026, the work-items native-review command was first invoked from the docs checkout with the work-items base SHA. It did not review the intended work-items candidate.
+
+Cause: command working-directory selection was not checked before invocation. Correction: invoke a candidate-bound review from its frozen checkout and verify the reported base/head before treating the result as evidence. The work-items review was rerun from `Chore/AdoptWorkItemsTracker`; the incorrect attempt supplies no review evidence.

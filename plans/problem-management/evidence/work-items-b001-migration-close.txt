@@ -1,0 +1,3 @@
+B001 was migrated on 18 October 2026 from the legacy work-items BUGS.md record.
+
+The canonical issue preserves the original pilot issue links, the unknown-cause limitation, the repaired retry behavior, and the verified PR #5 main-CI evidence. The resolved state reflects the original record; no new defect verification is claimed.
