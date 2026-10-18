@@ -1,0 +1,3 @@
+M001 was migrated on 18 October 2026 from the legacy work-items MISTAKES.md record.
+
+The canonical issue preserves the failed delivery-binding prerequisite, the already-merged PR #7 limitation, the checked-exit prevention rule, and the later guarded-publication evidence. The resolved state reflects the original record; no retroactive delivery binding is claimed.
