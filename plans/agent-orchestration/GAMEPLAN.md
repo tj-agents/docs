@@ -1,5 +1,11 @@
 # Controlled agent orchestration
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile controlled agent orchestration](https://github.com/tj-agents/docs/issues/9)
+<!-- END plan-tracker-migration -->
+
 Status: orchestration design proposal; problem skills delivered, handoff priority/deferral selected now.
 Coordination: [shared roadmap](../agentic-delivery/ROADMAP.md). Updated: 2026-10-11.
 Owner: tj-agents/docs for the cross-repository design. Core owns implementation of common behavior,

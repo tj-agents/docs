@@ -1,5 +1,11 @@
 # Auto-merge rollout progress
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile enable reviewed delivery for tj-agents repositories](https://github.com/tj-agents/docs/issues/17)
+<!-- END plan-tracker-migration -->
+
 - Plan: plans/tj-agents-auto-merge/PLAN.md
 - Roadmap: plans/tj-agents-auto-merge/ROADMAP.md
 - Roadmap item: tj-agents-auto-merge/reviewed-policy-rollout
