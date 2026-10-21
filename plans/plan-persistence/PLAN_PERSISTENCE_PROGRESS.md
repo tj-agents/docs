@@ -1,5 +1,11 @@
 # Plan persistence progress
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile durable plan persistence](https://github.com/tj-agents/docs/issues/14)
+<!-- END plan-tracker-migration -->
+
 - Plan: plans/plan-persistence/PLAN_PERSISTENCE_PLAN.md
 - Roadmap: plans/plan-persistence/PLAN_PERSISTENCE_ROADMAP.md
 - Roadmap item: plan-persistence/durable-lifecycle

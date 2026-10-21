@@ -1,5 +1,11 @@
 # Standards composition progress
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile scoped standards composition](https://github.com/tj-agents/docs/issues/16)
+<!-- END plan-tracker-migration -->
+
 - Plan: `plans/standards-composition/STANDARDS_COMPOSITION_PLAN.md`
 - Roadmap: `plans/standards-composition/STANDARDS_COMPOSITION_ROADMAP.md`
 - Roadmap item: `standards-composition/scoped-selection`
