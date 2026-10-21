@@ -1,5 +1,11 @@
 # Handoff priority and deferral
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile handoff priority and deferral](https://github.com/tj-agents/docs/issues/12)
+<!-- END plan-tracker-migration -->
+
 Status: selected for execution; prerequisite PR #206 is merged and published. Existing native owner successfully resumed.
 Decision recorded: 2026-10-11. Source owner: tj-agents/core.
 

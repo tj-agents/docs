@@ -1,5 +1,11 @@
 # Reduce time to useful progress
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile reduce time to useful progress](https://github.com/tj-agents/docs/issues/18)
+<!-- END plan-tracker-migration -->
+
 Status: improvement proposal; preserve the existing review and delivery gates.
 Updated: 2026-10-11.
 

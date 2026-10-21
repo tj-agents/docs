@@ -1,5 +1,11 @@
 # Agentic delivery roadmap
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile agentic delivery roadmap](https://github.com/tj-agents/docs/issues/10)
+<!-- END plan-tracker-migration -->
+
 Status: shared coordination record, not blanket implementation approval.
 Updated: 2026-10-11. Owner: tj-agents/docs; source repositories retain their implementation goals.
 
