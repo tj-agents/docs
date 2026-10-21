@@ -1,5 +1,11 @@
 # Model, effort and fast mode
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile model, effort and fast mode](https://github.com/tj-agents/docs/issues/11)
+<!-- END plan-tracker-migration -->
+
 Status: investigation and discussion requested; migration is not yet approved.
 Updated: 2026-10-11. Source owners: core engineering lanes and machine host adapters.
 
