@@ -1,5 +1,11 @@
 # Durable plan persistence
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile durable plan persistence](https://github.com/tj-agents/docs/issues/14)
+<!-- END plan-tracker-migration -->
+
 ## Status
 
 Proposed implementation design. Its implementation-readiness verdict belongs to the companion progress record. Publication of this design does not approve implementation.

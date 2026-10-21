@@ -1,5 +1,11 @@
 # Scoped standards composition
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile scoped standards composition](https://github.com/tj-agents/docs/issues/16)
+<!-- END plan-tracker-migration -->
+
 Design status: proposed composition contract, pending Tommy's decision. The inventory below distinguishes implemented behavior from the proposed mechanism. Publication approves the planning artifact only. Runtime implementation and consumer adoption remain gated; the owner slices identify additional content and host acceptance gates.
 
 ## Documentation ownership

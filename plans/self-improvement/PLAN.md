@@ -1,5 +1,11 @@
 # Automatic repair and improvement
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile automatic repair and improvement](https://github.com/tj-agents/docs/issues/15)
+<!-- END plan-tracker-migration -->
+
 Status: existing core self-repair owner selected for the priority/deferral follow-up after PR #206.
 Updated: 2026-10-11.
 

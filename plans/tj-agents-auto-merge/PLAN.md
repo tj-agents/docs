@@ -1,5 +1,11 @@
 # Enable reviewed delivery for tj-agents repositories
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile enable reviewed delivery for tj-agents repositories](https://github.com/tj-agents/docs/issues/17)
+<!-- END plan-tracker-migration -->
+
 ## Outcome and authorization
 
 Tommy's current instruction: enable auto-merging without the agent asking again, once reviews and
