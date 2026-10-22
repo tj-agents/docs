@@ -13,6 +13,7 @@ This is the shared documentation home; each source repository owns its implement
 | Agentic delivery across independent workstreams | [Roadmap](plans/agentic-delivery/ROADMAP.md) | [Selected next work](plans/agentic-delivery/ROADMAP.md#selected-next-work) | [Next steps](plans/agentic-delivery/ROADMAP.md#next-steps) |
 | Bugs, mistakes and debt | [Problem skills](plans/problem-management/PLAN.md) | [Scope](plans/problem-management/PLAN.md#scope-of-the-next-slice) | [Dependent handoff policy](plans/handoff-priority/PLAN.md) |
 | Controlled agent orchestration | [Gameplan](plans/agent-orchestration/GAMEPLAN.md) | [Readiness and next action](plans/agent-orchestration/GAMEPLAN.md#readiness-and-next-action) | [Proposed delivery sequence](plans/agent-orchestration/GAMEPLAN.md#delivery-sequence) |
+| Workflow and Agent Store boundaries | [Standing architecture](WORKFLOW_AGENT_STORE.md) | [Core lifecycle PR](https://github.com/tj-agents/core/pull/355) | [Acceptance gates](WORKFLOW_AGENT_STORE.md#gates-and-caller-acceptance) |
 
 The standards-composition proposal awaits a design decision. Publishing or moving it does not approve runtime implementation.
 
