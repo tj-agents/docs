@@ -7,7 +7,7 @@ the intended responsibility boundaries and acceptance gates; it does not represe
 installed, or activated behavior. The lifecycle implementation remains in progress on Core's
 [Lifecycle source PR](https://github.com/tj-agents/core/pull/355).
 Its canonical implementation plan is
-[Core's Workflow and Agent Store GOAL](https://github.com/tj-agents/core/blob/Refactor/WorkflowLifecycle/plans/workflow-agent-store/GOAL.md).
+[Core's Workflow and Agent Store GOAL](https://github.com/tj-agents/core/blob/Fix/WorkflowSelectionClosure/plans/workflow-agent-store/GOAL.md).
 
 ## Responsibilities
 
@@ -86,12 +86,12 @@ host activation.
 
 ## Sources
 
-- [Canonical Core implementation plan](https://github.com/tj-agents/core/blob/Refactor/WorkflowLifecycle/plans/workflow-agent-store/GOAL.md)
+- [Canonical Core implementation plan](https://github.com/tj-agents/core/blob/Fix/WorkflowSelectionClosure/plans/workflow-agent-store/GOAL.md)
 - [S1 source evidence: `5e815d06`](https://github.com/tj-agents/core/commit/5e815d0658597f031c332e9d2a3e3bb35d886e8a)
 - [S2 source evidence: `7c77e7d5`](https://github.com/tj-agents/core/commit/7c77e7d5b1dc6c419b5096431018079e7c530026)
 - [Status source evidence: `995f5e45`](https://github.com/tj-agents/core/commit/995f5e45caf269ca71ffd7235b4b1e520b9cc940)
 
-- [Lifecycle source snapshot: `4675ff4c`](https://github.com/tj-agents/core/commit/4675ff4c5fced788ca648db717a0a527c975e10a)
+- [Lifecycle source snapshot: `a6123ed9`](https://github.com/tj-agents/core/commit/a6123ed93061b9c8d816691ac69f71f711ca2c8a)
 
 These commits identify source snapshots. The linked Core PR and goal own current implementation, review
 and acceptance evidence; a source reference does not establish publication or activation.
