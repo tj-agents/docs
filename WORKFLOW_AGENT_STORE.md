@@ -2,12 +2,18 @@
 
 ## Decision status
 
-This is the standing architecture decision approved under the 21 October 2026 dispatch. It describes
-the intended responsibility boundaries and acceptance gates; it does not represent shipped, merged,
-installed, or activated behavior. The lifecycle implementation remains in progress on Core's
-[Lifecycle source PR](https://github.com/tj-agents/core/pull/355).
-Its canonical implementation plan is
+This is the standing architecture decision approved under the 21 October 2026 dispatch. Responsibility
+boundaries and acceptance gates remain distinct from implementation evidence.
+
+As of 23 October 2026, Core's [lifecycle source](https://github.com/tj-agents/core/pull/355) and
+[selection and review cleanup repair](https://github.com/tj-agents/core/pull/356) are merged and their
+causal package publication passed. [Marketplace selection](https://github.com/tj-agents/marketplace/pull/24)
+and [Personal caller guidance](https://github.com/tj-agents/personal/pull/17) are also merged with passing
+publication and native loading evidence. These deliveries do not complete the coordinated caller rollout.
+The remaining repository declarations and caller acceptance stay with
 [Core's Workflow and Agent Store GOAL](https://github.com/tj-agents/core/blob/Fix/WorkflowSelectionClosure/plans/workflow-agent-store/GOAL.md).
+[Core's continuation incident](https://github.com/tj-agents/core/issues/364) remains open: scheduler
+registration alone does not prove progress through a delayed decision and terminal reporting.
 
 ## Responsibilities
 
