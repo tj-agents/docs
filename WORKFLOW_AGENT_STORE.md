@@ -11,7 +11,7 @@ causal package publication passed. [Marketplace selection](https://github.com/tj
 and [Personal caller guidance](https://github.com/tj-agents/personal/pull/17) are also merged with passing
 publication and native loading evidence. These deliveries do not complete the coordinated caller rollout.
 The remaining repository declarations and caller acceptance stay with
-[Core's Workflow and Agent Store GOAL](https://github.com/tj-agents/core/blob/Fix/WorkflowSelectionClosure/plans/workflow-agent-store/GOAL.md).
+[Core's Workflow and Agent Store GOAL](https://github.com/tj-agents/core/blob/f2e0b7636b5318c1cfde5e688600e052068d2f93/plans/workflow-agent-store/GOAL.md).
 [Core's continuation incident](https://github.com/tj-agents/core/issues/364) remains open: scheduler
 registration alone does not prove progress through a delayed decision and terminal reporting.
 
@@ -92,7 +92,7 @@ host activation.
 
 ## Sources
 
-- [Canonical Core implementation plan](https://github.com/tj-agents/core/blob/Fix/WorkflowSelectionClosure/plans/workflow-agent-store/GOAL.md)
+- [Canonical Core implementation plan](https://github.com/tj-agents/core/blob/f2e0b7636b5318c1cfde5e688600e052068d2f93/plans/workflow-agent-store/GOAL.md)
 - [S1 source evidence: `5e815d06`](https://github.com/tj-agents/core/commit/5e815d0658597f031c332e9d2a3e3bb35d886e8a)
 - [S2 source evidence: `7c77e7d5`](https://github.com/tj-agents/core/commit/7c77e7d5b1dc6c419b5096431018079e7c530026)
 - [Status source evidence: `995f5e45`](https://github.com/tj-agents/core/commit/995f5e45caf269ca71ffd7235b4b1e520b9cc940)
