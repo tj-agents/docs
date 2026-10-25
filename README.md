@@ -3,6 +3,9 @@
 Global architecture, cross-repository designs, decisions and roadmaps for [tj-agents](https://github.com/tj-agents).
 This is the shared documentation home; each source repository owns its implementation and operational details.
 
+[Plugin catalog and project selection](PLUGIN_CATALOG.md) records the cross-repository ownership boundary
+for Marketplace, Core Machine, and profile adopters.
+
 ## Current design work
 
 | Topic | Design | Progress | Roadmap |
