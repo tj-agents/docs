@@ -1,15 +1,24 @@
 # Working on tj-agents documentation
 
 Start with [README.md](README.md) for scope and documentation ownership.
-This repository owns global design and cross-repository plans. Source repositories own implementation plans,
-package contracts, runtime code and operational documentation; link to those owners.
+This repository owns reference documentation for the currently implemented system: architecture,
+cross-repository responsibilities and shared terminology. Source repositories own package contracts,
+runtime code and operational documentation; link to those owners.
 
-Keep each plan, progress record and roadmap together under `plans/<topic>/`. Maintain one canonical plan
-and link its owner slices instead of duplicating them. Preserve dated evidence and distinguish proposals
-from approved decisions and shipped behavior. Documentation publication does not authorize runtime changes.
+Verify behavior against its owning source and update the existing topic in place when it changes.
+Keep proposals, execution plans, audit inventories, progress ledgers and PR/CI chronology with the
+owning source work or its PR, outside this reference repository. Git and PR history retain how a
+change happened; reference documentation explains how the system works now.
 
-Use installed agent skills for planning and review. Do not copy standards, workflow tooling or generated
-plugin output here. Keep private employer and product evidence in its authorized repository.
+```text
+Input: an approved messaging cleanup changes the host transport.
+Action: update the existing messaging reference to describe the implemented transport.
+Keep the capability audit, deletion checklist and CI results with the source work and its PR.
+Output: readers find the current behavior without reconstructing the cleanup timeline.
+```
+
+Use installed review skills. Do not copy standards, workflow tooling or generated plugin output here.
+Keep private employer and product evidence in its authorized repository.
 
 <!-- BEGIN personal:current-solution sha256:2e091b5f18f67fb2302024e817c71d4a0f5234c1ca63ca1c9af5c4eef3b6a128 -->
 # Personal projects
