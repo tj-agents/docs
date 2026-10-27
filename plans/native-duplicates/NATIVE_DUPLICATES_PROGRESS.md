@@ -20,7 +20,7 @@ Tommy approved D1-D11 within the inventory's conditions. Both hosts were assesse
 | Owner | PR and frozen head | Source change | Current evidence |
 | --- | --- | --- | --- |
 | Agent | https://github.com/tj-agents/agent/pull/26; `446230fdfa37014d846da2f08eb3c749025643b0` | Native message/peer entries with additional requirements; verified-delivery helper in Codex runtime; wrong memory writer, redundant memory wrapper and retired close/reaper removed | Ready correction; generator Check (277), absence scan and native-boundary test pass; native/independent incremental reviews and exact-head CI `40557806980` pass, including genuine Windows/Linux repository tests and host admission |
-| Core | https://github.com/tj-agents/core/pull/517; `c631774393aebead04de6998d3c0e02445ab0e1e` | Codex-only durable continuation runtime; Claude native continuation; five selectors removed; security guidance corrected; authoring rule requires real wrapper value | Draft correction; generator Check (446), guidance examples, generated-path guard and native/independent reviews pass; full CI `40557817874` passed Linux while Windows shared runtime tests remain active |
+| Core | https://github.com/tj-agents/core/pull/517; `c631774393aebead04de6998d3c0e02445ab0e1e` | Codex-only durable continuation runtime; Claude native continuation; five selectors removed; security guidance corrected; authoring rule requires real wrapper value | Ready correction; generator Check (446), guidance examples, generated-path guard and native/independent reviews pass; full exact-head CI `40557817874` passes Windows/Linux native startup, source/package and shared runtime tests, Windows compatibility/scheduler tests and the required aggregate |
 | Personal | https://github.com/tj-agents/personal/pull/41; `9505b84ea0ed8108b09d219a4642fac775a307d8` | Remove duplicate SessionStart policy emitter; preserve native instruction projection and PreToolUse clean-cut | Ready; native and independent reviews passed; CI `40547934870` genuinely passed Windows/Linux tests and host admission |
 
 ## Owner plans and validation
@@ -67,7 +67,7 @@ All sessions remain open. No close was armed or executed. Authentication/trust c
 ## Next Steps
 
 Scope: whole plan, including approved source PR delivery and all conditional parity/protected-work/installed acceptance gates. The full plan remains incomplete while those required gates remain unresolved.
-Current slice: finish reviews and exact-head validation for the memory-wrapper removal and authoring-rule correction, then restore Agent #26, Core #517 and Docs #29 to ready. PR delivery is the requested source milestone; deployment conditions below remain explicit.
+Current slice: Agent #26 and Core #517 are ready after fresh reviews and exact-head validation of the memory-wrapper removal and authoring-rule correction; finish this Docs checkpoint review and publish Docs #29 ready. PR delivery is the requested source milestone; deployment conditions below remain explicit.
 Remaining scope: reconcile exact existing Claude external registrations before deployment; fresh installed native behavior on supported surfaces; D4 only after its caller/API and protected-owner condition is satisfied; conditional role/context/loader removals only after equivalent proof.
 Done when: source cutovers and requested PRs are delivered, every retained custom requirement has its explicit rationale, and any claimed installed migration has its actual acceptance evidence. Sessions remain open.
 
