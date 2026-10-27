@@ -274,5 +274,5 @@ Tommy confirmed the model and approved D1-D11 after the inventory checkpoint. Th
 
 Fresh Agent base: `438783a2ba1049f2afbecc16d62677cb4b8fd1ac`. Agent PR #24 already landed D2's 1,246-line shell removal at this head; reconcile its caller/tests evidence rather than repeat its deletion. Agent implementation checkout: `C:\Users\TommySeery\source\repos\tj-agents\agent.worktrees\Refactor-NativeWrappers`, branch `Refactor/NativeWrappers`.
 
-Protected-work reconciliation: Core #512 is now the actual routing-removal PR at `1268140a639b649632593f75b2c9ff0b26a4a5fe`; its audit-time subject/head above remains historical evidence. Do not touch its routing/context files. Agent #22 remains open at its recorded head. Re-read protected PRs before overlapping owner slices.
+Protected-work reconciliation: Core #512 is now the actual routing-removal PR at `1268140a639b649632593f75b2c9ff0b26a4a5fe`; its audit-time subject/head above remains historical evidence. Do not touch its routing/context files. Agent #22 remains open; the latest reconciled head is `03aa0472bf38959960d6787cb3d424d6544a7e8d`, superseding its audit-time head. Re-read protected PRs before overlapping owner slices.
 
