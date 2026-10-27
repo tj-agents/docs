@@ -1,0 +1,269 @@
+{
+  "audit_date": "2026-10-27",
+  "canonical_skill_count": 286,
+  "measurement": "Tracked canonical SKILL.md files; subtree files are tracked UTF-8 text excluding local tests/fixtures directories. Subtree counts overlap nested families and are not executable/deletion totals. Infonetica plugins payload is authored.",
+  "installed_hosts": {
+    "claude": "2.1.282",
+    "codex": "0.163.0-alpha.1"
+  },
+  "repositories": [
+    {
+      "repository": "agent",
+      "origin": "https://github.com/tj-agents/agent",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\agent.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "b7e110371387b5d559a563ff23d7810bf93638eb",
+      "fetched_origin_main": "b7e110371387b5d559a563ff23d7810bf93638eb",
+      "initially_clean": true,
+      "tracked_files": 485,
+      "canonical_skills": 15
+    },
+    {
+      "repository": "core",
+      "origin": "https://github.com/tj-agents/core",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "f847d301722ceb383f43c628d3ae99af82225b5e",
+      "fetched_origin_main": "f847d301722ceb383f43c628d3ae99af82225b5e",
+      "initially_clean": true,
+      "tracked_files": 1029,
+      "canonical_skills": 62
+    },
+    {
+      "repository": "cli",
+      "origin": "https://github.com/tj-agents/cli",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\cli.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "a312194a0aa32dbf2599cc2a98f7c4deffed72a1",
+      "fetched_origin_main": "a312194a0aa32dbf2599cc2a98f7c4deffed72a1",
+      "initially_clean": true,
+      "tracked_files": 114,
+      "canonical_skills": 3
+    },
+    {
+      "repository": "template",
+      "origin": "https://github.com/tj-agents/template",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\template.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "11537acb98efd2a63b6a07e91ffa93676bc1e97d",
+      "fetched_origin_main": "11537acb98efd2a63b6a07e91ffa93676bc1e97d",
+      "initially_clean": true,
+      "tracked_files": 261,
+      "canonical_skills": 4
+    },
+    {
+      "repository": "docs",
+      "origin": "https://github.com/tj-agents/docs",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\docs.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "d3a4d8699877c5a84f42587e6a3d1a4a0860f48b",
+      "fetched_origin_main": "d3a4d8699877c5a84f42587e6a3d1a4a0860f48b",
+      "initially_clean": true,
+      "tracked_files": 33,
+      "canonical_skills": 0
+    },
+    {
+      "repository": "marketplace",
+      "origin": "https://github.com/tj-agents/marketplace",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\marketplace.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "2ec695b370b03a9f637adbb54b20b84d947a132e",
+      "fetched_origin_main": "2ec695b370b03a9f637adbb54b20b84d947a132e",
+      "initially_clean": true,
+      "tracked_files": 19,
+      "canonical_skills": 0
+    },
+    {
+      "repository": "infonetica",
+      "origin": "https://github.com/tj-agents/infonetica",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\infonetica.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "d3cafaaa29df864544a39f5db882ceb40f61b569",
+      "fetched_origin_main": "d3cafaaa29df864544a39f5db882ceb40f61b569",
+      "initially_clean": true,
+      "tracked_files": 57,
+      "canonical_skills": 22
+    },
+    {
+      "repository": "work",
+      "origin": "https://github.com/tj-agents/work",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\work.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "ce444085f295d4ac9bf7f3ff5aa630a01b92ff71",
+      "fetched_origin_main": "ce444085f295d4ac9bf7f3ff5aa630a01b92ff71",
+      "initially_clean": true,
+      "tracked_files": 82,
+      "canonical_skills": 7
+    },
+    {
+      "repository": "azure",
+      "origin": "https://github.com/tj-agents/azure",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\azure.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "a49bee912d038f486124b5fb0fb8aa9c89e8babe",
+      "fetched_origin_main": "a49bee912d038f486124b5fb0fb8aa9c89e8babe",
+      "initially_clean": true,
+      "tracked_files": 431,
+      "canonical_skills": 14
+    },
+    {
+      "repository": "github-actions",
+      "origin": "https://github.com/tj-agents/github-actions",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\github-actions.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "97c9242d025cc5d6537d31b7c9c46f442b1f7a1a",
+      "fetched_origin_main": "97c9242d025cc5d6537d31b7c9c46f442b1f7a1a",
+      "initially_clean": true,
+      "tracked_files": 189,
+      "canonical_skills": 15
+    },
+    {
+      "repository": "nvim",
+      "origin": "https://github.com/tj-agents/nvim",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\nvim.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "7954b867ada13825e0c12cd2f2423db0ebfca61b",
+      "fetched_origin_main": "7954b867ada13825e0c12cd2f2423db0ebfca61b",
+      "initially_clean": true,
+      "tracked_files": 47,
+      "canonical_skills": 3
+    },
+    {
+      "repository": "python",
+      "origin": "https://github.com/tj-agents/python",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\python.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "e0d32a6a09077fc2547c567ff115a57a8c1b3f8d",
+      "fetched_origin_main": "e0d32a6a09077fc2547c567ff115a57a8c1b3f8d",
+      "initially_clean": true,
+      "tracked_files": 160,
+      "canonical_skills": 14
+    },
+    {
+      "repository": "personal",
+      "origin": "https://github.com/tj-agents/personal",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\personal.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "c3bbdcc3668bd450e026e6f34cdad226f1d68d77",
+      "fetched_origin_main": "c3bbdcc3668bd450e026e6f34cdad226f1d68d77",
+      "initially_clean": true,
+      "tracked_files": 201,
+      "canonical_skills": 6
+    },
+    {
+      "repository": "work-items",
+      "origin": "https://github.com/tj-agents/work-items",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\work-items.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "7689bb577e0c46d8bf4c95cda2d01b0f1654d1f6",
+      "fetched_origin_main": "7689bb577e0c46d8bf4c95cda2d01b0f1654d1f6",
+      "initially_clean": true,
+      "tracked_files": 165,
+      "canonical_skills": 7
+    },
+    {
+      "repository": "github",
+      "origin": "https://github.com/tj-agents/github",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\github.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "b1bd4b3c3c9c890d4b98546ca0a9aaf37e21b256",
+      "fetched_origin_main": "b1bd4b3c3c9c890d4b98546ca0a9aaf37e21b256",
+      "initially_clean": true,
+      "tracked_files": 45,
+      "canonical_skills": 1
+    },
+    {
+      "repository": "cpp",
+      "origin": "https://github.com/tj-agents/cpp",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\cpp.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "f44fe5add7c5f48371c6a9a24889299396badc7d",
+      "fetched_origin_main": "f44fe5add7c5f48371c6a9a24889299396badc7d",
+      "initially_clean": true,
+      "tracked_files": 292,
+      "canonical_skills": 19
+    },
+    {
+      "repository": "dotnet",
+      "origin": "https://github.com/tj-agents/dotnet",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "061f4231921cbd3c85238b7d86895bed4edcd981",
+      "fetched_origin_main": "061f4231921cbd3c85238b7d86895bed4edcd981",
+      "initially_clean": true,
+      "tracked_files": 1072,
+      "canonical_skills": 51
+    },
+    {
+      "repository": "react",
+      "origin": "https://github.com/tj-agents/react",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\react.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "6fa428b840767e0d950c2b064f7d82a6f76418db",
+      "fetched_origin_main": "6fa428b840767e0d950c2b064f7d82a6f76418db",
+      "initially_clean": true,
+      "tracked_files": 155,
+      "canonical_skills": 24
+    },
+    {
+      "repository": "rust",
+      "origin": "https://github.com/tj-agents/rust",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\rust.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "543cd63321c8fab4197b12bbf6900ac87db1cd2f",
+      "fetched_origin_main": "543cd63321c8fab4197b12bbf6900ac87db1cd2f",
+      "initially_clean": true,
+      "tracked_files": 195,
+      "canonical_skills": 16
+    },
+    {
+      "repository": "learning",
+      "origin": "https://github.com/tj-agents/learning",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\learning.worktrees\\Audit-NativeDuplicates-20261027",
+      "head": "8d4ba6d733b9283f71133427756e80108aa295a4",
+      "fetched_origin_main": "8d4ba6d733b9283f71133427756e80108aa295a4",
+      "initially_clean": true,
+      "tracked_files": 49,
+      "canonical_skills": 3
+    }
+  ],
+  "protected_pull_requests": [
+    {
+      "repository": "core",
+      "number": 512,
+      "url": "https://github.com/tj-agents/core/pull/512",
+      "state": "OPEN",
+      "branch": "Fix/TierGateUntrackedScan",
+      "head": "2c0fd994bd5e54f62f44fe08b3b94f5968d43ce1"
+    },
+    {
+      "repository": "cpp",
+      "number": 56,
+      "url": "https://github.com/tj-agents/cpp/pull/56",
+      "state": "OPEN",
+      "branch": "Refactor/RemoveSkillRoutes",
+      "head": "49ddea35352cf81654ac5d4a1f85a10949327263"
+    },
+    {
+      "repository": "dotnet",
+      "number": 85,
+      "url": "https://github.com/tj-agents/dotnet/pull/85",
+      "state": "OPEN",
+      "branch": "Refactor/RemoveSkillRoutes",
+      "head": "19b8aab572fb87654ae39336e992aaf3f272f21d"
+    },
+    {
+      "repository": "template",
+      "number": 44,
+      "url": "https://github.com/tj-agents/template/pull/44",
+      "state": "OPEN",
+      "branch": "Refactor/RemoveSkillRoutes",
+      "head": "f7f4dcf6e36bee51600398f65ae7d7eb702c49f8"
+    },
+    {
+      "repository": "react",
+      "number": 32,
+      "url": "https://github.com/tj-agents/react/pull/32",
+      "state": "OPEN",
+      "branch": "Refactor/RemoveSkillRoutes",
+      "head": "40cce7d9e63755a1e30893618a85627657384103"
+    },
+    {
+      "repository": "rust",
+      "number": 17,
+      "url": "https://github.com/tj-agents/rust/pull/17",
+      "state": "OPEN",
+      "branch": "Refactor/RemoveSkillRoutes",
+      "head": "0d87f09b12ec2458c22f3f791831cc9027fccb21"
+    },
+    {
+      "repository": "agent",
+      "number": 22,
+      "url": "https://github.com/tj-agents/agent/pull/22",
+      "state": "OPEN",
+      "branch": "Fix/NativeAuthDenyRules",
+      "head": "48b94c1bcfd5488241d580169ce6f575390976d4"
+    }
+  ]
+}
