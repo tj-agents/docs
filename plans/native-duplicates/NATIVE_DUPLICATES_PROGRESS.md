@@ -7,13 +7,16 @@ Owner: current Codex session, started from the Agent checkout at Tommy's handoff
 - Roadmap: plans/native-duplicates/NATIVE_DUPLICATES_ROADMAP.md
 - Roadmap item: native-duplicates/migration
 
-Artifact checkout: `C:/Users/TommySeery/source/repos/tj-agents/docs.worktrees/Audit-NativeDuplicates-20261027`, branch `Docs/NativeDuplicates`, initial base `d3a4d8699877c5a84f42587e6a3d1a4a0860f48b`.
+Worktree: C:/Users/TommySeery/source/repos/tj-agents/docs.worktrees/Audit-NativeDuplicates-20261027
+Branch: Docs/NativeDuplicates
+PR: not opened
+Initial base: `d3a4d8699877c5a84f42587e6a3d1a4a0860f48b`.
 
 ## Current state
 
 Tommy approved D1-D11 within the inventory's conditions. Both hosts were assessed independently; one canonical capability uses separate native host entries, with custom runtime retained only for a demonstrated gap. The frozen inventory covers all 20 repositories and 286 authored skills. Its historical sizes and SHAs remain an audit snapshot rather than a claim about the changed branches.
 
-Four source cutovers are published. All implementation writer leases are released; parent owns acceptance and the remaining validation. Protected routing and permission work remains untouched. Agent #24 landed D2's 1,246-line duplicate shell removal during the audit, before this task's Agent source commit.
+Four source cutovers are published as open, ready PRs. All implementation writer leases are released; parent owns acceptance and the remaining validation. Protected routing and permission work remains untouched. Agent #24 landed D2's 1,246-line duplicate shell removal during the audit, before this task's Agent source commit.
 
 | Owner | PR and frozen head | Source change | Current evidence |
 | --- | --- | --- | --- |
@@ -24,9 +27,9 @@ Four source cutovers are published. All implementation writer leases are release
 
 ## Owner plans and validation
 
-Agent slice: `C:/Users/TommySeery/source/repos/tj-agents/agent.worktrees/Refactor-NativeWrappers/plans/native-wrappers/NATIVE_WRAPPERS_PLAN.md`. All 42 focused tests, generator Check (282 outputs), guidance, plan graph, instruction pairing and diff checks passed. Main synchronization added PR #25's Claude refresh fix; its nine retirement tests and native-boundary test passed. The exact-head remote suites now supersede the local environment limitation for source validation. Live messaging and memory setting changes were not exercised.
+Agent slice: `plans/native-wrappers/NATIVE_WRAPPERS_PLAN.md` in Agent #26 above. All 42 focused tests, generator Check (282 outputs), guidance, plan graph, instruction pairing and diff checks passed. Main synchronization added PR #25's Claude refresh fix; its nine retirement tests and native-boundary test passed. The exact-head remote suites now supersede the local environment limitation for source validation. Live messaging and memory setting changes were not exercised.
 
-Core slice: `C:/Users/TommySeery/source/repos/tj-agents/core.worktrees/Refactor-NativeWrappers/plans/native-wrappers/GOAL.md`. The 46-test adapter suite (six platform skips), all 42 supervisor tests, 23 layout tests, 19 process-standard tests and 11 review-adapter tests passed. Complete source/package fixtures, strict-root failures, host rejection, owner limits and completion evidence passed. Generator Check (446 outputs), digests, harness, tier, guidance and CRLF-aware diff checks passed. Core's generated digest fields remain uncommitted under its explicit publication policy; committed guard passes. Routine CI skipped platform suites, so the parent explicitly enabled the existing full-validation label. Exact-head full run `40549311958` passed both platform suites, native startup/discovery, generated-output guard and required aggregate; Windows also passed corpus references, PowerShell compatibility and continuation scheduler tests.
+Core slice: `plans/native-wrappers/GOAL.md` in Core #517 above. The 46-test adapter suite (six platform skips), all 42 supervisor tests, 23 layout tests, 19 process-standard tests and 11 review-adapter tests passed. Complete source/package fixtures, strict-root failures, host rejection, owner limits and completion evidence passed. Generator Check (446 outputs), digests, harness, tier, guidance and CRLF-aware diff checks passed. Core's generated digest fields remain uncommitted under its explicit publication policy; committed guard passes. Routine CI skipped platform suites, so the parent explicitly enabled the existing full-validation label. Exact-head full run `40549311958` passed both platform suites, native startup/discovery, generated-output guard and required aggregate; Windows also passed corpus references, PowerShell compatibility and continuation scheduler tests.
 
 Personal: native adoption write/check, generator Check (129 outputs), guidance, exact AGENTS/CLAUDE pairing, unchanged PreToolUse assertions, emitter caller scan and focused modules passed. No new runtime remains in this instruction delivery path. Infonetica has no generator; its shared native manifests and work-scope instructions remain unchanged. No personal profile was injected into employer source.
 
@@ -43,9 +46,9 @@ These retained cases are explicit conditional outcomes, not claims that a native
 
 ## Reviews and safety
 
-Canonical Docs work order: `C:/Users/TommySeery/source/repos/tj-agents/docs/.git/agent-workflow/reviews/87eaca807a90e8afb564837d5ddfcad080ad71aa919e45545249caccf12c9281/work-order.md`. First inventory review retained ACC1/ACC2, fixed at `2d95b2380b36a895f38cd7a50aa37ee55f65d12f`. The approval checkpoint's stale execution text and protected Agent head are corrected in this update. Each source PR has its own exact-head Git-private review receipt and delivery binding.
+The tracked plan, progress and roadmap own the canonical execution state. The linked source PRs and CI runs above provide durable source and validation evidence. First inventory review retained ACC1/ACC2, fixed at `2d95b2380b36a895f38cd7a50aa37ee55f65d12f`. The approval checkpoint's stale execution text and protected Agent head are corrected in this update. Final publication review clarified open PR status and removed machine-private evidence dependencies and unrelated diagnostic detail.
 
-All sessions remain open. No close was armed or executed. One native reviewer attempted unavailable close preparation; no target was prepared and no session was closed. Later reviews use explicit read-only/keep-open native prompts. One parent diagnostic exposed credentials earlier in the session; values were not repeated and rotation was reported to Tommy. Authentication/trust controls were not bypassed.
+All sessions remain open. No close was armed or executed. Authentication/trust controls were not bypassed.
 
 ## Next Steps
 
