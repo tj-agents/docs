@@ -7,9 +7,9 @@ Owner: current Codex session, started from the Agent checkout at Tommy's handoff
 - Roadmap: plans/native-duplicates/NATIVE_DUPLICATES_ROADMAP.md
 - Roadmap item: native-duplicates/migration
 
-Worktree: C:/Users/TommySeery/source/repos/tj-agents/docs.worktrees/Audit-NativeDuplicates-20261027
-Branch: Docs/NativeDuplicates
-PR: not opened
+- Worktree: C:/Users/TommySeery/source/repos/tj-agents/docs.worktrees/Audit-NativeDuplicates-20261027
+- Branch: Docs/NativeDuplicates
+- PR: https://github.com/tj-agents/docs/pull/29
 Initial base: `d3a4d8699877c5a84f42587e6a3d1a4a0860f48b`.
 
 ## Current state
@@ -53,6 +53,8 @@ All sessions remain open. No close was armed or executed. Authentication/trust c
 ## Next Steps
 
 Scope: whole plan, including approved source PR delivery and all conditional parity/protected-work/installed acceptance gates. The full plan remains incomplete while those required gates remain unresolved.
-Current slice: source reviews and genuine platform validation are complete; publish the reviewed Docs inventory/checkpoint. PR delivery is the requested source milestone, and the deployment conditions below remain explicit.
+Current slice: source reviews and genuine platform validation are complete; Docs #29 publishes the inventory/checkpoint. PR delivery is the requested source milestone, and the deployment conditions below remain explicit.
 Remaining scope: reconcile exact existing Claude external registrations before deployment; fresh installed native behavior on supported surfaces; D4 only after its caller/API and protected-owner condition is satisfied; conditional role/context/loader removals only after equivalent proof.
 Done when: source cutovers and requested PRs are delivered, every retained custom requirement has its explicit rationale, and any claimed installed migration has its actual acceptance evidence. Sessions remain open.
+
+Verify the linked PR heads and report the reviewed source-delivery checkpoint with its retained deployment conditions.
