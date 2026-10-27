@@ -77,12 +77,12 @@ Three gates remain separate:
 | Gate | What it proves | What it does not prove |
 | --- | --- | --- |
 | Source | Canonical sources, generated mirrors, manifests and tests agree | Selected packages are installed or active on a host. |
-| Declaration | Catalog and project selection express the required closure | A host has accepted, installed or activated that selection. |
+| Declaration | Plugin selection declarations express the required closure | A host has accepted, installed or activated that selection. |
 | Native activation | A fresh supported host resolves selected installed entry points | Source or declaration work was sufficient on another host. |
 
-Known callers must be accepted together: Core lifecycle callers and adapters, Marketplace catalog and
+Known callers must be accepted together: Core lifecycle callers and adapters, Marketplace plugin roster and
 project declarations, Personal GitHub guidance, Infonetica Azure guidance, and affected already-bound
-readers. Source generation, a passing test suite, a catalog entry, or a selection declaration alone is
+readers. Source generation, a passing test suite, a plugin entry, or a selection declaration alone is
 not that acceptance. Each caller needs its applicable source, declaration and native gate evidence.
 
 Publication follows the coordinated order recorded by Core: source stack, generated-package publication,
