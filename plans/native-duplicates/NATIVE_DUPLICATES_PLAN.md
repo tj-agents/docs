@@ -4,9 +4,9 @@ Audit date: October 27, 2026. Status: migration approved by Tommy on October 27,
 
 ## Outcome and authority
 
-Remove implementations of behavior the host already provides. Keep one capability name and intent across Claude and Codex. A host with a native implementation receives a thin instruction wrapper; an unmet requirement receives one custom implementation, packaged only for the hosts that need it. Generated distribution copies are not independently authored implementations.
+Remove implementations of behavior the host already provides. Use native capabilities directly when they satisfy the requested outcome. Retain a skill only for a concrete additional workflow, policy or missing host capability; a common name alone is insufficient. Retained skills keep one canonical intent with separate host adapters, and custom implementation ships only to the hosts that need it. Generated distribution copies are not independently authored implementations.
 
-Authority is Tommy's instruction to follow `handoff-native-duplicates.md` from the Agent checkout. That handoff explicitly requires presenting the inventory and proposed deletions before substantial removal. It also says never to close this or any other session. This document is the canonical approved inventory. At the initial checkpoint, no runtime implementation, installation, hook changes, publication or deletion had occurred. Tommy subsequently confirmed the single-wrapper/native-first model and approved D1-D11 within their recorded conditions. His follow-up requires checking both hosts and keeping each host's custom behavior in its separate runtime/adapter so neither host receives an unusable wrapper.
+Authority is Tommy's instruction to follow `handoff-native-duplicates.md` from the Agent checkout. That handoff explicitly requires presenting the inventory and proposed deletions before substantial removal. It also says never to close this or any other session. This document is the canonical approved inventory. At the initial checkpoint, no runtime implementation, installation, hook changes, publication or deletion had occurred. Tommy subsequently confirmed the single-wrapper/native-first model and approved D1-D11 within their recorded conditions. His follow-ups require checking both hosts and keeping each host's custom behavior in its separate runtime/adapter. He then explicitly rejected the redundant memory wrapper and authorized removing it and checking the other retained skills for real added value. That clarification supersedes any earlier blanket instruction to wrap every native capability.
 
 This is a source and documentation audit, not installed acceptance testing. A documented feature and installed CLI help establish availability claims, not that a particular account, private frontend, plugin, permission scope, or OS workflow has been exercised successfully.
 
@@ -43,7 +43,7 @@ Installed versions observed: Claude Code `2.1.282`; Codex CLI `0.163.0-alpha.1`.
 
 ## Capability table: Agent, Agent Store and CLI
 
-Paths are repository-relative. `WRAP` means thin native wrapper for the overlapping behavior. `DELETE` means retire superseded implementation after caller migration. `KEEP` means a requirement remains outside established native equivalence; keep one shared implementation, or one Codex-only implementation where explicitly indicated. `CONDITIONAL` names evidence required before deletion. These are approved migration directions, not completed migration; conditional rows retain their proof requirements before deletion.
+Paths are repository-relative. `WRAP` means native delegation within a skill justified by an additional requirement, not a new skill merely to rename a built-in control. `DELETE` means retire superseded implementation after caller migration. `KEEP` means a requirement remains outside established native equivalence; keep one shared implementation, or one Codex-only implementation where explicitly indicated. `CONDITIONAL` names evidence required before deletion. These are approved migration directions, not completed migration; conditional rows retain their proof requirements before deletion.
 
 | ID / capability | Where it lives: repo, path, measured size | Claude native equivalent | Codex native equivalent | Decision |
 | --- | --- | --- | --- | --- |
@@ -64,7 +64,7 @@ Paths are repository-relative. `WRAP` means thin native wrapper for the overlapp
 | A15 lanes | agent `.agents/agent/policy/lanes/SKILL.md` 166, resolver 112, tables 141 JSON, prompt bodies 14 | Native model/effort/subagent selection | Native model/effort/subagent selection | KEEP house pricing/capability policy and one data mapping. WRAP native execution; no second dispatcher for native subagents. |
 | A16 Agent Store/inspect | agent `.agents/agent-store/runtime/{session_store,repository_identity,reader}.py` + `.agents/agent-store/utility/inspect/scripts/inspect.py`; 4/1,068 | Native sessions/history | Native daemon sessions/history | KEEP execution ownership/provider/branch/head/predecessor schema. Replace redundant host observations where possible. A native session list is not this application model. |
 | A17 session registration/lifecycle hooks | agent `.claude/hooks/agent.json`, `.codex/hooks/agent.json`; register/startup and peer identity runtime | N10 | N10 | KEEP minimal unmet house observations; delete a binding only with duplicate/caller proof. No current Machine duplicate registration found. Full event table below. |
-| A18 Codex memory utility | agent `.agents/codex/utility/memory/scripts/memory.py` 51; skill 21 | Native memory settings, different host | N9 | DELETE wrong JSON-setting implementation; replace with thin native-memory guidance/config control. Do not carry its default-true claim forward. |
+| A18 Codex memory utility | agent `.agents/codex/utility/memory/scripts/memory.py` 51; skill 21 | Native memory settings, different host | N9 | DELETE wrong JSON-setting implementation and the replacement memory wrapper, adapters and aliases. Use native memory controls directly; no added house capability is required. |
 | A19 Codex hook-control utility | agent `.agents/codex/utility/hooks/scripts/hook_control.py` 469; skill 37 | Native hook settings, A9 | Native `features.hooks`, O10 | WRAP native setting control; decide whether previous-value snapshot/guarded restore remains needed. This audit never disables hooks. |
 | A20 Agent shell history picker | agent `shell/cr.ps1` 1,102 + `shell/agents.ps1` 41 | N11 | N11 | DELETE superseded parsing/index/picker after mapping to native resume and CLI `cr`. One implementation if cross-host picker remains required. |
 | A21 folder picker | agent `shell/fuzzy.ps1` 103; cli `src/f.rs` 183 production | No established agent-native equivalent | No established agent-native equivalent | DELETE Agent duplicate after profile migration to existing CLI implementation; preserve required `fp` target explicitly. This is intra-suite duplication. |
@@ -157,7 +157,7 @@ Tommy approved the concrete groups below on October 27, 2026, subject to the sta
 | D2 Duplicate shell implementation | Remove Agent `cr.ps1` 1,102 + `agents.ps1` 41 + `fuzzy.ps1` 103 after profile/caller migration to native/CLI behavior. | 1,246 lines of superseded implementation; compare supported filters/picker/`fp` behavior first. Preserve one chosen CLI implementation where native behavior is insufficient. |
 | D3 Legacy Agent close | Retire peer `close.py` + `finish_reaper.py`, 230 lines, after entry-point/caller confirmation. | Do not delete shared `session_close.py`, live watcher or detached-launch helpers merely by proximity. Never execute closure in this task. |
 | D4 Terminal API duplicate | Consolidate Agent 666-line close-tab/UIA family into one CLI-owned terminal capability if focus/inventory callers can use it. | Unresolved focus/inventory contract prevents immediate deletion. No second replacement engine. |
-| D5 Wrong Codex memory setting | Delete 51-line JSON writer; native-memory thin wrapper uses O9 semantics. | No writing settings in this audit. Fresh effective-config verification required later. |
+| D5 Wrong Codex memory setting | Delete 51-line JSON writer and the redundant house memory skill; use native controls directly. | No memory setting is changed by this removal. Remove both host entries and all generated/package references; retain no alias. |
 | D6 Native goal and scheduling | Replace generic goal continuation on both hosts with N4; replace Claude external scheduling with N5. | 927-line scheduler/adapter boundary is conditional. Retain Codex-only durable CLI scheduling only if that unsupported-native-interface requirement is still required. Separate 655-line owner runtime before deleting. |
 | D7 Duplicate convenience selection | Consolidate Core `worktree`, `commit-push`, `pull-main`, `sync`, `sync-all`: five skills/245 canonical lines plus host entries. | Preserve useful staging/ownership/verification rules in their existing owners. This removes duplicate selectors, not native Git safety policy. |
 | D8 Native plugin management | Reduce refresh/install/selection transport to N8, leaving explicit house roster/projection/trust policy with one owner. | No wholesale removal of 4,376-line refresh cluster; many callers share it. Installer/profile-role code requires native discovery proof. |
@@ -205,9 +205,9 @@ Suggested repo sequence after approval, one PR per affected repo: Agent/CLI call
 
 Before authoring skill consolidation/rename, re-enter Template's resolved authoring brief and the host-native creator; before runtime edits, load the owning Engineering lifecycle and target repository instructions. The current audit loaded `template:new-skill` and `engineering:skill-authoring` to assess the proposal, but did not author a skill. Per-repo standards selection and precise code snippets remain owner-slice work after approval; this inventory does not invent those details.
 
-PRs must include Why and What, use the host's own attribution, contain no new code comments, and carry required generated changes according to that repository. Core's generated payload exclusion differs from Template-layout publishers; do not use one blanket staging rule. No implementation PR exists yet.
+PRs must include Why and What, use the host's own attribution, contain no new code comments, and carry required generated changes according to that repository. Core's generated payload exclusion differs from Template-layout publishers; do not use one blanket staging rule. The progress ledger links the actual implementation PRs and current validation evidence.
 
-Acceptance: one intent/name on both hosts; native-backed host has no reimplementation/runtime behind its wrapper; custom unmet behavior has one owner and ships only where needed; all known callers and installed registrations migrate; excluded work remains untouched; generator checks and target suites pass; fresh Claude/Codex discovery and Windows/Linux supported entry points are exercised. A limited host/platform acceptance must be reported with its resolver, never called passed.
+Acceptance: every retained skill has a concrete additional requirement and one canonical intent across hosts; sufficient native controls need no house skill; native-backed host has no redundant implementation/runtime behind a justified wrapper; custom unmet behavior has one owner and ships only where needed; all known callers and installed registrations migrate; excluded work remains untouched; generator checks and target suites pass; fresh Claude/Codex discovery and Windows/Linux supported entry points are exercised. A limited host/platform acceptance must be reported with its resolver, never called passed.
 
 ## Verification and delivery state
 
@@ -222,7 +222,7 @@ No runtime code changed, so runtime suites were not run for the inventory. No ge
   "hosts": [
     {
       "host": "claude",
-      "behavior": "native wrappers for verified host capabilities; one custom implementation only for additional unmet behavior",
+      "behavior": "direct native capabilities unless an additional workflow or policy justifies a skill; one custom implementation only for unmet behavior",
       "source": ".claude/hooks/agent.json",
       "mapping": "Agent and owner-specific host adapters and payload inclusion reviewed by capability in this inventory",
       "verification": {
@@ -233,7 +233,7 @@ No runtime code changed, so runtime suites were not run for the inventory. No ge
     },
     {
       "host": "codex",
-      "behavior": "native wrappers for verified host capabilities; custom host-specific exceptions require demonstrated native interface gaps",
+      "behavior": "direct native capabilities unless an additional workflow or policy justifies a skill; custom host-specific exceptions require demonstrated native interface gaps",
       "source": ".codex/hooks/agent.json",
       "mapping": "Agent and owner-specific host adapters and payload inclusion reviewed by capability in this inventory",
       "verification": {

@@ -14,14 +14,14 @@ Initial base: `d3a4d8699877c5a84f42587e6a3d1a4a0860f48b`.
 
 ## Current state
 
-Tommy approved D1-D11 within the inventory's conditions. Both hosts were assessed independently; one canonical capability uses separate native host entries, with custom runtime retained only for a demonstrated gap. The frozen inventory covers all 20 repositories and 286 authored skills. Its historical sizes and SHAs remain an audit snapshot rather than a claim about the changed branches.
+Tommy approved D1-D11 within the inventory's conditions. Both hosts were assessed independently. Tommy subsequently clarified that a common skill name alone is not useful: sufficient native controls are used directly, and retained skills require concrete added workflow, policy or missing-host behavior. The frozen inventory covers all 20 repositories and 286 authored skills. Its historical sizes and SHAs remain an audit snapshot rather than a claim about the changed branches.
 
-Four source cutovers are published as open, ready PRs. All implementation writer leases are released; parent owns acceptance and the remaining validation. Protected routing and permission work remains untouched. Agent #24 landed D2's 1,246-line duplicate shell removal during the audit, before this task's Agent source commit.
+Four source cutovers are published as open PRs. Agent is ready after fresh review and exact-head CI. Core and this Docs checkpoint remain draft while final validation completes; Personal and Infonetica remain ready at their unchanged heads. All implementation writer leases are released; parent owns acceptance and the remaining validation. Protected routing and permission work remains untouched. Agent #24 landed D2's 1,246-line duplicate shell removal during the audit, before this task's Agent source commit.
 
 | Owner | PR and frozen head | Source change | Current evidence |
 | --- | --- | --- | --- |
-| Agent | https://github.com/tj-agents/agent/pull/26; `60da803c1dc8e5fe192f494b86fa9c8d1ffaa652` | Native message/peer/memory entries; verified-delivery helper moved to Codex runtime; wrong memory writer and retired close/reaper removed | Ready; native and independent reviews passed; CI `40544585189` genuinely passed Windows/Linux repository tests and host admission |
-| Core | https://github.com/tj-agents/core/pull/517; `bf287c19d3dcfb00abd6ed9bc314421d344ad38c` | Codex-only durable continuation runtime; Claude native continuation; five selectors removed; security capability guidance corrected | Ready; source reviews passed; generated-digest guard fixed; full run `40549311958` genuinely passed Windows/Linux source/package, shared runtime and native startup/discovery suites |
+| Agent | https://github.com/tj-agents/agent/pull/26; `446230fdfa37014d846da2f08eb3c749025643b0` | Native message/peer entries with additional requirements; verified-delivery helper in Codex runtime; wrong memory writer, redundant memory wrapper and retired close/reaper removed | Ready correction; generator Check (277), absence scan and native-boundary test pass; native/independent incremental reviews and exact-head CI `40557806980` pass, including genuine Windows/Linux repository tests and host admission |
+| Core | https://github.com/tj-agents/core/pull/517; `c631774393aebead04de6998d3c0e02445ab0e1e` | Codex-only durable continuation runtime; Claude native continuation; five selectors removed; security guidance corrected; authoring rule requires real wrapper value | Draft correction; generator Check (446), guidance examples, generated-path guard and native/independent reviews pass; full CI `40557817874` passed Linux while Windows shared runtime tests remain active |
 | Personal | https://github.com/tj-agents/personal/pull/41; `9505b84ea0ed8108b09d219a4642fac775a307d8` | Remove duplicate SessionStart policy emitter; preserve native instruction projection and PreToolUse clean-cut | Ready; native and independent reviews passed; CI `40547934870` genuinely passed Windows/Linux tests and host admission |
 | Infonetica | https://github.com/tj-agents/infonetica/pull/31; `4c9cb97d02df5f360b7bdb8e58c661bd17d13219` | Replace 189-line shell engine with 44-line company policy wrapper around selected worktree owner | Ready; native direct and independent reviews passed; 56 local tests passed with one relative-Core-path skip; absolute Core payload check passed; hosted CI manual under repository policy |
 
@@ -34,6 +34,24 @@ Core slice: `plans/native-wrappers/GOAL.md` in Core #517 above. The 46-test adap
 Personal: native adoption write/check, generator Check (129 outputs), guidance, exact AGENTS/CLAUDE pairing, unchanged PreToolUse assertions, emitter caller scan and focused modules passed. No new runtime remains in this instruction delivery path. Infonetica has no generator; its shared native manifests and work-scope instructions remain unchanged. No personal profile was injected into employer source.
 
 Local full-suite limits were observed and retained: Agent 949 tests (22 failures, one error, 25 skips); Core repository 431 (four failures, 61 errors, 14 skips) and hooks 620 (three failures, 170 errors, seven skips); Personal 123 (27 errors, three skips). A deterministic Windows `mock.patch.dict` probe loses an empty inherited Git configuration value and turns Git success into Git128. The Agent Store failures reproduce on unchanged source. Core's stale skill-count assertion was corrected; all ten unchanged pre-tool tests and the unchanged timeout test passed in isolation. No credential controls, hook gates or test isolation behavior were changed to manufacture a pass. Exact-head remote platform evidence is recorded separately above.
+
+## Wrapper value audit after Tommy's correction
+
+`engineering:skill-authoring` in Core #517 owns the general existence rule. Agent #26 removes both `agent:memory` and the old `codex:memory`, including adapters, generated entries and aliases. Memory controls are native; no new memory implementation or setting change is introduced.
+
+| Retained skill | Concrete requirement beyond native command spelling |
+| --- | --- |
+| Message | Authorized exact recipient/profile/responsibility, uncertain-send reconciliation and optional Codex recipient-history proof |
+| Peer | Registered cross-host inventory and exact physical-terminal/process identity |
+| Listen | One existing watcher and callback identity, compact completion delivery, resume the owning workflow without repeated model polling |
+| Plugins / refresh | House dependency/selection policy, publisher-head and trust/readiness checks, same-session convergence |
+| Search / recent | Offline selected-profile history, tool-call worktree attribution, activity ordering and exact resume command enrichment |
+| Open / recover | Cross-host resolution, live-tab focus, interrupted execution ownership and duplicate-writer prevention |
+| Review | Frozen candidate, independent assessment and delivery evidence around native reviewers |
+| Persistent workflow | Exact delivery/acceptance authority and observed wakes; Codex-only durable CLI transport where required |
+| Infonetica worktree | Employer checkout layout, branch policy and exact cleanup evidence around the shared lifecycle |
+
+The separate `recent` entry has a narrower requirement than search and native pickers; its custom history attribution remains used by Engineering recents. It is not retained merely for the name. Personal's removed instruction emitter and Core's five deleted selectors remain deleted.
 
 ## Retained requirements and boundaries
 
@@ -53,7 +71,7 @@ All sessions remain open. No close was armed or executed. Authentication/trust c
 ## Next Steps
 
 Scope: whole plan, including approved source PR delivery and all conditional parity/protected-work/installed acceptance gates. The full plan remains incomplete while those required gates remain unresolved.
-Current slice: source reviews and genuine platform validation are complete; Docs #29 publishes the inventory/checkpoint. PR delivery is the requested source milestone, and the deployment conditions below remain explicit.
+Current slice: finish reviews and exact-head validation for the memory-wrapper removal and authoring-rule correction, then restore Agent #26, Core #517 and Docs #29 to ready. PR delivery is the requested source milestone; deployment conditions below remain explicit.
 Remaining scope: reconcile exact existing Claude external registrations before deployment; fresh installed native behavior on supported surfaces; D4 only after its caller/API and protected-owner condition is satisfied; conditional role/context/loader removals only after equivalent proof.
 Done when: source cutovers and requested PRs are delivered, every retained custom requirement has its explicit rationale, and any claimed installed migration has its actual acceptance evidence. Sessions remain open.
 
