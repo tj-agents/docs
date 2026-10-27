@@ -1,12 +1,12 @@
 # Native host duplication inventory
 
-Audit date: October 27, 2026. Status: inventory and proposal; substantial deletion awaits Tommy's approval.
+Audit date: October 27, 2026. Status: migration approved by Tommy on October 27, 2026; conditional parity checks remain required before the affected removals.
 
 ## Outcome and authority
 
 Remove implementations of behavior the host already provides. Keep one capability name and intent across Claude and Codex. A host with a native implementation receives a thin instruction wrapper; an unmet requirement receives one custom implementation, packaged only for the hosts that need it. Generated distribution copies are not independently authored implementations.
 
-Authority is Tommy's instruction to follow `handoff-native-duplicates.md` from the Agent checkout. That handoff explicitly requires presenting the inventory and proposed deletions before substantial removal. It also says never to close this or any other session. This document is that approval artifact. No runtime implementation, installation, hook changes, publication, or deletion has occurred.
+Authority is Tommy's instruction to follow `handoff-native-duplicates.md` from the Agent checkout. That handoff explicitly requires presenting the inventory and proposed deletions before substantial removal. It also says never to close this or any other session. This document is the canonical approved inventory. At the initial checkpoint, no runtime implementation, installation, hook changes, publication or deletion had occurred. Tommy subsequently confirmed the single-wrapper/native-first model and approved D1-D11 within their recorded conditions. His follow-up requires checking both hosts and keeping each host's custom behavior in its separate runtime/adapter so neither host receives an unusable wrapper.
 
 This is a source and documentation audit, not installed acceptance testing. A documented feature and installed CLI help establish availability claims, not that a particular account, private frontend, plugin, permission scope, or OS workflow has been exercised successfully.
 
@@ -42,7 +42,7 @@ Installed versions observed: Claude Code `2.1.282`; Codex CLI `0.163.0-alpha.1`.
 
 ## Capability table: Agent, Agent Store and CLI
 
-Paths are repository-relative. `WRAP` means thin native wrapper for the overlapping behavior. `DELETE` means retire superseded implementation after caller migration. `KEEP` means a requirement remains outside established native equivalence; keep one shared implementation, or one Codex-only implementation where explicitly indicated. `CONDITIONAL` names evidence required before deletion. These are proposals, not approval or completed migration.
+Paths are repository-relative. `WRAP` means thin native wrapper for the overlapping behavior. `DELETE` means retire superseded implementation after caller migration. `KEEP` means a requirement remains outside established native equivalence; keep one shared implementation, or one Codex-only implementation where explicitly indicated. `CONDITIONAL` names evidence required before deletion. These are approved migration directions, not completed migration; conditional rows retain their proof requirements before deletion.
 
 | ID / capability | Where it lives: repo, path, measured size | Claude native equivalent | Codex native equivalent | Decision |
 | --- | --- | --- | --- | --- |
@@ -144,7 +144,7 @@ The handoff's claim that current Core Machine and Agent both register `session_s
 
 ## Proposed removals and packaging boundaries
 
-Approval requested for the concrete groups below. Numbers are measured source boundaries, not a promised final diff. Caller migration, both host entries, manifests, payload inclusion, permissions, tests and installed bindings belong to the same cutover.
+Tommy approved the concrete groups below on October 27, 2026, subject to the stated conditions. Numbers are measured source boundaries, not a promised final diff. Caller migration, both host entries, manifests, payload inclusion, permissions, tests and installed bindings belong to the same cutover.
 
 | Group | Proposed change after approval | Evidence / stop condition |
 | --- | --- | --- |
@@ -193,7 +193,7 @@ Coordination so far is read-only reconciliation, not a sent message or an agreem
 
 The initial solution assessment is complete for this inventory: use current native host mechanisms wherever equivalence is established; reuse existing CLI capabilities for remaining OS behavior; keep one minimal shared policy/data implementation for additional house requirements. A fork, third-party scheduler, new generic dispatcher or second marketplace manager is unnecessary. Native claims were checked against primary docs and installed help. Additional behavior and interface limitations are explicit, not treated as native absence proven by a search.
 
-Authority: inventory/read-only audit and reviewable documentation are authorized. Substantial deletion is not authorized until Tommy approves the table/groups. Verdict: ready for that decision, not implementation-ready for every conditional group. L3 investigation is complete; specified approved removals can use L4/L5, with fresh L3 judgment only for the named unresolved parity contracts. No model switch is claimed by naming a lane.
+Authority: implement D1-D11 repo by repo, with one PR per affected repository and the existing parity/caller conditions. The inventory approval gate is satisfied. Conditional groups are not automatically implementation-ready; resolve their named interfaces before removal. L3 investigation is complete; specified approved removals can use L4/L5, with fresh L3 judgment only for the named unresolved parity contracts. No model switch is claimed by naming a lane.
 
 
 Before authoring skill consolidation/rename, re-enter Template's resolved authoring brief and the host-native creator; before runtime edits, load the owning Engineering lifecycle and target repository instructions. The current audit loaded `template:new-skill` and `engineering:skill-authoring` to assess the proposal, but did not author a skill. Per-repo standards selection and precise code snippets remain owner-slice work after approval; this inventory does not invent those details.
@@ -268,6 +268,11 @@ All web sources below were opened on October 27, 2026. OpenAI's developer docume
 | L2 | `claude --version`, `--help`, `agents --help`, `plugin update --help`, `plugin marketplace --help` |
 | L3 | `codex features --help`; filtered `codex features list` for goals/hooks/memories/multi_agent/plugins |
 
-## Next action
+## Approved execution and next action
 
-Tommy approves, rejects or narrows D1-D11 using the conditional boundaries above. Then begin the first approved owner slice from a refreshed main, complete required review/validation and open one PR per affected repository. Keep every session open.
+Tommy confirmed the model and approved D1-D11 after the inventory checkpoint. This grants implementation and the requested per-repository PR delivery; no session closure is authorized. One canonical capability contract uses native host operations through separate host adapters. Custom behavior survives only for a demonstrated unmet requirement and remains in that host's runtime.
+
+Fresh Agent base: `438783a2ba1049f2afbecc16d62677cb4b8fd1ac`. Agent PR #24 already landed D2's 1,246-line shell removal at this head; reconcile its caller/tests evidence rather than repeat its deletion. Agent implementation checkout: `C:\Users\TommySeery\source\repos\tj-agents\agent.worktrees\Refactor-NativeWrappers`, branch `Refactor/NativeWrappers`.
+
+Protected-work reconciliation: Core #512 is now the actual routing-removal PR at `1268140a639b649632593f75b2c9ff0b26a4a5fe`; its audit-time subject/head above remains historical evidence. Do not touch its routing/context files. Agent #22 remains open at its recorded head. Re-read protected PRs before overlapping owner slices.
+
