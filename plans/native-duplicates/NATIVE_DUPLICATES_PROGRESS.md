@@ -2,7 +2,11 @@
 
 Date: October 27, 2026.
 Owner: current Codex session, started from `C:\Users\TommySeery\source\repos\tj-agents\agent` at Tommy's handoff instruction.
-Canonical proposal: `NATIVE_DUPLICATES_PLAN.md` beside this file.
+
+- Plan: plans/native-duplicates/NATIVE_DUPLICATES_PLAN.md
+- Roadmap: plans/native-duplicates/NATIVE_DUPLICATES_ROADMAP.md
+- Roadmap item: native-duplicates/migration
+
 Artifact checkout: `C:\Users\TommySeery\source\repos\tj-agents\docs.worktrees\Audit-NativeDuplicates-20261027`.
 Branch: `Docs/NativeDuplicates`.
 Base: `d3a4d8699877c5a84f42587e6a3d1a4a0860f48b` from fetched `origin/main`.
@@ -18,12 +22,18 @@ The assessment is complete for the proposed native-reuse strategy. D1-D11 are pr
 
 ## Validation
 
-Passed: installed Workflow host-coverage validator (`valid: true`, exactly one record); catalogue reconciliation (20 frozen repositories, 286 unique authored skills, all source paths and table IDs, exact full SHAs); unchanged status in all 19 source audit worktrees; paired AGENTS.md/CLAUDE.md checks in the docs artifact repository; balanced Markdown fences. The artifact is checkpointed by the commit carrying this ledger. Runtime suites are not applicable to this source-only inventory; future code changes must run their owning checks. No close script has been armed or run, and no peer/session has been closed.
+Passed: installed Workflow host-coverage validator (`valid: true`, exactly one record); catalogue reconciliation (20 frozen repositories, 286 unique authored skills, all source paths and table IDs, exact full SHAs); unchanged status in all 19 source audit worktrees; paired AGENTS.md/CLAUDE.md checks in the docs artifact repository; balanced Markdown fences. The plan-graph check initially found missing ledger linkage/scope fields; those are corrected in this commit and the check passes with zero errors or warnings. The artifact is checkpointed by the commit carrying this ledger. Runtime suites are not applicable to this source-only inventory; future code changes must run their owning checks. No close script has been armed or run, and no peer/session has been closed.
+
+## Reviews
+
+Canonical work order: `C:\Users\TommySeery\source\repos\tj-agents\docs\.git\agent-workflow\reviews\87eaca807a90e8afb564837d5ddfcad080ad71aa919e45545249caccf12c9281\work-order.md`.
+
+First pass at `d5164de53dd4c894db7ff85793904a7877b4af2d`: native reviewer found no defects; fresh accuracy review checked every catalog path and principal removal measurements. Parent retained ACC1 (ledger graph fields) and ACC2 (ambiguous source paths). Both are repaired in this commit. The canonical work order owns incremental verification and its exact watermark; source review is not runtime acceptance or implementation approval.
 
 ## Next Steps
 
-Paused: Tommy — approve, reject or narrow D1-D11 in the canonical inventory; implementation resumes only for the agreed groups, after refreshing origin/main and reconciling the named protected PRs.
-Scope: remove verified native-host duplicates across tj-agents using one standardized capability intent on both hosts.
+Paused: Tommy - approve, reject or narrow D1-D11 in the canonical inventory; implementation resumes only for the agreed groups, after refreshing origin/main and reconciling the named protected PRs.
+Scope: current slice only; full plan remains incomplete. The handoff requires Tommy's inventory approval before substantial deletion.
 Current slice: verified inventory and concrete deletion proposal for approval.
 Remaining scope: approved implementation repo by repo, caller and package migration, native acceptance, tests, review and one PR per affected repository.
 Done when: approved duplicate implementations are removed, remaining custom behavior is justified and packaged only where needed, all delivery/acceptance evidence is complete, and sessions remain open as instructed.
