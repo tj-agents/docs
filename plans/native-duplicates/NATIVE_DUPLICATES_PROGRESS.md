@@ -10,15 +10,17 @@ Owner: current Codex session, started from `C:\Users\TommySeery\source\repos\tj-
 Artifact checkout: `C:\Users\TommySeery\source\repos\tj-agents\docs.worktrees\Audit-NativeDuplicates-20261027`.
 Branch: `Docs/NativeDuplicates`.
 Base: `d3a4d8699877c5a84f42587e6a3d1a4a0860f48b` from fetched `origin/main`.
-PR: not opened; the handoff requires inventory approval before implementation.
+PR: no new migration PR yet; inventory approval is now satisfied. Agent #24 already landed D2 during the audit.
 
 ## Current state
 
 All 20 repositories have fresh audit worktrees and frozen source evidence. Three read-only delegated source audits completed. The parent verified primary native documentation and installed CLI help. Tables cover every named handoff capability, additional shell/runtime duplicates, all 62 Core skills, all other publisher capability families and every discovered authored behavior-hook family. The CSV provides the individual authored-skill roster.
 
-The handoff's Machine duplicate-hook claim is stale on current Core main. Core#512 is a tier-gate scan fix; the other protected PRs remain route/auth work. All seven were OPEN when read. No protected branch, source runtime, host settings, hooks, marketplace installation or session lifecycle was changed.
+At the initial inventory checkpoint, the handoff's Machine duplicate-hook claim was stale and Core #512 had a tier-gate-scan scope. Protected PRs were open; their source remained untouched. The later reconciliation below supersedes that historical Core head/scope.
 
-The assessment is complete for the proposed native-reuse strategy. D1-D11 are proposals. Conditional parity cases are not implementation-ready. No new runtime PR, installed acceptance result or test pass is claimed.
+Tommy confirmed the native-first single-wrapper model and approved D1-D11 within their conditions. His latest steering requires independent native checks on both hosts and separate host runtime/adapter implementation. Conditional parity cases remain design/acceptance gates.
+
+Active Agent slice: `C:\Users\TommySeery\source\repos\tj-agents\agent.worktrees\Refactor-NativeWrappers`, branch `Refactor/NativeWrappers`, fresh base `438783a2ba1049f2afbecc16d62677cb4b8fd1ac`. Agent PR #24 already landed D2. Core #512 now owns full routing removal at `1268140a639b649632593f75b2c9ff0b26a4a5fe`; preserve it. Agent #22 remains protected. Read-only investigators own bounded Core, Personal/Infonetica and native-message parity evidence; parent owns all design and writes. No new runtime PR or installed acceptance result is claimed.
 
 ## Validation
 
@@ -32,8 +34,11 @@ First pass at `d5164de53dd4c894db7ff85793904a7877b4af2d`: native reviewer found 
 
 ## Next Steps
 
-Paused: Tommy - approve, reject or narrow D1-D11 in the canonical inventory; implementation resumes only for the agreed groups, after refreshing origin/main and reconciling the named protected PRs.
-Scope: current slice only; full plan remains incomplete. The handoff requires Tommy's inventory approval before substantial deletion.
-Current slice: verified inventory and concrete deletion proposal for approval.
-Remaining scope: approved implementation repo by repo, caller and package migration, native acceptance, tests, review and one PR per affected repository.
+Scope: whole plan through all approved D1-D11 owner slices and requested per-repository PR delivery; conditional parity and protected-work gates remain.
+Current slice: finish precise Agent/CLI native-wrapper design, then implement from fresh Agent base while preserving other owners.
+Remaining scope: Agent/CLI, Core, Personal, Infonetica and any proved Template/context cutovers; caller/package migration, native acceptance, tests, review and one PR per affected repository. D2 is already landed through Agent #24.
 Done when: approved duplicate implementations are removed, remaining custom behavior is justified and packaged only where needed, all delivery/acceptance evidence is complete, and sessions remain open as instructed.
+
+## Agent implementation checkpoint
+
+The Agent owner slice is maintained at `C:/Users/TommySeery/source/repos/tj-agents/agent.worktrees/Refactor-NativeWrappers/plans/native-wrappers/NATIVE_WRAPPERS_PLAN.md`. Native message/peer/memory adapters are implemented, the verified message helper is isolated in Codex runtime, the incorrect memory writer and retired close/reaper path are removed. Targeted tests (42) and generation/check passed; full Agent suite and frozen review are pending. D4 terminal extraction must preserve live startup/recovery callers and exact identity guarantees before deleting OS adapters. Agent #22 now reads `03aa0472bf38959960d6787cb3d424d6544a7e8d`. No session has been closed.
