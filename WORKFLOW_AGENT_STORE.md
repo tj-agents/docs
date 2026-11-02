@@ -24,7 +24,8 @@ registration alone does not prove progress through a delayed decision and termin
 | Machine | Native observation and host operations | Observes processes, attaches sessions, launches, reopens and operates terminals; it does not reinterpret recorded state as a lifecycle decision. |
 | Workflow | Generic lifecycle | Owns the single whole-goal owner and the public plan, run, resume, status and handoff subjects. |
 | Engineering | Technical operations | Supplies bounded software design, implementation, diagnosis, testing, review and delivery evidence to Workflow. |
-| Personal | GitHub profile operations | Retains Personal's GitHub records, identity checks, factual updates and closure policy. |
+| GitHub | Reusable GitHub work-item operations | Owns managed issue content, identity checks, request reconciliation and verified issue/board mutations. |
+| Personal | Personal-project work policy | Owns automatic recording and progress maintenance for explicitly adopted source projects. |
 | Infonetica | Azure profile operations | Retains Infonetica's Azure records, native-type policy, identity checks and company delivery gates. |
 
 Workflow has one generic lifecycle owner. `workflow:run` can execute with or without a plan, retains the
@@ -64,11 +65,19 @@ same package-relative path in each consuming payload. A consuming package loads 
 never a sibling plugin cache or author checkout. This keeps payloads self-contained while Agent Store
 remains the API and runtime source owner; it does not introduce a resolver service or a second registry.
 
-Personal and Infonetica are distinct profiles, not lifecycle owners. Personal retains GitHub-specific
-record operations. Infonetica retains Azure-specific native type handling and company delivery controls.
-Profile producer dependencies and repository ownership never establish profile adoption. A reconciled
-profile item enters Workflow with the same canonical identity and its existing mapped Engineering technical
-operation; Workflow reuses or acquires the sole goal owner, and Engineering returns technical evidence.
+Personal and Infonetica are distinct profiles, not lifecycle owners. Personal selects the shared GitHub
+work-item operations and supplies automatic recording and board-progress policy. Infonetica retains
+Azure-specific native type handling and company delivery controls. Profile producer dependencies and
+repository ownership never establish profile adoption. A reconciled item enters Workflow with the same
+canonical identity and mapped Engineering operation; Workflow reuses or acquires its sole goal owner.
+
+The affected source project chooses the policy and provider, independently of where a problem was
+observed. Workflow resolves that source's primary checkout and imports only its bounded recording policy
+alongside the selected operation. A personal project's own defect stays with that project. A reusable
+tj-agents tooling defect demonstrated during employer work uses its authorized source's routine and
+sanitized source evidence; the employer task retains its policy, goal and owner. Template self-repair
+owns eligible source repair follow-through. GitHub verifies factual updates and both board entries;
+board status alone establishes neither ownership nor acceptance.
 
 ## Gates and caller acceptance
 
