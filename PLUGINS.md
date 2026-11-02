@@ -53,3 +53,17 @@ exports where its generic hooks require them, without retaining another authored
 This is the approved target architecture. Publication, plugin activation and fresh Windows/Linux
 native-host acceptance remain the migration owner's delivery obligations; this document does not
 claim that pending packages are already installed.
+
+## Work-item capability and source policy
+
+GitHub publishes the neutral `github:work-item`, `github:create-work-item` and
+`github:address-work-item` operations. Personal depends on that capability and owns the automatic
+recording and progress policy for explicitly adopted personal source projects. Agent's ordinary
+selection includes GitHub without selecting Personal. Installing a provider grants no recording or
+implementation authority.
+
+Workflow resolves the affected source project's policy and provider from its primary checkout. It can
+import the installed Personal package's bounded work-item policy for that source while Personal remains
+disabled for an unrelated observing project. This does not load Personal's other standards or change the
+observer's scope. Template owns the eligible tj-agents source repair decision; employer evidence stays
+within its authorized context. See [Workflow and Agent Store boundaries](WORKFLOW_AGENT_STORE.md).
