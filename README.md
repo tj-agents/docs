@@ -18,8 +18,12 @@ and operational details. Follow [AGENTS.md](AGENTS.md) when changing documentati
 | This repository | Current architecture, cross-repository responsibilities and shared terminology |
 | [core](https://github.com/tj-agents/core) | Common agent behavior, engineering process and workflow |
 | [agent](https://github.com/tj-agents/agent) | Agent sessions, coordination, history, plugin selection and refresh |
+| [agent-store](https://github.com/tj-agents/agent-store) | The link store between tracker work items and agent sessions |
+| [work-items](https://github.com/tj-agents/work-items) | The tracker interface and its GitHub/Azure DevOps adapters |
 | [cli](https://github.com/tj-agents/cli) | Deterministic terminal, process and explicit worktree utilities |
+| [github](https://github.com/tj-agents/github) | General GitHub access and collaboration utilities |
 | [template](https://github.com/tj-agents/template) | Scaffolding, generators and templates |
+| Profile repositories such as [personal](https://github.com/tj-agents/personal), [work](https://github.com/tj-agents/work) and [infonetica](https://github.com/tj-agents/infonetica) | Which tracker and policy apply where a project selects that profile |
 | Stack repositories such as [dotnet](https://github.com/tj-agents/dotnet), [react](https://github.com/tj-agents/react), [cpp](https://github.com/tj-agents/cpp) and [rust](https://github.com/tj-agents/rust) | Stack standards, package contracts and releases |
 | Employer and product repositories | Their conventions, product decisions, private evidence and implementation details |
 
