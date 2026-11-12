@@ -17,6 +17,64 @@ plugin identity; directory placement under `tj-agents` does not change its publi
 availability, project selection, installation, trust, and effective skill loading are distinct
 checks. A project declaration alone does not prove the host loaded a plugin.
 
+## Configuration scope
+
+| Scope | Authority | What belongs there |
+| --- | --- | --- |
+| Common organization rules | Base's shipped `tier.json` context | Rules that apply across repositories, including configuration ownership and target repository resolution |
+| Repository selection | `.agents/plugins.json`, expanded from Marketplace | The repository's complete selected plugin composition |
+| Repository configuration | `.agents/settings.json` | Explicit repository choices, including Personal's separate bot-identity opt-in |
+| Machine-local bindings | Native local host settings and owned local state | Resolved executable/cache paths, local permission grants and credential bindings |
+
+Global scope does not mean that every installed profile applies everywhere. Common rules can load
+globally; Work, employer, Personal and stack behavior follow the target repository's selection and
+applicability. Resolve the repository containing the actual file or operation, including linked
+worktrees and nested repositories. A startup directory, GitHub owner or another session's scope is
+not a substitute for that repository's declarations.
+
+Keep authored repository declarations portable across Windows, Linux and different usernames.
+Resolve local paths when preparing a host and keep those values in locally owned, Git-excluded
+settings. Agent preparation grants permissions from the verified selected payloads and removes its
+own obsolete grants when selection changes. It preserves unrelated local settings. Cached payloads
+alone cannot grant permissions or establish repository adoption.
+
+Base's common context loads through the existing SessionStart hook. Repository preparation also
+projects selected `always` contexts from their canonical declarations into the managed `AGENTS.md`
+standards block. Claude imports that file through `CLAUDE.md`; Codex reads the repository's native
+instruction file. Conditional contexts remain runtime decisions. A shared document online or a
+skill listed in a menu does not establish that either host loaded the rule.
+
+Protected global host configuration, shell profiles, persistent environment and global Git writes
+belong in the owning repository's root `install.ps1`. A packaged installer is a declared,
+byte-identical copy of that file. Python can discover, render and verify changes; the protected
+mutation remains in that installer, including native commands or APIs that write global settings.
+Common tooling installation uses this boundary without enabling repository profiles globally.
+
+## Profile composition and credentials
+
+review-drafting behavior. The `tj-agents/company` source repository and its worktrees are work
+scope even though their GitHub owner is `tj-agents`.
+
+Personal requires explicit repository adoption. Neither the repository owner, a home-directory
+location nor permission to commit agent configuration selects it. Personal selection also does not
+enable bot credentials by itself: the same repository must opt in separately:
+
+```json
+{
+  "configuration": {
+    "personal": {
+      "bot_identity": true
+    }
+  }
+}
+```
+
+This setting belongs in `.agents/settings.json`; it contains no token or machine path.
+Repositories without both selections use their existing native human Git and GitHub CLI identity.
+An opt-in for one repository does not cover another repository with the same owner. Existing global
+credential helpers and unrelated authentication settings are not evidence of agent ownership and
+must not be rewritten as part of repository preparation.
+
 ## Plugins change
 
 1. Edit only Marketplace's `plugins.json` for plugin names, sources, and dependencies; regenerate
@@ -28,7 +86,7 @@ checks. A project declaration alone does not prove the host loaded a plugin.
    Publish the Marketplace change before the Agent snapshot update that refers to it.
 
 Do not create a second authored plugin registry in a producer repository. Agent consumes the same
-Marketplace plugin roster; Core owns the reproducible machine setup and sync entry points that install it.
+Marketplace plugin roster; Agent owns its host installation and refresh entry points.
 
 ## Skill ownership
 
@@ -36,7 +94,7 @@ The approved ownership decision of 2026-10-25 separates three reusable source re
 
 | Source | Published namespaces | Responsibility |
 | --- | --- | --- |
-| [Core](https://github.com/tj-agents/core) | `base`, `workflow`, `engineering`, `machine` | Common behavior, workflow and engineering policy, machine setup and OS utilities |
+| [Core](https://github.com/tj-agents/core) | `base`, `workflow`, `engineering`, `docs` | Common behavior, workflow, engineering policy and documentation standards |
 | [Agent](https://github.com/tj-agents/agent) | `agent`, `agent-store`, `codex` | Agent sessions, coordination, history, selection and refresh; persisted identities; Codex hooks and memory configuration |
 | [CLI](https://github.com/tj-agents/cli) | `cli` | Deterministic terminal, process and explicit linked-worktree operations, alongside the existing CLI application |
 
@@ -46,10 +104,9 @@ Agent resolves conversation and session meaning, then delegates explicit process
 `cli:close` preserves the checkout; `cli:closeout` additionally removes its separately eligible linked
 worktree. Neither operation infers agent completion or sweeps other worktrees.
 
-The dependency graph stays acyclic: CLI consumes Base; Agent consumes Base, Agent Store, Machine and
+The dependency graph stays acyclic: CLI consumes Base; Agent consumes Base, Agent Store and
 CLI; Workflow and Engineering consume Agent capabilities. Core embeds declared, receipted runtime
 exports where its generic hooks require them, without retaining another authored implementation.
 
-This is the approved target architecture. Publication, plugin activation and fresh Windows/Linux
-native-host acceptance remain the migration owner's delivery obligations; this document does not
-claim that pending packages are already installed.
+Marketplace records the published source revisions. Publication, plugin activation and effective
+loading remain separate checks, including fresh native sessions on Windows and Linux.
