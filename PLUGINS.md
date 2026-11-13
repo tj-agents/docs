@@ -30,6 +30,7 @@ source names a specific profile.
 
 ```json
 { "name": "work", "repository": "work", "revision": "...", "profile": "generic" },
+{ "name": "example-employer", "repository": "example-employer", "revision": "...", "profile": "specific", "extends": "work" }
 ```
 
 ## Plugins change
