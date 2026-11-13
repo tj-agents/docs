@@ -23,7 +23,7 @@ and operational details. Follow [AGENTS.md](AGENTS.md) when changing documentati
 | [cli](https://github.com/tj-agents/cli) | Deterministic terminal, process and explicit worktree utilities |
 | [github](https://github.com/tj-agents/github) | General GitHub access and collaboration utilities |
 | [template](https://github.com/tj-agents/template) | Scaffolding, generators and templates |
-| Profile repositories such as [personal](https://github.com/tj-agents/personal), [work](https://github.com/tj-agents/work) and [infonetica](https://github.com/tj-agents/infonetica) | Which tracker and policy apply where a project selects that profile |
+| Profile repositories such as [personal](https://github.com/tj-agents/personal) and [work](https://github.com/tj-agents/work), plus a specific profile such as an employer's (see [Generic and specific profiles](PLUGINS.md#generic-and-specific-profiles)) | Which tracker and policy apply where a project selects that profile |
 | Stack repositories such as [dotnet](https://github.com/tj-agents/dotnet), [react](https://github.com/tj-agents/react), [cpp](https://github.com/tj-agents/cpp) and [rust](https://github.com/tj-agents/rust) | Stack standards, package contracts and releases |
 | Employer and product repositories | Their conventions, product decisions, private evidence and implementation details |
 

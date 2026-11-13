@@ -25,7 +25,7 @@ registration alone does not prove progress through a delayed decision and termin
 | Workflow | Generic lifecycle | Owns the single whole-goal owner and the public plan, run, resume, status and handoff subjects. |
 | Engineering | Technical operations | Supplies bounded software design, implementation, diagnosis, testing, review and delivery evidence to Workflow. |
 | Personal | GitHub profile operations | Retains Personal's GitHub records, identity checks, factual updates and closure policy. |
-| Infonetica | Azure profile operations | Retains Infonetica's Azure records, native-type policy, identity checks and company delivery gates. |
+| A specific profile, such as an employer's (see [Generic and specific profiles](PLUGINS.md#generic-and-specific-profiles)) | That profile's tracker operations | Retains that profile's tracker records, native-type policy, identity checks and company delivery gates. |
 
 Workflow has one generic lifecycle owner. `workflow:run` can execute with or without a plan, retains the
 whole goal across phases and delegates bounded technical work where appropriate. Engineering operations
@@ -64,11 +64,12 @@ same package-relative path in each consuming payload. A consuming package loads 
 never a sibling plugin cache or author checkout. This keeps payloads self-contained while Agent Store
 remains the API and runtime source owner; it does not introduce a resolver service or a second registry.
 
-Personal and Infonetica are distinct profiles, not lifecycle owners. Personal retains GitHub-specific
-record operations. Infonetica retains Azure-specific native type handling and company delivery controls.
-Profile producer dependencies and repository ownership never establish profile adoption. A reconciled
-profile item enters Workflow with the same canonical identity and its existing mapped Engineering technical
-operation; Workflow reuses or acquires the sole goal owner, and Engineering returns technical evidence.
+Personal and a selected specific profile are distinct profiles, not lifecycle owners. Personal
+retains GitHub-specific record operations; a specific profile retains its own tracker's native
+type handling and company delivery controls. Profile producer dependencies and repository
+ownership never establish profile adoption. A reconciled profile item enters Workflow with the
+same canonical identity and its existing mapped Engineering technical operation; Workflow reuses
+or acquires the sole goal owner, and Engineering returns technical evidence.
 
 ## Gates and caller acceptance
 
@@ -80,10 +81,11 @@ Three gates remain separate:
 | Declaration | Plugin selection declarations express the required closure | A host has accepted, installed or activated that selection. |
 | Native activation | A fresh supported host resolves selected installed entry points | Source or declaration work was sufficient on another host. |
 
-Known callers must be accepted together: Core lifecycle callers and adapters, Marketplace plugin roster and
-project declarations, Personal GitHub guidance, Infonetica Azure guidance, and affected already-bound
-readers. Source generation, a passing test suite, a plugin entry, or a selection declaration alone is
-not that acceptance. Each caller needs its applicable source, declaration and native gate evidence.
+Known callers must be accepted together: Core lifecycle callers and adapters, Marketplace plugin
+roster and project declarations, Personal GitHub guidance, a selected specific profile's tracker
+guidance, and affected already-bound readers. Source generation, a passing test suite, a plugin
+entry, or a selection declaration alone is not that acceptance. Each caller needs its applicable
+source, declaration and native gate evidence.
 
 Publication follows the coordinated order recorded by Core: source stack, generated-package publication,
 then marketplace exposure. Installed Windows and Linux host acceptance remain explicit evidence gates.

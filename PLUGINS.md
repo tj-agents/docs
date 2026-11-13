@@ -17,6 +17,22 @@ plugin identity; directory placement under `tj-agents` does not change its publi
 availability, project selection, installation, trust, and effective skill loading are distinct
 checks. A project declaration alone does not prove the host loaded a plugin.
 
+## Generic and specific profiles
+
+A **generic** plugin is usable by anyone: stacks, tools, lifecycle plugins, and the `personal`
+and `work` profiles all name no organization, person, repository or user path. A **specific**
+profile layers on exactly one generic profile through `extends` and holds everything particular
+to its organization: tracker settings, context, standards, declarations and enrollment.
+
+Marketplace's `plugins.json` labels every catalog entry `"profile": "generic"`, or `"profile":
+"specific"` plus `"extends": "<generic profile>"`. Its CI rejects a generic plugin whose pinned
+source names a specific profile.
+
+```json
+{ "name": "work", "repository": "work", "revision": "...", "profile": "generic" },
+{ "name": "infonetica", "repository": "infonetica", "revision": "...", "profile": "specific", "extends": "work" }
+```
+
 ## Plugins change
 
 1. Edit only Marketplace's `plugins.json` for plugin names, sources, and dependencies; regenerate
