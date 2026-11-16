@@ -17,23 +17,31 @@ plugin identity; directory placement under `tj-agents` does not change its publi
 availability, project selection, installation, trust, and effective skill loading are distinct
 checks. A project declaration alone does not prove the host loaded a plugin.
 
-## Generic and specific profiles
+## Plugin kinds
 
-A **generic** plugin is usable by anyone: stacks, tools, lifecycle plugins, and the `personal`
-and `work` profiles all name no organization, person, repository or user path. A **specific**
-profile layers on exactly one generic profile through `extends` and holds everything particular
-to its organization: tracker settings, context, standards, declarations and enrollment.
+Marketplace's `plugins.json` declares exactly one `kind` for every catalog entry. The
+[Marketplace README](https://github.com/tj-agents/marketplace#plugin-kinds) owns the field
+reference and how to add each kind.
 
-Marketplace's `plugins.json` labels every catalog entry `"profile": "generic"`, or `"profile":
-"specific"` plus `"extends": "<generic profile>"`. `"generic_profile": true` marks the generic
-profiles themselves, `personal` and `work`; a repository selects exactly one, and Agent's selector
-refuses a selection that would contain two. A specific profile extends a generic profile and also
-requires it, so selecting the specific profile brings its generic profile. Marketplace CI rejects a
-generic plugin whose pinned source names a specific profile.
+| Kind | What it is | A repository selects |
+| --- | --- | --- |
+| `shared` | A capability any repository may use: stacks, tools and lifecycle plugins | Any number |
+| `profile` | How the repository is worked on: `personal` or `work` | Exactly one |
+| `organization` | One organization's layer on one profile: tracker settings, context, standards, declarations and enrollment | At most one, with its profile |
+
+An organization declares `"extends": "<profile>"` and lists that profile in `requires`, so
+selecting the organization brings its profile. Shared plugins and profiles are generic: they name
+no organization, person, repository or user path, and Marketplace CI rejects a generic plugin whose
+pinned source names an organization. An organization is specific.
+
+Agent's selector (`agent:plugins`, adoption and `tj install` reconciliation) enforces selection. It
+refuses more than one profile after `requires` expansion. It also refuses any profile other than the
+one an organization extends, such as `personal`, in a repository that organization's installed
+employer declaration matches by Git origin or names as its own source repository.
 
 ```json
-{ "name": "work", "repository": "work", "revision": "...", "profile": "generic", "generic_profile": true },
-{ "name": "example-employer", "repository": "example-employer", "revision": "...", "requires": ["work"], "profile": "specific", "extends": "work" }
+{ "name": "work", "repository": "work", "revision": "...", "requires": ["engineering", "teams"], "kind": "profile" },
+{ "name": "example-employer", "repository": "example-employer", "revision": "...", "requires": ["work"], "kind": "organization", "extends": "work" }
 ```
 
 ## Plugins change
