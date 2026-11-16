@@ -25,12 +25,15 @@ profile layers on exactly one generic profile through `extends` and holds everyt
 to its organization: tracker settings, context, standards, declarations and enrollment.
 
 Marketplace's `plugins.json` labels every catalog entry `"profile": "generic"`, or `"profile":
-"specific"` plus `"extends": "<generic profile>"`. Its CI rejects a generic plugin whose pinned
-source names a specific profile.
+"specific"` plus `"extends": "<generic profile>"`. `"generic_profile": true` marks the generic
+profiles themselves, `personal` and `work`; a repository selects exactly one, and Agent's selector
+refuses a selection that would contain two. A specific profile extends a generic profile and also
+requires it, so selecting the specific profile brings its generic profile. Marketplace CI rejects a
+generic plugin whose pinned source names a specific profile.
 
 ```json
-{ "name": "work", "repository": "work", "revision": "...", "profile": "generic" },
-{ "name": "example-employer", "repository": "example-employer", "revision": "...", "profile": "specific", "extends": "work" }
+{ "name": "work", "repository": "work", "revision": "...", "profile": "generic", "generic_profile": true },
+{ "name": "example-employer", "repository": "example-employer", "revision": "...", "requires": ["work"], "profile": "specific", "extends": "work" }
 ```
 
 ## Plugins change
