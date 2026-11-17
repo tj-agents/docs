@@ -17,6 +17,27 @@ plugin identity; directory placement under `tj-agents` does not change its publi
 availability, project selection, installation, trust, and effective skill loading are distinct
 checks. A project declaration alone does not prove the host loaded a plugin.
 
+## Standards loading and worktrees
+
+Agent prepares the current checkout's native plugin settings from its selection before a managed launch.
+A checkout's own `.agents/plugins.json` takes precedence. When it is absent in a linked worktree, readers
+use the primary checkout's selection through Git's worktree metadata. This includes selections kept out
+of version control in employer repositories. Invalid local selections remain errors; they do not silently
+inherit another selection. Settings generation writes to the current checkout, while reading an inherited
+selection leaves its primary copy unchanged. CLI owns the shared filesystem resolver; Agent's launch,
+adoption and permission generation and Core's context readers consume it.
+
+Skills load on demand from their descriptions on Claude and Codex. The agent selects the standards relevant
+to its task and reads their full bodies and needed references before editing. TJ skill entries point to
+their canonical definitions; a name in a catalogue or index alone is not a loaded standard. Agent's compact
+repository index and Core's SessionStart context provide routing, rather than injecting every stack's
+standards or requiring a fixed list of reads. Repository activation keeps unrelated plugins out of discovery.
+
+This loading path applies to every selected stack, including .NET, React, Azure, GitHub Actions and Python.
+It relies on the agent choosing and applying the relevant skills. Mechanical checks enforce the rules they
+can test, and review assesses the remaining judgments; reading a document alone proves neither. Core's
+separate host-memory, settings, state and worktree boundaries remain active.
+
 ## Plugin kinds
 
 Marketplace's `plugins.json` declares exactly one `kind` for every catalog entry. The
