@@ -19,13 +19,20 @@ checks. A project declaration alone does not prove the host loaded a plugin.
 
 ## Standards loading and worktrees
 
-Agent prepares the current checkout's native plugin settings from its selection before a managed launch.
+Agent checks the current checkout's native plugin settings and standards index before a managed launch.
 A checkout's own `.agents/plugins.json` takes precedence. When it is absent in a linked worktree, readers
 use the primary checkout's selection through Git's worktree metadata. This includes selections kept out
 of version control in employer repositories. Invalid local selections remain errors; they do not silently
-inherit another selection. Settings generation writes to the current checkout, while reading an inherited
-selection leaves its primary copy unchanged. CLI owns the shared filesystem resolver; Agent's launch,
+inherit another selection. Explicit adoption, installer reconciliation or `tj prepare --write` writes to
+the current checkout; startup and refresh report drift without rewriting repository instructions or
+configuration. Reading an inherited selection leaves its primary copy unchanged. CLI owns the shared filesystem resolver; Agent's launch,
 adoption and permission generation and Core's context readers consume it.
+
+Configuration scope is explicit when requested. Otherwise a Git project with a tracked selection uses
+project scope, and one without a tracked selection uses local scope; outside Git the default is project
+scope. Repository owner names do not select a profile or scope. Omitted permission preferences preserve
+the provider's native settings. Agent's [repository selection and permissions contract](https://github.com/tj-agents/agent#repository-selection)
+owns the commands and precedence rules.
 
 Skills load on demand from their descriptions on Claude and Codex. The agent selects the standards relevant
 to its task and reads their full bodies and needed references before editing. TJ skill entries point to
@@ -47,7 +54,7 @@ reference and how to add each kind.
 | Kind | What it is | A repository selects |
 | --- | --- | --- |
 | `shared` | A capability any repository may use: stacks, tools and lifecycle plugins | Any number |
-| `profile` | How the repository is worked on: `personal` or `work` | Exactly one |
+| `profile` | How the repository is worked on: `personal` or `work` | At most one; selected explicitly or required by an organization |
 | `organization` | One organization's layer on one profile: tracker settings, context, standards, declarations and enrollment | At most one, with its profile |
 
 An organization declares `"extends": "<profile>"` and lists that profile in `requires`, so
@@ -76,28 +83,25 @@ employer declaration matches by Git origin or names as its own source repository
    Publish the Marketplace change before the Agent snapshot update that refers to it.
 
 Do not create a second authored plugin registry in a producer repository. Agent consumes the same
-Marketplace plugin roster; Core owns the reproducible machine setup and sync entry points that install it.
+Marketplace plugin roster; Agent owns installation and repository selection.
 
 ## Skill ownership
 
-The approved ownership decision of 2026-10-25 separates three reusable source repositories:
+The source owners separate shared guidance from session behavior and operating-system mechanics:
 
 | Source | Published namespaces | Responsibility |
 | --- | --- | --- |
-| [Core](https://github.com/tj-agents/core) | `base`, `workflow`, `engineering`, `machine` | Common behavior, workflow and engineering policy, machine setup and OS utilities |
-| [Agent](https://github.com/tj-agents/agent) | `agent`, `agent-store`, `codex` | Agent sessions, coordination, history, selection and refresh; persisted identities; Codex hooks and memory configuration |
+| [Core](https://github.com/tj-agents/core) | `base`, `workflow`, `engineering`, `docs` | Common behavior, workflow, engineering policy and documentation guidance |
+| [Agent](https://github.com/tj-agents/agent) | `agent`, `agent-store`, `codex` | Agent sessions, coordination, history, selection, installation and refresh; link-store inspection; Codex hooks and memory configuration |
 | [CLI](https://github.com/tj-agents/cli) | `cli` | Deterministic terminal, process and explicit linked-worktree operations, alongside the existing CLI application |
 
-Agent resolves conversation and session meaning, then delegates explicit process/tab targets to CLI.
-`agent:handoff --host claude|codex -- <host arguments>` selects a private native launch handler;
-`agent:open` recovers existing sessions. Shared operations use one Agent namespace across both hosts.
-`cli:close` preserves the checkout; `cli:closeout` additionally removes its separately eligible linked
-worktree. Neither operation infers agent completion or sweeps other worktrees.
+Agent resolves conversation and session meaning, then delegates explicit process and terminal operations
+to CLI. `tj claude` and `tj codex` retain native conversation interfaces. Handoff, start and recovery use
+the same managed lifecycle; `tj message` chooses the appropriate messaging implementation for both hosts.
+[Workflow and Agent Store boundaries](WORKFLOW_AGENT_STORE.md) describes completion and recorded identity.
+The [Agent Store repository](https://github.com/tj-agents/agent-store) owns its database and binary; Agent's
+inspection skill consumes that API.
 
-The dependency graph stays acyclic: CLI consumes Base; Agent consumes Base, Agent Store, Machine and
-CLI; Workflow and Engineering consume Agent capabilities. Core embeds declared, receipted runtime
-exports where its generic hooks require them, without retaining another authored implementation.
-
-This is the approved target architecture. Publication, plugin activation and fresh Windows/Linux
-native-host acceptance remain the migration owner's delivery obligations; this document does not
-claim that pending packages are already installed.
+Marketplace owns the dependency graph. Core consumes staged, pinned Agent runtime exports where its
+generic hooks require them, without retaining another authored implementation. Generated plugin payloads
+remain publication output, and source changes alone do not establish native activation.
