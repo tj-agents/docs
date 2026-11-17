@@ -1,6 +1,9 @@
 # Working on tj-agents documentation
 
 Start with [README.md](README.md) for scope and documentation ownership.
+For product-vision discussions, read the canonical
+[tj-agents product vision](https://github.com/tj-agents/.github/blob/main/VISION.md); keep proposed direction
+distinct from this repository's references to implemented behavior.
 This repository owns reference documentation for the currently implemented system: architecture,
 cross-repository responsibilities and shared terminology. Source repositories own package contracts,
 runtime code and operational documentation; link to those owners.

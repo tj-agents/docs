@@ -4,6 +4,10 @@ Reference documentation for the current [tj-agents](https://github.com/tj-agents
 cross-repository responsibilities and shared terminology. Each source repository owns its implementation
 and operational details. Follow [AGENTS.md](AGENTS.md) when changing documentation.
 
+For the intended public application and future direction, read the canonical
+[product vision](https://github.com/tj-agents/.github/blob/main/VISION.md). It is maintained with the
+organization profile; the reference topics below describe the current system.
+
 ## Reference topics
 
 | Topic | Document |
