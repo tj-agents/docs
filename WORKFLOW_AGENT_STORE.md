@@ -68,6 +68,10 @@ can verify the process before the user submits a turn, but that does not prove t
 loaded the conversation. Agent keeps conversation confirmation pending without submitting synthetic input.
 The [launch and recovery contract](https://github.com/tj-agents/agent#lifecycle) owns these evidence stages.
 
+Codex turn completion does not expose every draft or other native activity. Its managed wrapper delivers
+the result and retains the native window until normal exit, then rechecks cleanup. CLI's
+[completion contract](https://github.com/tj-agents/cli#completion-waits-and-keep-open) owns that boundary.
+
 ## Worktrees and repository state
 
 Managed worktrees are created only under `<repository-root>/.worktrees/<name>` through
