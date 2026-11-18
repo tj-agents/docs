@@ -18,12 +18,14 @@ uses the single host-neutral policy and requires verified wiring and equivalent 
 both native host payloads; no Codex-only permission or configuration is sufficient. This is a general
 requirement for every future agent plan and fix, not an exception for this rollout.
 
+Targets: tj-agents/core, cpp, dotnet, rust, react, nvim, kit, marketplace, work, the employer plugin, docs, cli.
 Keep each existing source owner and active checkout intact. The unfinished configurable-auto-merge
 feature has a live independent owner in core/.worktrees/Feature-ConfigurableAutoMerge; do not create
 a second writer there. The work-plugin delivery remains a distinct existing workstream.
 
 ## Evidence
 
+- GitHub `allow_auto_merge` was inspected for all twelve targets. It is enabled on the nine public repositories; it remains false on private `work`, the employer plugin and `docs` because the organization plan does not provide that feature. No billing, visibility or protection change was made.
 - Core's merged runtime accepts `.agents/delivery-authorization.json` with `standing_authorization: auto` and a recorded instruction, while retaining review and required-check gates. The newer `auto_merge` boolean is not accepted by the merged schema.
 - The separate configurable-auto-merge source feature's original historical pin was `a41bdace0d6757009519fb90c253bc78aed28970`; resumed PR188 candidate `98c2262` was observed only as a short identifier, and its rebased Linux shared-runtime suite failed two merge-gate contract tests; both are historical context. Independently owned PR188 subsequently merged at `8a2c87945c3665ba68ca012e1d045e42a22db1ec`; its own causal main run `38095228523` is in progress. No subsequent publication, release or cleanup is verified here, and Root has neither adopted nor merged the work. Read-only status checks do not transfer ownership or adopt its paths.
 - The repository-plugin setup decision was one-time setup and remains a separate unfinished workstream; merge permission alone cannot implement the missing `configure-repo-plugins` entry point.
@@ -83,6 +85,7 @@ The shared standing-merge policy resolves the repository instruction, affected p
 
 ## Delivered source and retained dependencies
 
+PROGRESS.md is the current execution snapshot and owns exact heads, test results, owners and gates. Eleven initial policy PRs landed; The employer plugin's policy PR and Work1 retain billing failures before job steps. Work1 communications do not implement the separate repository-plugin setup workstream.
 
 Core175 delivered the general Claude/Codex plan coverage requirement. Core182 corrected both machine handoff contracts so a bounded side handoff retains the unfinished parent. Core183 delivered the user-approved generic five-class authority capability, retaining explicit holds and authorization-policy stops. Core184 delivered the shared Stop mechanism. Their exact-head and causal publication checks are recorded in PROGRESS.md and the source plans. They do not activate all repository preferences or prove installed prevention.
 
@@ -819,3 +822,4 @@ Current slice: own Core PR189's causal main publication and safe cleanup; finish
 Remaining scope: publish budget repair; qualify and land extractor preparation then native wiring; deliver authenticated parent Stop association and timeout drainage; migrate configuration after its owner publishes/releases, then deliver Kit support and reviewed twelve-repo adoption.
 Done when: every authorized slice is delivered with truthful both-host evidence or has its concrete external/ownership gate, resolver and resume condition recorded; repository activation conditions are accounted for; the canonical terminal transition represents the whole goal.
 
+Follow PROGRESS.md for exact executable actions. A completed phase, side handoff, open PR, started CI or source merge never completes this parent. Preserve Work1/employer-plugin billing holds without retry or bypass. Preserve the independent Feature/ConfigurableAutoMerge owner and PR188 work: a41bdace0d6757009519fb90c253bc78aed28970, candidate98c2262, and the two rebased Linux failures are historical; PR188 subsequently merged at8a2c87945c3665ba68ca012e1d045e42a22db1ec with causal main run38095228523 in progress, while no subsequent publication/release/cleanup is verified here and Root has neither adopted nor merged it. After that owner publishes or durably releases its paths, implement the selected namespaced migration atomically and preserve Core183's full strict authorized_stop_classes validation.
