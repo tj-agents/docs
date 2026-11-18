@@ -6,7 +6,7 @@ Owner: codex:01a15674-78c1-7703-8f6f-53e59ab10e57. Keep this session open.
 ## Outcome
 
 Every in-scope outstanding plan has a verified canonical tracker identity or a precise unresolved
-disposition. Personal work uses its explicitly selected GitHub provider; Infonetica work uses its
+disposition. Personal work uses its explicitly selected GitHub provider; employer work uses its
 explicitly selected Azure provider. Design/recovery documents remain with their source owners and link
 the tracker; status is maintained in the tracker. Recording does not start implementation or transfer
 another live executor's ownership. Do not migrate completed work into a new open backlog.
@@ -22,7 +22,7 @@ inferred from an owner or directory. Agent Workboard retains its existing explic
 
 ## Mechanism decision
 
-Assessment complete: use shipped Personal/Infonetica deterministic readers/creators, existing durable
+Assessment complete: use shipped Personal/employer deterministic readers/creators, existing durable
 request receipts and the native tracker hierarchy where supported. Do not add a migration service,
 shared package or new backlog. Small disposable scripts may inventory and reconcile known sources.
 Repository metadata and recorded explicit adoption establish scope. No alternate tracker is substituted.

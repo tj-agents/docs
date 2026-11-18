@@ -25,19 +25,19 @@ The same resolved selection drives planning, first writes, review and generated 
 
 ## Authorization and boundaries
 
-Tommy requested work on the standards and their refactor on 2026-10-09, including repository plans that reach the personal repository's default branch even when implementation is unfinished. Planning publication is authorized. Implementation stays in the standards source repositories and proceeds only from resolved, reviewed design. This does not authorize application-code publication, changing live hook trust, enabling currently disabled hooks, or modifying another active writer's unfinished work. Infonetica retains its own commit/push/merge and private-tooling rules; personal plan publication must not be installed as work-repository authority. Tommy explicitly requested a fresh design handoff on 2026-10-09 for the direction of all tj-agents, beginning with .NET and React and updating kit templates if the design requires it. This supersedes the earlier same-session preference for this design work only. The current successor is authorized to investigate, propose and review the design and publish its personal-repository planning artifacts. Runtime implementation and live consumer adoption await Tommy's decision on the proposal. The originating session retains cris-authz and its unpublished local style correction.
+Tommy requested work on the standards and their refactor on 2026-10-09, including repository plans that reach the personal repository's default branch even when implementation is unfinished. Planning publication is authorized. Implementation stays in the standards source repositories and proceeds only from resolved, reviewed design. This does not authorize application-code publication, changing live hook trust, enabling currently disabled hooks, or modifying another active writer's unfinished work. The employer profile retains its own commit/push/merge and private-tooling rules; personal plan publication must not be installed as work-repository authority. Tommy explicitly requested a fresh design handoff on 2026-10-09 for the direction of all tj-agents, beginning with .NET and React and updating kit templates if the design requires it. This supersedes the earlier same-session preference for this design work only. The current successor is authorized to investigate, propose and review the design and publish its personal-repository planning artifacts. Runtime implementation and live consumer adoption await Tommy's decision on the proposal. The originating session retains its work application and its unpublished local style correction.
 
 ## Evidence and existing ownership
 
 - [.NET PR24](https://github.com/tj-agents/dotnet/pull/24) and [PR32](https://github.com/tj-agents/dotnet/pull/32) merged capability scopes and family-profile separation. `.agents/tests/test_source_layout.py` pins stack-free core hubs and keeps prerequisite-bearing members outside core. This is implemented and tested separation, but stack-free does not mean free of personal conventions.
 - [Core PR140](https://github.com/tj-agents/core/pull/140) merged `.agents/machine/utility/bootstrap-capabilities/scripts/selection_profiles.py`: an optional read-only adapter for source-owned finite selection forms. It returns package IDs; discovery, installation and dependency closure are outside its contract. The inspected current source contains no production caller. [C++ PR37](https://github.com/tj-agents/cpp/pull/37) publishes one producer declaration and parity fixtures, but remains an open draft. Reuse this reader and producer work where their contracts fit; do not replace them under the claim that no separation existed.
 - Core PR116 merged project/dependency facts and standards context, explicitly deferring source ownership and host activation. The current `Feature/StandardsSourceOwnership` worktree contains uncommitted `source_facts.py`, tier/context changes and tests. Preserve that owner; inspect its state before integrating its contribution.
-- Dotnet PR35 merged the generator and registered cris-authz. Current C# routes select style/naming; the Domain row selects domain-design but not its DDD/value owners. Repository filename rules select EF-specific persistence without matching its prerequisite metadata.
+- Dotnet PR35 merged the generator and registered a work repository. Current C# routes select style/naming; the Domain row selects domain-design but not its DDD/value owners. Repository filename rules select EF-specific persistence without matching its prerequisite metadata.
 - Core's installed tier gate announces .NET applicability. Review lists tier conventions but does not prove semantic prerequisites were selected. `workflow_ops.route_findings` requires a checkout-local table, whereas the router can cross a nested worktree boundary to the main checkout's private table.
 - The .NET style skill mixes language and personal choices under `profile: core`; its no-underscore preference applies to all C# in its current wording. EF persistence and tenancy declare technology prerequisites but also contain selected library and house assumptions. Split those decisions rather than relabeling their whole bodies universal.
 - Kit already generates `selection.json` with profiles, applicability, requires and provenance. Treat this as an existing inventory to consume, not proof of an enforced resolver. Core already owns scoped context facets for house, architecture and adopted suites. Reuse their capabilities after identifying missing consumer behavior.
 - `Feature/ConfigurableAutoMerge` has committed implementation and reviewed evidence but no PR. Its existing goal authorizes delivery through a draft PR, defaults omitted/false to disabled, and makes merge conditional on separate delivery authority. Do not claim it shipped or silently take over its writer.
-- [Infonetica PR1](https://github.com/tj-agents/infonetica/pull/1) already merged a dedicated employer package. Its `plugins/infonetica/skills/work-context/SKILL.md` says generic .NET/React standards supplement employer standards, but this does not select individual personal rules within mixed stack skills. Reuse the employer owner rather than inventing a replacement.
+- The employer plugin's first PR already merged a dedicated employer package. Its `work-context` skill says generic .NET/React standards supplement employer standards, but this does not select individual personal rules within mixed stack skills. Reuse the employer owner rather than inventing a replacement.
 - Engineering plans already require planning artifacts to land; base planning alone does not select that lifecycle. This selection/publication gap and the personal-versus-work boundary need explicit repair.
 
 ## Selection decisions
@@ -88,7 +88,7 @@ Kit owns producer/template mechanics. Propose template, schema or generator chan
 
 ### Phase 4: Employer profiles and intentional personal adoption
 
-The employer source repository owns employer profiles and its specific conventions. Compose selected shared technical/architecture contracts and any explicitly adopted personal conventions. Keep a future employer separate from Infonetica, rather than modifying the personal pack globally for each job.
+The employer source repository owns employer profiles and its specific conventions. Compose selected shared technical/architecture contracts and any explicitly adopted personal conventions. Keep each employer separate, rather than modifying the personal pack globally for each job.
 
 Consumption: employer and project profiles resolve a visible composed selection with attribution and an explanation for each chosen contract. Work-repository private-tooling and publication rules remain intact.
 
@@ -130,7 +130,7 @@ Inventory taken on 2026-10-09. Repository-relative paths in this section belong 
 | dotnet, `2d19e965ef2315e2fe1f258f65769b6beb0b11f6` | `.agents/tests/test_source_layout.py` pins stack-free core and prerequisite-bearing families; 3 tests passed. PR24/32/35 are merged. `.agents/sync_generated.py` emits profile inventory. | Stack-free core still includes personal naming/style. `.agents/dotnet/utility/skill-routes/scripts/gen_skill_routes.py` hardcodes style/naming for C#, domain-design for Domain paths and EF persistence for repository filenames; it does not consume selection metadata. |
 | react, `5a23d4b3465cfe2c02c43d0a832eb28799afb907` | Generated `plugins/react/selection.json` separates core, selected-stack, testing, state, routing and other profiles. `.agents/tests/test_core_profile.py`: 5 tests passed. | No React-side selection reader or standards-route generator found. `style` and `structure` mix technical and house provenance; `testing` is a house authorization convention. `domain-design` has no agreed substantive rules. Do not manufacture a React DDD standard. |
 | kit, `ac260634c671e5c5ff402f128be794079b9dcf50` | Canonical generator template `.agents/kit/utility/new-plugin/templates/repository/.agents/sync_generated.py.in` requires metadata and emits profiles, aliases, applicability, requires and provenance. Focused generator suite: 42 tests passed. | `applicability`, `requires`, and `provenance` are descriptive comma-split strings, not a validated predicate/precedence language. Add only the machine-readable composition extension described below; do not replace the generator or inventory. |
-| infonetica, `9546906d5358317dd249db901a56e0c2ce9226fe` on `Feature/WorkCommunications` | Here `plugins/infonetica/` is authored source, by its own AGENTS.md. `tier.json` requires GitHub and `^infonetica/`; `work-context` delegates work standards to the employer, `service-standards` and repository docs. PR1 merged at `972f40571cd7eefaf0f93808c9923e4e0fe0ae35`. Employer suite: 14 tests passed. | Flat 20-skill inventory and employer detection do not select individual shared/personal requirements. Respect this source-layout exception and the existing communication-work owner. Underscore preservation is a requested repository-convention acceptance case, not a claim that this package currently publishes a C# field-naming rule. |
+| employer plugin, on `Feature/WorkCommunications` | Here `plugins/company/` is authored source, by its own AGENTS.md. `tier.json` requires GitHub and an employer remote pattern; `work-context` delegates work standards to the employer, `service-standards` and repository docs. PR1 merged. Employer suite: 14 tests passed. | Flat 20-skill inventory and employer detection do not select individual shared/personal requirements. Respect this source-layout exception and the existing communication-work owner. Underscore preservation is a requested repository-convention acceptance case, not a claim that this package currently publishes a C# field-naming rule. |
 
 C++ PR37 remains an open draft at `3b42f8e8c568763d857d286224bcd7884a5e8bf6`; its finite-profile producer is reusable evidence, not an initial migration. Core `Feature/ConfigurableAutoMerge` remains at `a41bdac` with its own `plans/configurable-auto-merge/GOAL.md`, reviewed implementation and no open PR found. Its existing next step is delivery through a draft PR, with merge conditional on separate authority. Hook repair and host limitations remain owned by core's existing host work and `.agents/plugins/TECH_DEBT.md`. No inspected foreign working tree was changed.
 
@@ -142,7 +142,7 @@ Implementation-path standards resolved before writing the examples:
 | kit canonical generator/template and proposed `.agents/standards/` template files | Kit AGENTS.md, README.md, generator and tests, conformance/check contract. Generator changes originate in kit, are released there, then reach stacks through `kit:update`; vendored stack generators are not independent edit targets. |
 | dotnet `.agents/dotnet/contract/` families, route utility and proposed `.agents/standards/dotnet.json` | Dotnet AGENTS.md/README.md, `style`, `naming`, `naming-collaborators`, `domain-ddd`, `domain-values`, `logging`, `persistence`, `multitenancy`, `skill-routes`, and core route convention. Its generated inventory does not constitute routed implementation standards. |
 | react `.agents/react/contract/` families and proposed `.agents/standards/react.json` | React AGENTS.md/README.md, `style`, `structure`, `libraries`, `libraries-selected`, `testing`, `testing-frontend`, `domain-design`. No repository route table or standards-route generator exists; kit owns its generator. |
-| infonetica `plugins/infonetica/standards.json` and contract skills | Employer AGENTS.md/README.md, `work-context`, tier and harness declarations. Personal authoring repo publication differs from private work-checkout tooling and employer application publication gates. |
+| employer plugin `plugins/company/standards.json` and contract skills | Employer AGENTS.md/README.md, `work-context`, tier and harness declarations. Personal authoring repo publication differs from private work-checkout tooling and employer application publication gates. |
 
 ## Recommended contract and alternatives
 
@@ -158,7 +158,7 @@ Four identities stay distinct: the capability lock selects installable packages;
 
 ### Producer manifest
 
-Keep existing `selection.json` and the finite-profile schema unchanged. Add an optional versioned `standards.json` per package. Kit authors it from `.agents/standards/<plugin>.json`; the legacy employer repo authors `plugins/infonetica/standards.json` directly. Core owns the JSON schema and resolver; kit vendors the released schema and fixture version through its existing update mechanism. Schema changes require core/kit parity tests, not a separately authored schema copy.
+Keep existing `selection.json` and the finite-profile schema unchanged. Add an optional versioned `standards.json` per package. Kit authors it from `.agents/standards/<plugin>.json`; the legacy employer repo authors `plugins/company/standards.json` directly. Core owns the JSON schema and resolver; kit vendors the released schema and fixture version through its existing update mechanism. Schema changes require core/kit parity tests, not a separately authored schema copy.
 
 Proposed `standards.json` fields:
 
@@ -275,10 +275,10 @@ Proposed mixed-stack repository example (illustrative project paths and future c
   "scopes": [
     {
       "root": "services/authz",
-      "providers": ["dotagents/dotnet", "infonetica/infonetica"],
-      "profiles": ["infonetica/infonetica#engineering", "dotagents/dotnet#ddd"],
+      "providers": ["dotagents/dotnet", "company/company"],
+      "profiles": ["company/company#engineering", "dotagents/dotnet#ddd"],
       "contracts": [],
-      "house": {"employer": "infonetica"},
+      "house": {"employer": "company"},
       "architecture": ["ddd"],
       "adopted_suites": [],
       "choices": []
@@ -293,10 +293,10 @@ Proposed mixed-stack repository example (illustrative project paths and future c
     },
     {
       "root": "app",
-      "providers": ["react-agents/react", "infonetica/infonetica"],
-      "profiles": ["infonetica/infonetica#frontend"],
+      "providers": ["react-agents/react", "company/company"],
+      "profiles": ["company/company#frontend"],
       "contracts": [],
-      "house": {"employer": "infonetica"},
+      "house": {"employer": "company"},
       "architecture": [],
       "adopted_suites": [],
       "choices": []
@@ -310,7 +310,7 @@ Employer scope also requires its verified tier detection; writing `house.employe
 
 For private work checkouts, the employer-owned published registry may supply this same scoped document as an input layer, keyed by exact host/repository identity. A clone-local excluded file can add reviewed project facts. The resolver records both inputs and reports overlap conflicts; it never reads another checkout's private file. Do not commit personal agent settings to application repositories. A frozen review explicitly captures the allowed private input snapshot as a Git-private artifact; its hash enters the descriptor while its private content stays out of PRs.
 
-Conflicts are resolved by explicit choice, not package order or "generic wins". A `choices` element is `{ "decision": "csharp.private-field-naming", "use": "infonetica/infonetica#naming-fields", "reason": "Repository convention requires underscore fields", "evidence": ["AGENTS.md"] }`. Validate at scope load that its winner belongs to an explicitly adopted contract/profile and declares that decision key. For each target, apply the choice only if that decision has a relevant candidate; then the winner must be among its applicable candidates. A root-scoped C# naming choice is irrelevant to a TypeScript target. Evidence paths are nonempty, contained, existing repository files whose bytes are included in input hashes. A choice cannot suppress universal, technical, architecture or technology contracts, select an unadopted contract, or override a stronger instruction. Conflicting choices on overlapping scopes error even if one root is deeper. Compatible contracts without a decision key accumulate; distinct naming decisions remain independent.
+Conflicts are resolved by explicit choice, not package order or "generic wins". A `choices` element is `{ "decision": "csharp.private-field-naming", "use": "company/company#naming-fields", "reason": "Repository convention requires underscore fields", "evidence": ["AGENTS.md"] }`. Validate at scope load that its winner belongs to an explicitly adopted contract/profile and declares that decision key. For each target, apply the choice only if that decision has a relevant candidate; then the winner must be among its applicable candidates. A root-scoped C# naming choice is irrelevant to a TypeScript target. Evidence paths are nonempty, contained, existing repository files whose bytes are included in input hashes. A choice cannot suppress universal, technical, architecture or technology contracts, select an unadopted contract, or override a stronger instruction. Conflicting choices on overlapping scopes error even if one root is deeper. Compatible contracts without a decision key accumulate; distinct naming decisions remain independent.
 
 Proposed conflict boundary in core `.agents/hooks/requirement_resolver.py`; `candidates` is an ID-keyed map of validated records after scope/prerequisite checks, and `choices` is the validated decision-keyed map after rejecting overlap duplicates:
 
