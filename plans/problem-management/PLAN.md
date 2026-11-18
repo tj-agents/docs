@@ -31,6 +31,7 @@ The work-items legacy records now have canonical managed issues: B001 is closed 
 
 ## Current conclusion and rollout handoff — 18 October 2026
 
+The approved destination is GitHub Issues in each personal project's existing repository, outside its code branches and main-checkout Markdown registers. Feature, task, bug, mistake and debt are distinct record kinds, generated and maintained through deterministic scripts/templates in the separate optional `tj-agents/work-items` plugin. Specifications, substantial plans and curated knowledge stay with source. Core supplies generic integration; selecting Core alone does not impose this personal tracker on the employer profile, which retains Azure DevOps. No Firebase or custom cloud database was selected.
 
 The tooling shipped: work-items foundation #3, GitHub lifecycle #5 and Core adapter #7, together with Core #272/#273 and marketplace #11. Controlled installed-host checks passed on Codex and Claude. That proves the capability, not migration of every personal repository. Existing records have not been claimed migrated. Fresh local inspection found neither `.work-items.json` nor `.problem-records.json` in the docs and work-items primary checkouts, so these consumers still lack the shipped explicit tracker adoption declarations.
 
@@ -121,6 +122,7 @@ foundation scope. Proceed to [handoff priority/deferral](../handoff-priority/PLA
 
 The delivered foundation above is historical evidence. Tommy now requests a separate research handoff
 to determine how personal problem recording and documentation policy should be owned and selected.
+Core must remain useful in every repository, including employer work repositories. His personal
 repositories must additionally adopt his bug, mistake, technical-debt and documentation workflow;
 work repositories must not inherit that personal policy merely by using Core.
 
@@ -140,6 +142,7 @@ misrepresent it as a missing installed skill, or turn this personal-policy resea
 ### Authorization and boundaries
 
 Tommy requested: "something to think about maybe do a handoff and it can dig into a solution", then
+clarified that all his personal repositories need it while employer work repositories need
 Core without his personal tech-debt policy. This authorizes investigation and a concrete proposal.
 It does not authorize implementing a new package, changing Core's defaults, migrating consumer repos,
 installing profiles, committing shared notes, pushing, merging or publishing this research.
@@ -158,7 +161,7 @@ Lane: L3, because package/policy ownership and adoption have unresolved bounded 
   their session-guidance/harness dependencies, and work-specific overrides. Current installed guidance
   records in the primary checkout but still requires immediate scoped documentation publication;
   the new personal batching instruction supersedes that cadence for this user's current notes.
-- Core, tj-agents/work and tj-agents/company ownership and packaging conventions. Read only relevant
+- Core, tj-agents/work and the employer plugin's ownership and packaging conventions. Read only relevant
   policy; do not copy private employer/product content into public docs.
 - Actual marketplace/plugin/repository selection mechanisms, including current authored sources and
   already-owned work. Do not infer personal scope from a machine-global setting that affects work repos.
@@ -365,6 +368,7 @@ and generated host settings. Add its real published package to the marketplace a
 A checked inventory of approved canonical repository identities drives existing-repo adoption and new-repo
 templates; keep private inventory data with its authorized owner. An explicit opt-out is retained in that
 inventory and removes the project selection, so a later sweep does not re-add it. A machine-global install,
+cached skill or directory outside the employer folder never proves adoption. Fresh computers consume the same
 committed selections; installation and hook trust must still be verified on each host. Reuse the existing
 catalog/source-ownership owners without extending the parent's Rolling Plugin Sync task.
 
@@ -372,6 +376,7 @@ catalog/source-ownership owners without extending the parent's Rolling Plugin Sy
 
 Tommy now wants to proceed toward GitHub-backed personal work items and asks where the skills should
 live, whether Core should be renamed, and whether a separate repository should be called documentation
+or work-item. His employer repositories must retain Azure DevOps while continuing to use Core.
 Backend selection is settled in principle; source naming/ownership is the current design decision.
 This turn prepares that concrete decision in the existing plan. No new repository or runtime source
 has been created, and no employer tracking change is inferred.
@@ -388,6 +393,7 @@ in anticipation of an unrequested migration; the existing employer workflows alr
 | Shared agent/session helpers, generic repair and execution lifecycle | Existing Core packages. They consume an optional repository-declared tracker integration without choosing GitHub for every user. |
 | GitHub work-item commands, templates, schemas and tests | New `tj-agents/work-items` source package, with one canonical implementation shipped to both hosts. |
 | Which personal repositories adopt it and when agents record automatically | Explicit repository selections plus the approved personal adoption inventory/policy. A global Core install supplies no adoption evidence. |
+| Azure DevOps work items and employer-specific rules | Existing employer/work-repository owners; existing commands, approval gates and destinations remain theirs. |
 | Actual feature/task/problem records | The source project's own GitHub Issues, not one organization-wide inbox in the new tooling repository. |
 | Designs, specifications and cross-repository proposals | Their existing source-repository plan owners or this docs repository according to its README. |
 
@@ -398,6 +404,7 @@ The reusable scripts must not import mandatory personal cadence into Core. Exist
 need a compatibility route to the selected tracker; the transport/template implementation belongs to the
 new owner rather than being copied into Core or employer skills.
 
+Recommended selection behavior: explicitly adopted personal repository -> work-items/GitHub; employer
 repository -> existing employer/Azure DevOps; no selected tracker -> generic helpers remain usable and
 no GitHub write is inferred. A failed or missing selected integration is actionable failure, never an
 excuse to silently choose a different destination. Do not use folder names, installed cache contents or
@@ -548,6 +555,7 @@ Tommy approved the concrete work-items proposal and instructed this session to i
 This supersedes the research-only restrictions recorded in the historical handoff. Create
 `tj-agents/work-items`, implement deterministic templates and GitHub issue tooling, integrate
 Core through explicit repository selection, publish the package and adopt it in personal repositories.
+Keep Core's name and preserve the employer's Azure DevOps policy. GitHub Issues in each source
 repository stores its work; the tooling repository is the first live pilot. Existing records retain
 facts and stable identities during migration. No employer repository or unrelated workflow is in scope.
 

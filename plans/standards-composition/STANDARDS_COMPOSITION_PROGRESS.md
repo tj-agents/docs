@@ -56,6 +56,7 @@ review remains provenance for the design; this move receives its own documentati
 Reuse .NET PR24/32/35, core PR140/116, kit inventories and the employer package. The dated inventory in
 the plan records unfinished source-ownership, catalog, conditional-route, naming, auto-merge and host work;
 reconcile those owners against current source before implementation. Preserve other writers and the
+originating work application's unpublished work.
 
 The shared plan owns cross-repository dependencies and acceptance. Source repositories own runtime
 implementation plans and reviews. The docs migration is authorized; the proposed runtime design still

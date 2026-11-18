@@ -16,6 +16,7 @@ Current work is tracked through the selected Personal GitHub provider. This docu
 
 ## Current state
 
+Tommy authorized standing agent merges in tj-agents repositories after review and required checks pass, for Claude and Codex. Eleven of twelve initial policy PRs landed; GitHub allow_auto_merge is true on nine public targets and false on private work, the employer plugin and docs under GitHub Free. The employer plugin's policy PR remains held after payment/spending-limit failure before job steps; Work PR #1 pickup, repaired source ad8296a, review and both-host checks are verified, while CI 38063706429 failed before jobs for the same billing reason. No payment, retry or bypass is authorized. Work communications and missing Rust marketplace configuration are separate.
 
 Core source milestones: five-class capability Core #183 merged at 2349ee141ade5f6bb142e1b55286b6a3687da350; causal main CI 38065840191 passed and generated 625c0d10578117eb5e879d4d364302a904437d5f names the exact parent. Core #182 launcher correction merged at c945245; causal main CI 38064530595 passed and generated bb981 names the exact parent. Core #175 generalized both-host plan requirement merged at 3f06c88636ebb77fad3909ecfb367f0c3f50011c. These do not activate the five classes or prove normal-profile prevention.
 
@@ -31,6 +32,7 @@ The configurable-auto-merge owner remains independent at Core Feature/Configurab
 
 ## Next Steps
 
+Current action: track Core PR189 causal main run38095220544 through its one active Root monitor, then own source publication and safe cleanup; finish fresh Docs DD05 review/publication and promote SourceGoal only after actual releases. The budget-repair publication is the extractor-preparation gate. PR188 merged at8a2c87945c3665ba68ca012e1d045e42a22db1ec and its own causal main run38095228523 is in progress; further publication/release/cleanup waits for its independent owner, with no Root adoption or merge. Preserve the association source-release gate. Heartbeat PR187 remains merged and declared complete, with no explicit durable source path release. Work1 and employer-plugin billing holds are unchanged.
 
 Scope: Retain the whole authorized rollout; preparation, a side handoff, an open PR, or a source merge does not complete it.
 Current slice: own PR189 causal main publication and safe cleanup, finish fresh Docs DD05 review/publication, then promote SourceGoal after actual releases; retain the heartbeat durable-release gate and leave PR188 publication/release/cleanup with its independent owner.
@@ -43,6 +45,7 @@ The Docs plan embeds selected contracts and observable source/CI identities. Sup
 
 ## Completed work
 
+- Initial policy rollout: eleven of twelve PRs landed; nine public targets enabled; the employer plugin's policy PR held on account billing.
 - Kit v1.2.1 and dotnet #40, Rust #3, React #16, and nvim #4 merged at their reviewed heads with exact-head and causal main CI recorded in the plan/landings evidence.
 - Core #175, #182, #183 and #184 merged as recorded above; source capabilities do not themselves activate repository preferences.
 - Work plugin PR #1 was picked up, repaired and reviewed; exact CI remains held before job steps by account billing.
@@ -61,3 +64,4 @@ Native-gate c007 review is complete/changes-requested at the current watermark; 
 - Failure diagnosis artifact proves the preparation timeout also occurs on exact base; do not classify it as a candidate regression or raise timeout without evidence. Accepted generic repair design SHA 90f7b96... is the next implementation basis.
 - Core #184 follow-on must bind Stop to a verified native session/controller identity; current event cwd resolution misses the separate Docs controller and is unsupported API coverage, not an invalid lease.
 - Track submission receipt, observed pickup, first action and completed delivery separately. A launch or green CI does not prove the later transitions or installed activation.
+- The employer plugin's policy PR and Work #1 payment/spending-limit failures remain unchanged external holds; no retry, billing change, visibility change or branch-protection change.
