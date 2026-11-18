@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "repository": "tj-agents/core",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "commit": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+      "plugins": [
+        "base",
+        "engineering",
+        "machine"
+      ],
+      "version_plugin": "base"
+    },
+    {
+      "repository": "tj-agents/dotnet",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+      "commit": "480d07f0db30ad5cd6c8965f2541a78eabeb1b63",
+      "plugins": [
+        "dotnet"
+      ],
+      "version_plugin": "dotnet"
+    },
+    {
+      "repository": "tj-agents/azure",
+      "checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\azure",
+      "commit": "320779cf68822f13a062f87f01686d3b7276b9db",
+      "plugins": [
+        "azure"
+      ],
+      "version_plugin": "azure"
+    }
+  ]
+}

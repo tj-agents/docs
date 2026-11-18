@@ -1,0 +1,19 @@
+{
+  "session_id": "01a132e7-26a7-7fa3-9484-9a8897e77d18",
+  "host_pid": 8140,
+  "registered_attachment": "C:\\Users\\TommySeery\\source\\repos\\tj-agents",
+  "canonical_helper": "C:\\Users\\TommySeery\\.codex\\plugins\\cache\\base-agents\\machine\\2.1.16\\.agents\\machine\\utility\\peer-cli\\scripts\\close.py",
+  "attempts": [
+    {
+      "spawn_seconds": 15,
+      "result": "session exit observer did not confirm startup"
+    },
+    {
+      "spawn_seconds": 60,
+      "result": "session exit observer did not confirm startup"
+    }
+  ],
+  "own_receipts": [],
+  "source_consumer_delivery_complete": true,
+  "cli_close_verified": false
+}

@@ -1,0 +1,5 @@
+Resolved on 18 October 2026.
+
+Agent Workboard PR #3 repaired the inherited main CI baseline and merged as squash commit 2bca92e7ecde351202e3e2d468082e9fbf453d84. The repair run 39135954035 passed Rust, nightly fuzz and the Windows release smoke test. A complete local Windows package installer/updater smoke test also passed before publication.
+
+Tracker-adoption PR #1 then rebased onto repaired main and merged as squash commit 668ad0e795b4de35f020510cdaec0154367d5619. Its run 39136652023 passed the same three checks.

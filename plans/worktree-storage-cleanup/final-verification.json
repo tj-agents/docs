@@ -1,0 +1,24 @@
+{
+  "verified_utc": "2026-10-14T16:17:48.201707+00:00",
+  "removed_worktrees": 30,
+  "removed_checkout_logical_bytes": 106237251,
+  "remote_archives_verified": 9,
+  "archived_document_contents_verified": 19,
+  "byte_exact_original_documents_verified": 19,
+  "private_backup_files_verified": 35,
+  "restored_active_checkout": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-SessionStoreHookRegistration",
+  "restored_code_head": "352312dafd3e6a43f9bc39911a7674868596e3e5",
+  "protected_directories": [
+    "C:\\Users\\TommySeery\\source\\repos\\tj-agents",
+    "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+    "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core.worktrees\\Fix-DocsReviewProportionality",
+    "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Feature-WorkItemPlanMigration",
+    "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-MergeGateJurisdictionFirst",
+    "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-SessionStoreHookRegistration",
+    "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet\\.worktrees\\Fix-SnippetsCompileUnderScaffold"
+  ],
+  "rust_build_caches_absent": true,
+  "retired_writers_refuse_execution": true,
+  "remaining_registered_worktrees": 97,
+  "free_bytes": 9927901184
+}

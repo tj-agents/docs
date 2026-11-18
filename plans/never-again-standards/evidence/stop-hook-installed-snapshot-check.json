@@ -1,0 +1,7 @@
+{
+  "hook": "C:\\Users\\TommySeery\\.codex\\plugins\\data\\engineering-base-agents\\hook-snapshots\\8db91a0371b51f37b0a81546992a938f2f0c9e69c13886869ce541b178e0670e\\hooks\\continuation_stop.py",
+  "exit": 0,
+  "response": {},
+  "stderr": "",
+  "result": "Actual installed Stop hook returns an empty response and permits exit without a blocking prompt."
+}

@@ -1,0 +1,48 @@
+{
+  "root": "C:\\Users\\TommySeery\\source\\repos\\sandbox-dotnet",
+  "pins": {
+    "azure-agents/azure": "320779cf68822f13a062f87f01686d3b7276b9db",
+    "base-agents/base": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+    "base-agents/engineering": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+    "base-agents/machine": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+    "dotagents/dotnet": "480d07f0db30ad5cd6c8965f2541a78eabeb1b63"
+  },
+  "changed_paths": [
+    ".agents/capabilities.lock.json",
+    ".agents/catalog/catalog.json",
+    ".claude/settings.json",
+    ".codex/config.toml"
+  ],
+  "preserved_existing_non_standards_files": 1862,
+  "repeat_byte_identical": true,
+  "write_check_results": [
+    {
+      "mode": "write",
+      "exit": 0,
+      "stdout": "Updated: .agents/capabilities.lock.json, .agents/catalog/catalog.json, .claude/settings.json, .codex/config.toml\n",
+      "stderr": ""
+    },
+    {
+      "mode": "check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "mode": "write",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "mode": "check",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "status_before": "",
+  "status_after": "",
+  "consumer_commit": "cc6c5043baeeb34c8d1e0db301400c529c3ab719",
+  "input": "C:\\Users\\TommySeery\\AppData\\Local\\Temp\\never-again-real-snapshots-b3il2268\\sources-final-consumer.json"
+}

@@ -1,0 +1,21 @@
+{
+  "published_core": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+  "initial_write_and_check": "passed",
+  "add_stack_write_and_check": "passed",
+  "existing_dotnet_and_core_pins_preserved": true,
+  "repeat_unchanged": true,
+  "files": [
+    ".agents/capabilities.lock.json",
+    ".claude/settings.json",
+    ".codex/config.toml",
+    ".agents/catalog/catalog.json"
+  ],
+  "lock_plugins": {
+    "azure-agents/azure": "320779cf68822f13a062f87f01686d3b7276b9db",
+    "base-agents/base": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+    "base-agents/engineering": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+    "base-agents/machine": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+    "dotagents/dotnet": "08f9c41275105e6eac01009301cbbb9edfc8acdf"
+  },
+  "evidence_note": "Actual CLI exit0 write/check and byte hash repeat comparison succeeded; report formatting errors did not affect injector results."
+}

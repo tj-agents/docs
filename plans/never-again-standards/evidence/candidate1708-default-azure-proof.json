@@ -1,0 +1,10 @@
+{
+  "candidate": "1708d258eec07da19dfd6c2663d84878563899b8",
+  "default_azure_workflows": true,
+  "scaffold_exit": 0,
+  "ci_workflow_present": true,
+  "file_count": 55,
+  "required_standards": "passed",
+  "check_repeat_check_unchanged": "passed",
+  "B008_full_combined_preflight_closure": "not_claimed; separate repair owner preserved"
+}

@@ -1,0 +1,240 @@
+{
+  "free_before": 10010365952,
+  "outcomes": [
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\cpp-capability-harness",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\cpp",
+      "branch": "Feature/CapabilityHarness",
+      "completion_evidence": "approved capability harness review; implementation merged",
+      "result": "removed",
+      "bytes": 966022,
+      "private_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\cpp\\.git\\storage-cleanup-backups\\cpp-capability-harness-e9639381653a.zip",
+      "private_hashes": {
+        ".agents/persistent-workflow-binding.json": "f8fe350e7105d1724fe12ca4cc70513668688c375c073b8e0127fe0c2af2f8e4"
+      },
+      "head": "b5c9d2c2363eaa31916457717bee643b20e995d0",
+      "remote_branch": "Archive/StorageCleanup20261014/Feature-CapabilityHarness",
+      "document_hashes": {
+        "reviews/Feature-CapabilityHarness.md": "c6a6f8d23a21c713a13bf8781628550b6d13cd51f4b617d0d27feebc5704bb10"
+      },
+      "remote_verified": true,
+      "original_document_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\cpp\\.git\\storage-cleanup-backups\\cpp-capability-harness-b5c9d2c2363e-original-documents.zip",
+      "git_line_ending_normalization": [
+        "reviews/Feature-CapabilityHarness.md"
+      ]
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\nvim\\.worktrees\\Feature-CapabilityHarness",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\nvim",
+      "branch": "Feature/CapabilityHarness",
+      "completion_evidence": "approved capability harness review; implementation merged",
+      "result": "removed",
+      "bytes": 54761,
+      "head": "2a66e704cf516e749bce39f0f6b35b24ed390f6d",
+      "remote_branch": "Archive/StorageCleanup20261014/Feature-CapabilityHarness",
+      "document_hashes": {
+        "reviews/Feature-CapabilityHarness.md": "bb8ccc8562fa3f35ca1fc68a5a0cf5df2e2f668a7715b3d5e8ab96105be9f1b9"
+      },
+      "remote_verified": true,
+      "original_document_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\nvim\\.git\\storage-cleanup-backups\\Feature-CapabilityHarness-2a66e704cf51-original-documents.zip",
+      "git_line_ending_normalization": []
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Feature-ConfigurableAutoMerge",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Feature/ConfigurableAutoMerge",
+      "completion_evidence": "approved final review; implementation merged",
+      "result": "removed",
+      "bytes": 8393568,
+      "private_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Feature-ConfigurableAutoMerge-fef2e8ef87ed.zip",
+      "private_hashes": {
+        ".agents/continuation/configurable-auto-merge-bootstrap-approval.json": "17a97efbffcb71e1e7591099e1fb546f56918cadb295dd875e08e2225a359d1c",
+        ".agents/continuation/events.jsonl": "b82a0f911db668b9e57541dab64765a262c91b5f7e1bec0c5056154521271f45",
+        ".agents/continuation/owner.json": "992e04736d5e5f594974a722b2fb4aaf612b3421f96e71536ea85872ec495389",
+        ".agents/continuation/owner.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        ".agents/continuation/rebind.json": "9e736ca5c608eb925b14f1afebaa9efdad53829a93c63b9ffde0415f5be05e3b"
+      },
+      "head": "a165bb425a1c648606c8cd422e1d70977d6f0982",
+      "remote_branch": "Archive/StorageCleanup20261014/Feature-ConfigurableAutoMerge",
+      "document_hashes": {
+        "reviews/Feature-ConfigurableAutoMerge.md": "5de3ec3797fd0e00b358a0886dcf963c3badaa76af432bed1a8cf43f1d2b6d48"
+      },
+      "remote_verified": true,
+      "original_document_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Feature-ConfigurableAutoMerge-a165bb425a1c-original-documents.zip",
+      "git_line_ending_normalization": []
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Feature-ProblemSkills",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Feature/ProblemSkills",
+      "completion_evidence": "goal complete; PR206 and causal publication verified",
+      "result": "removed",
+      "bytes": 8580769,
+      "private_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Feature-ProblemSkills-f1a0db58f63c.zip",
+      "private_hashes": {
+        ".agents/continuation/events.jsonl": "2ce09ec49bb11d0f79f2e4d0506237cedcb747186574b2fae0971869e97f385d",
+        ".agents/continuation/owner.json": "8dbc5a683e8e2ac38b42d606d65506d2a46a7b1d4ddeea5f97aa01b9c175078f",
+        ".agents/continuation/owner.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        ".agents/continuation/scheduler.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      "head": "dfe6d5f6fd6eb7a3dbf55667b094581e5d85af62",
+      "remote_branch": "Archive/StorageCleanup20261014/Feature-ProblemSkills",
+      "document_hashes": {
+        "plans/problem-skills/GOAL.md": "20d3fcb56bd5a46ba6e399c055dda5f007a7ada21d0931b188b376294ffaf2ed"
+      },
+      "remote_verified": true,
+      "original_document_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Feature-ProblemSkills-dfe6d5f6fd6e-original-documents.zip",
+      "git_line_ending_normalization": []
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-FollowupRecoveryOwnership",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/FollowupRecoveryOwnership",
+      "completion_evidence": "goal complete; PR207 and causal publication verified; later user authorizes retirement",
+      "result": "removed",
+      "bytes": 8491221,
+      "private_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Fix-FollowupRecoveryOwnership-9954043c5d7b.zip",
+      "private_hashes": {
+        ".agents/continuation/events.jsonl": "fa830f6d7ff600f34c83642249a7d4601389cce2f274de9d6492611529c524e9",
+        ".agents/continuation/final-close.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        ".agents/continuation/foreground-rebind.json": "dbbb33aa25d5c9c966685b01128e0c7ac0338971da5dd0fd9794cce00f879f13",
+        ".agents/continuation/owner.json": "518192923a4a3eea62a53e40e3db0a49b9d1ebfd894a1082aae627972223c7d9",
+        ".agents/continuation/owner.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        ".agents/continuation/parent-result.txt": "742b6798c4dcc572c9243a8f65ecb7e8aef3ebfc4ea02990f724e68040ec035e",
+        ".agents/continuation/parent-target.json": "8ccc3a0897896488ddf67544a4f131caf8744997e52c62213a3ffa8e4361cbed",
+        ".agents/continuation/scheduler.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      "head": "e5a4e1a31f97400740028f1701f00ae13a743b4b",
+      "remote_branch": "Archive/StorageCleanup20261014/Fix-FollowupRecoveryOwnership",
+      "document_hashes": {
+        "plans/followup-recovery/GOAL.md": "95530a9ae46170fc4c9209e4aed6c128515eb387d5280a37eb9247c513fbe5d1",
+        "plans/followup-recovery/handoff.txt": "5906cbf97df6cc4f5ff1037316b72ac39073529bdc5293324c648b7e26131bfb",
+        "plans/followup-recovery/pr-body.md": "43102c86ddb5794640d0fa528fb8ab98f32547c33543225759e9b5eb55e7d39f",
+        "reviews/Fix-FollowupRecoveryOwnership.md": "e29704821749f701cd951832a5b438393dba2e1559ccc82327840d898ee77ab2"
+      },
+      "remote_verified": true,
+      "original_document_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Fix-FollowupRecoveryOwnership-e5a4e1a31f97-original-documents.zip",
+      "git_line_ending_normalization": []
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-IdeaInitialization",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/IdeaInitialization",
+      "completion_evidence": "goal reports source delivery complete and continuation owner complete; old process exited",
+      "result": "removed",
+      "bytes": 8973094,
+      "private_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Fix-IdeaInitialization-5805de3329d5.zip",
+      "private_hashes": {
+        ".agents/continuation/events.jsonl": "bcc80d46b6c88af0436f6498a13c6f4427f116b6b5a0ce0adf584603b8e70202",
+        ".agents/continuation/foreground-rebind.json": "971ef26ed64138f41b6ae1298ef03109df3dd615c26548e89568e0f288914acf",
+        ".agents/continuation/owner.json": "58a950db0a8597456c5e2a06354807b3ec7ab5af47c6138b6412fe2ef3077e04",
+        ".agents/continuation/owner.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        ".agents/continuation/scheduler.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      "head": "024d2fcfd1dc33016fe4945d207e5893e93e5081",
+      "remote_branch": "Archive/StorageCleanup20261014/Fix-IdeaInitialization",
+      "document_hashes": {
+        "plans/idea-initialization/GOAL.md": "fed1292535cd4cd0b3d3769d8c97c517465af16a29b80820d9d3920b820d0ddd"
+      },
+      "remote_verified": true,
+      "original_document_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Fix-IdeaInitialization-024d2fcfd1dc-original-documents.zip",
+      "git_line_ending_normalization": []
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-SandboxSetupReadFailure",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/SandboxSetupReadFailure",
+      "completion_evidence": "goal completion records PR205 delivered; only local checkpoint remains",
+      "result": "removed",
+      "bytes": 8440375,
+      "private_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Fix-SandboxSetupReadFailure-8eb2e46b7736.zip",
+      "private_hashes": {
+        ".agents/continuation/events.jsonl": "ded5334123b963a865d9c7cebab2a880d51c39d0492f16700a56efd3c82cdc0b",
+        ".agents/continuation/owner.json": "3fca6440e7a7f42d033f37f14970ecb673ee6a976a49b0112d93c9b3fdf40dc5",
+        ".agents/continuation/owner.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        ".agents/continuation/sandbox-setup-read-failure-prompt.txt": "45095352907688d379eb61fbf9e489f5a74ae703b8f26e35772c8cb82ac0431d",
+        ".agents/continuation/scheduler.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      "head": "5c3f5e8e025c2fb264132ff6ebb438ab11e90b9f",
+      "remote_branch": "Archive/StorageCleanup20261014/Fix-SandboxSetupReadFailure",
+      "document_hashes": {
+        "MISTAKES.md": "686666318c273b954d77bc4c634a12e956691db1c0a8046c67e889456f56acaa",
+        "plans/sandbox-setup-read-failure/GOAL.md": "53ce892aa3ff015f61826ccacb26ac8b9f4047c22f924a4cf04f0db5278817b5"
+      },
+      "remote_verified": true,
+      "original_document_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Fix-SandboxSetupReadFailure-5c3f5e8e025c-original-documents.zip",
+      "git_line_ending_normalization": []
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-StopGateAndProfileRepair",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/StopGateFailures",
+      "completion_evidence": "goal completion says no authorized repair work remains; PR235/236/237 merged",
+      "result": "removed",
+      "bytes": 8970799,
+      "private_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Fix-StopGateAndProfileRepair-7d6f49a0c50f.zip",
+      "private_hashes": {
+        ".agents/continuation/events.jsonl": "3a646c1da413ddce9236ba4b85caf7d08377608c8a3528484aa5a0ce7b51d30b",
+        ".agents/continuation/owner.json": "936ff4320d946436c43ad687ea47fb9459497e4d1d3549bcf36f1afafe46537c",
+        ".agents/continuation/owner.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      "head": "ff9c8653f157a363a187e864d9ce207c34ce7967",
+      "remote_branch": "Archive/StorageCleanup20261014/Fix-StopGateFailures",
+      "document_hashes": {
+        "BUGS.md": "da9fd659bb14c6dc6d90edf3c35fea64245300ed2abea31be5a937a39aeaf415",
+        "MISTAKES.md": "b1571b3088bfdd03527ce96a0f85388139af6f9c7aeeb0c7c927f45543309abb",
+        "plans/stop-gate-and-profile-repair/GOAL.md": "679902cf6d1ec81c333f951df977b13225c89a09472064e8a2adfe14d5d22434",
+        "plans/stop-gate-and-profile-repair/PR_BODY.md": "7d05c882eb9335efd7df12ce17a56bf46260bad32741c5015fa4d737bf469022",
+        "reviews/Docs-StopGateOwnership.md": "37ab25e2dcd137cdb50182e2496868b954ebf3ed1b2864ad26ef408055ef5d2d",
+        "reviews/Fix-StopGateFailures.md": "e55995ccb7b98fee6500b1ca65d42d6e996c705113b243a02b73ac96343a0497"
+      },
+      "remote_verified": true,
+      "original_document_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Fix-StopGateAndProfileRepair-ff9c8653f157-original-documents.zip",
+      "git_line_ending_normalization": []
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-SessionStoreHookRegistration",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/SessionStoreHookRegistration",
+      "completion_evidence": "PR247 complete; sole remaining cleanup probe PID42764 no longer exists in fresh snapshot",
+      "result": "restored-and-protected",
+      "bytes": 9442337,
+      "private_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Fix-SessionStoreHookRegistration-352312dafd3e-72e76b76cf5a.zip",
+      "private_hashes": {
+        ".agents/continuation/events.jsonl": "864f93ac9a498ea00f9acad740435777a4e29ae29b920e66b727303761f08f85",
+        ".agents/continuation/owner.json": "769087ff733402e3e96b56a562845c018fbc036f85fdf5bbfad8bd4b82da61f0",
+        ".agents/continuation/owner.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        ".agents/continuation/scheduler.lock": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      "head": "5e8425bb182b823efd520e36d74c8e4062340634",
+      "remote_branch": "Archive/StorageCleanup20261014/Fix-SessionStoreHookRegistration",
+      "document_hashes": {
+        "plans/session-store-hook-registration/GOAL.md": "aa722fdfb2b81b197f02e8edf553629fdcb3fc3d2b5f582a548e66c0da333e28",
+        "reviews/Fix-SessionStoreHookRegistration.md": "33c725440fcf5ee6656a4d1fc97dfb0031d577771ab5a8b428b8017e1e010043"
+      },
+      "remote_verified": true,
+      "reason": "Native sessions 01a13725-d930-7340-8425-8eca8d8e37f0 and 01a1373d-fe0f-7b03-8410-cf0a1412911d resumed after the earlier snapshot; exact branch checkout and Git registration restored, private records restored without overwriting any newer files.",
+      "restored_private_files": [
+        ".agents/continuation/events.jsonl",
+        ".agents/continuation/owner.json",
+        ".agents/continuation/owner.lock",
+        ".agents/continuation/scheduler.lock"
+      ],
+      "preserved_existing_private_files": [],
+      "restored_code_head": "352312dafd3e6a43f9bc39911a7674868596e3e5",
+      "restoration_index": "Existing index and working files retained; preservation documents may remain staged. Exact archival commit remains remote.",
+      "original_document_backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.git\\storage-cleanup-backups\\Fix-SessionStoreHookRegistration-5e8425bb182b-original-documents.zip",
+      "git_line_ending_normalization": []
+    }
+  ],
+  "previous_attempts": [
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-SessionStoreHookRegistration",
+      "reason": "Private backup verification failed"
+    }
+  ],
+  "free_after": 10027638784,
+  "removed_count": 8,
+  "pushed_count": 9,
+  "removed_logical_bytes": 52870609
+}

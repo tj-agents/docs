@@ -1,0 +1,11 @@
+{
+  "paths": [
+    "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\cli\\target\\debug",
+    "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\cli\\target\\release"
+  ],
+  "files": 3780,
+  "bytes": 1129492091,
+  "free_before": 9117999104,
+  "removed": true,
+  "free_after": 9983885312
+}

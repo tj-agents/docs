@@ -1,0 +1,14 @@
+{
+  "retirement_writers_retired": [
+    "storage-retire-approved.py",
+    "storage-preserve-finished.py",
+    "storage-park-idle.py",
+    "storage_retirement.py"
+  ],
+  "move_only_guard_failed": true,
+  "handle_guard_rejected_existing_holder": true,
+  "handle_guard_failed_concurrent_startup": true,
+  "concurrency_prevention_qualified": false,
+  "live_checkout_restored": true,
+  "no_additional_retirement_authorized_from_failed_guard": true
+}

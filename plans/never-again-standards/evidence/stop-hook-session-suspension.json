@@ -1,0 +1,10 @@
+{
+  "session_id": "01a132e7-26a7-7fa3-9484-9a8897e77d18",
+  "phase": "L7 inline session-state cleanup",
+  "before_hook_result": "Initialize persistent-workflow for the active delivery binding before ending this turn.",
+  "after_hook_result": null,
+  "execution_suspended": true,
+  "backup": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\docs\\plans\\never-again-standards\\evidence\\stop-hook-receipt-before-suspension.json",
+  "user_authority": "if its the same closeout then that agent is handling it i just told oyu why are you continuing you retard?",
+  "scope": "Only this session routing receipt; no plugin, global setting, hook definition, repair owner or scheduler changed."
+}

@@ -1,0 +1,7 @@
+On 18 October 2026, after creating the agent-workboard adoption PR, the first `gh pr view` invocation supplied `--repo` without a PR number, URL, or branch selector. GitHub CLI rejected it before returning delivery state.
+
+Cause: the delivery-state command was composed without validating its required selector.
+
+Correction: pass the exact PR number returned by `gh pr create` to every subsequent `gh pr view` command.
+
+Verification: no repository state changed after the rejected command; the returned PR URL identifies #1 for the corrected query.

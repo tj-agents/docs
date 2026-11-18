@@ -1,0 +1,226 @@
+{
+  "started_utc": "2026-10-14T15:34:11.822983+00:00",
+  "apply": true,
+  "free_before": 9959661568,
+  "outcomes": [
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\azure\\.worktrees\\Fix-TemplateWorkflowRepository",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\azure",
+      "branch": "Fix/TemplateWorkflowRepository",
+      "head": "682acf75015799b306df15089ecd340676bf2eb9",
+      "result": "removed",
+      "bytes": 638010
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\github-actions\\.worktrees\\Fix-TemplateWorkflowRepository",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\github-actions",
+      "branch": "Fix/TemplateWorkflowRepository",
+      "head": "706a817563f1cb27b5b6db90375a5388b482cfd0",
+      "result": "removed",
+      "bytes": 105262
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\nvim\\.worktrees\\Refactor-KitLayout",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\nvim",
+      "branch": "Refactor/KitLayout",
+      "head": "d99ce72e5250902b89131ef2a099550e9413a211",
+      "result": "removed",
+      "bytes": 51944
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\react\\.worktrees\\Fix-TemplateWorkflowRepository",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\react",
+      "branch": "Fix/TemplateWorkflowRepository",
+      "head": "d746b647d0d9f4ceb38838d61bac2ba161d4a01b",
+      "result": "removed",
+      "bytes": 281383
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\react\\.worktrees\\Refactor-KitLayout",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\react",
+      "branch": "Refactor/KitLayout",
+      "head": "88ebf33621f6788e758ac33985d4534687da05a8",
+      "result": "removed",
+      "bytes": 279834
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet\\.worktrees\\Feature-ScriptedScaffold\\.worktrees\\HostsRepair",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+      "branch": "Fix/ScaffoldHostsQualification",
+      "head": "081e83184f9f5158e5b20d49b1e37b0ec768b7e1",
+      "result": "removed",
+      "bytes": 953462
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet\\.worktrees\\Fix-DomainEventDispatcher",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+      "branch": "Fix/DomainEventDispatcher",
+      "head": "08f9c41275105e6eac01009301cbbb9edfc8acdf",
+      "result": "removed",
+      "bytes": 1589170
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet\\.worktrees\\Fix-TemplateWorkflowRepository",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+      "branch": "Fix/TemplateWorkflowRepository",
+      "head": "4cb90a2cd0dcdfd34bcae9614a6dc5b9309c52ad",
+      "result": "removed",
+      "bytes": 1165950
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet\\.worktrees\\Fix-ValuesStructTest",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+      "branch": "Fix/ValuesStructTest",
+      "head": "60623180f8e14dac2aa615dac5948b955ec4a362",
+      "result": "removed",
+      "bytes": 678207
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet\\.worktrees\\Refactor-KitLayout",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+      "branch": "Refactor/KitLayout",
+      "head": "9f8e918812f12e4e75ea66e7bc6506bc8250ebfa",
+      "result": "removed",
+      "bytes": 666067
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\rust\\.worktrees\\Fix-TemplateWorkflowRepository",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\rust",
+      "branch": "Fix/TemplateWorkflowRepository",
+      "head": "579f95d539215d493c1f20ea8372343a7a16bde5",
+      "result": "removed",
+      "bytes": 178712
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\rust\\.worktrees\\Refactor-KitLayout",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\rust",
+      "branch": "Refactor/KitLayout",
+      "head": "f4a23a4f3febe61659dbef66153e36f997396336",
+      "result": "removed",
+      "bytes": 177540
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\work\\.worktrees\\Fix-TemplateWorkflowRepository",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\work",
+      "branch": "Fix/TemplateWorkflowRepository",
+      "head": "3b021cab6943a422870772de88266b9323d494d9",
+      "result": "removed",
+      "bytes": 149646
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\template\\.worktrees\\Feature-SkillFamilies",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\template",
+      "branch": "Feature/SkillFamilies",
+      "head": "51a8a1dfd54cdbdd9d63747c3cc3d4e249fb343a",
+      "result": "removed",
+      "bytes": 367427
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\template\\.worktrees\\Fix-ReadTokenSecret",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\template",
+      "branch": "Fix/ReadTokenSecret",
+      "head": "b0c549de03be7c0faef122c68427e2ab71d4484e",
+      "result": "removed",
+      "bytes": 367425
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\template\\.worktrees\\Refactor-KitTaxonomyVocabulary",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\template",
+      "branch": "Refactor/KitTaxonomyVocabulary",
+      "head": "b085210d06e42c10d840cf7f969c7484b730f945",
+      "result": "removed",
+      "bytes": 373342
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Docs-StandardsCompositionDesign",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/LanePromptBoundary",
+      "head": "04c9604b1c70ef80c447b86cc3f86e53e6319a26",
+      "result": "removed",
+      "bytes": 7675120
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Feature-SelfRepair",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Feature/SelfRepair",
+      "head": "86e9b1dedfdf5ab16f52c0e8da05d7d61343dee1",
+      "result": "removed",
+      "bytes": 8199700
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Feature-WorkItemSessions",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Feature/WorkItemSessions",
+      "head": "856d2d925a42ff61504ab3874c6f73658a025ac6",
+      "result": "skipped",
+      "reason": "Ignored data requires preservation: .agents/continuation/child-b863052f8fe648b7bc09c5f6e67ff4dd.json, .agents/continuation/delivery-approval-228.json, .agents/continuation/events.jsonl"
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-CodexMergeCleanupStop",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/CodexMergeCleanupFallback",
+      "head": "efbd52e0f4543f6704a0900ff1b683ca3bf9269b",
+      "result": "skipped",
+      "reason": "Ignored data requires preservation: .agents/continuation/events.jsonl, .agents/continuation/handoff-codex-merge-cleanup-stop.txt, .agents/continuation/owner.json"
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-ContinuationHeartbeatMetadata",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/ContinuationHeartbeatMetadata",
+      "head": "5481a79f9ac66c3167f675d23ba6b0d0c0bdec8e",
+      "result": "skipped",
+      "reason": "Ignored data requires preservation: .agents/persistent-workflow-binding.json"
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-ContinueAuthorizedGoal",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/ContinueAuthorizedGoal",
+      "head": "18cc0870200da0c8d6c938b435bdbebab47edaea",
+      "result": "skipped",
+      "reason": "Ignored data requires preservation: .agents/persistent-workflow-binding.json"
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-ConventionApprovalConfiguration",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": null,
+      "head": "3b41211db4b6349ca74036e0df3a6d8bc91784f2",
+      "result": "removed",
+      "bytes": 8830804
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-HandoffWorkflowGrant",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/HandoffWorkflowGrant",
+      "head": "8b5aedd4bb16769704c8e5471889132c63b3e0a4",
+      "result": "removed",
+      "bytes": 6561023
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-HookCacheRecovery",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Fix/HookCacheRecovery",
+      "head": "e0c59ff863bef7acdb7156806c73fe7fb938e716",
+      "result": "skipped",
+      "reason": "Ignored data requires preservation: .agents/continuation/events.jsonl, .agents/continuation/hook-cache-recovery-claude-handoff.txt, .agents/continuation/owner.json"
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Fix-PeerCliUnderScope",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": null,
+      "head": "8b5aedd4bb16769704c8e5471889132c63b3e0a4",
+      "result": "removed",
+      "bytes": 6561020
+    },
+    {
+      "path": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core.worktrees\\Feature-PrReadinessMonitor",
+      "repo": "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+      "branch": "Feature/PrReadinessMonitor",
+      "head": "a715da39dbd3fbfe780a505d66c26525a20abe14",
+      "result": "removed",
+      "bytes": 7515594
+    }
+  ],
+  "free_after": 10029690880,
+  "removed_count": 22,
+  "removed_logical_bytes": 53366642
+}

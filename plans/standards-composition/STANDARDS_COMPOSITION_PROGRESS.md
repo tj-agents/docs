@@ -5,16 +5,19 @@
 - Roadmap item: `standards-composition/scoped-selection`
 - Repository: https://github.com/tj-agents/docs
 - Worktree: C:/Users/TommySeery/source/repos/tj-agents/docs
-- Branch: Docs/SharedDesignPlans
-- PR: not opened
+- Branch: main
+- PR: https://github.com/tj-agents/docs/pull/1 (merged)
+- Core retirement: https://github.com/tj-agents/core/pull/170 (merged)
 - Last reconciled: 2026-10-09, shared documentation ownership
 
 ## Current state
 
 Tommy requested a shared docs repository for global design and cross-repository plans, following
-Concertable's documentation ownership model. This migration moves the plan, roadmap and progress record
-together into tj-agents/docs. The core copies are retired after this repository's planning artifacts land;
-core retains a link to the shared documentation owner. Existing implementation plans stay in their source repositories.
+Concertable's documentation ownership model. The plan, roadmap and progress record
+are published together in tj-agents/docs through PR1, merge `bbe987e6d4245d06d59412027864a6aa4d33f816`.
+Core PR170 retired the duplicate artifacts and added ownership pointers, merge
+`193c48144e4cde03a30aab8e68fa2b684d1f4cb6`. Existing implementation plans stay in their source repositories.
+The docs repository is private. The saved continuation prompt now points to this checkout.
 
 The proposal was published through core PR169, merge `8ea3baae61621668729e12333aaf66b17a31ea6b`,
 reviewed head `9ead6c5a185ba0405e0eaaf7830efaffec9cd385`. Earlier discovery landed through core PR167.
@@ -35,15 +38,20 @@ Core PR169 passed frozen documentation reachability and diff checks. Its plan gr
 one pre-existing size warning in an unrelated ledger. Its guard passed; Windows/Linux CI was still running
 at the docs merge. Main regeneration subsequently reported generated output already current.
 Migration checks passed: plan graph (zero errors/warnings), relative links, instruction-file pairing and
-preservation of the design body outside ownership/provenance notes. Record review and publication identities
-when this relocation completes.
+preservation of the design body outside ownership/provenance notes. Both frozen reachability checks and
+diff checks passed. Core's graph has zero errors and the same unrelated size warning. Core PR170's guard
+passed; full Windows/Linux CI was still running at the docs-only merge. No full CI pass is claimed.
+Docs has no CI/publish workflow; core's main workflow regenerates packages but this move changes no package source.
 
 ## Reviews
 
 Core PR169's native and parent reviews resolved four gaps: resource addressing, target-relevant choices,
 the unspecified concern API and legacy-release compatibility. Incremental review approved `9ead6c5`.
 The configured fresh lens was unsupported on this account and supplied no evidence. That completed
-review remains provenance for the design; this move receives its own documentation review.
+review remains provenance for the design. Native Codex and parent documentation reviews passed with no
+findings for docs `e2f6441037fde2645487bece1856b7542feebcfe` and core
+`49a174289cf46861fa6571dfb49aac3de65ae50c`. The configured lens remained unavailable, so its bounded
+checks used the documented parent fallback. Both delivery bindings were released after merge.
 
 ## Decisions, discoveries, blockers, and deviations
 
@@ -52,7 +60,7 @@ the plan records unfinished source-ownership, catalog, conditional-route, naming
 reconcile those owners against current source before implementation. Preserve other writers and the
 
 The shared plan owns cross-repository dependencies and acceptance. Source repositories own runtime
-implementation plans and reviews. The docs migration is authorized; the proposed runtime design still
+implementation plans and reviews. The authorized docs migration is complete; the proposed runtime design still
 requires Tommy's decision. No live hook change, implementation executor or takeover of another owner is authorized.
 
 ## Execution readiness
@@ -63,15 +71,16 @@ new Dapper/raw guidance and fresh-host qualification retain the explicit gates i
 
 ## Next Steps
 
-1. Finish the authorized docs migration: validate and review this repository, publish its artifacts to main,
-   then remove the core copies and land core's documentation pointer. Record both publication identities here.
-2. Await Tommy's decision on the existing proposal. If revision is requested, revise this same plan in docs.
-3. After explicit runtime approval, record its scope here, reconcile existing source owners and start the
+Paused: Tommy — approve or revise the published design and authorize runtime owner slices; the original handoff reserves that decision.
+
+Scope: current slice only; full plan remains incomplete.
+Current slice: obtain the runtime decision on the published proposal; shared documentation migration is complete.
+Remaining scope: approved owner implementation slices, producer/consumer migration and both-host qualification.
+Done when: Tommy's decision is recorded and the next authorized action is resolved; the wider refactor remains open.
+
+1. Read the published proposal in this docs repository. If Tommy requests a revision, update this same plan.
+2. After explicit runtime approval, record its scope here, reconcile existing source owners and start the
    authorized C0 slice in a core checkout from current origin/main. Keep implementation progress with that
    owner and cross-repository dependencies here. The docs checkout is not a runtime implementation target.
 
-Scope: current slice only; full plan remains incomplete.
-Current slice: publish the shared docs owner and retire the duplicate core artifacts.
-Remaining scope: design approval, owner implementation slices, producer/consumer migration and host qualification.
-Done when: the shared plan is published in docs, core links to it without duplicate artifacts, and the
-runtime decision boundary remains explicit.
+This post-publication checkpoint rides the next substantive plan change; no bookkeeping-only PR is needed.

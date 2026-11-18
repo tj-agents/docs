@@ -1,0 +1,19 @@
+{
+  "kind": "bug",
+  "title": "CI is red on main",
+  "summary": "The agent-workboard CI workflow has three independently failing jobs on the main branch, preventing a clean tracker-adoption delivery.",
+  "priority": "P2",
+  "owner": "agent-workboard CI",
+  "expected": "The CI workflow passes its Rust, fuzz, and Windows release jobs on main and on configuration-only pull requests.",
+  "actual": "Main run 36435467943 and adoption PR run 39128794278 fail rust tests without a Git identity, fuzz because cargo-fuzz runs stable rustc, and the Windows release test because multiple Git executable paths are treated as one command.",
+  "evidence": "Both runs fail all three job names. The adoption branch changes only tracker configuration; the main run at its exact base commit already has the same failing jobs.",
+  "impact": "CI cannot establish a green delivery state for unrelated configuration changes.",
+  "resolution": "A dedicated CI repair makes the three jobs pass on a fresh GitHub Actions run and leaves the tracker-adoption PR with passing required checks.",
+  "observed": "2026-10-18",
+  "cause": "Confirmed workflow and release-test configuration defects: no test Git identity, stable toolchain overriding nightly fuzz instrumentation, and an unselected multi-result Git command lookup.",
+  "source_owner": "tomjseery/agent-workboard CI and release-test scripts",
+  "state": "resolved",
+  "repair": "PR #3 repaired CI and Windows installer/updater behavior, merged as 2bca92e7ecde351202e3e2d468082e9fbf453d84.",
+  "next_action": "Continue the remaining eligible personal-repository tracker rollout.",
+  "verification": "Repair run 39135954035 and the rebased adoption run 39136652023 each passed rust, fuzz, and windows-release; GitHub bug #2 is closed."
+}

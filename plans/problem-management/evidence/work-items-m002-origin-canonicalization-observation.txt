@@ -1,0 +1,9 @@
+On 18 October 2026, the cpp tracker adoption was blocked because its local `origin` was still `https://github.com/ThomasSeery/cpp.git`, while GitHub's canonical identity is `tomjseery/cpp`.
+
+The same audit found `agent-starter-kit` still using `https://github.com/ThomasSeery/agent-starter-kit.git`; GitHub confirms its canonical identity is `tomjseery/agent-starter-kit`.
+
+Cause: the rollout reused local origin strings without first resolving them to GitHub's canonical owner. The tracker correctly rejected the mismatch; this is not a tracker or Core standards defect.
+
+Correction: resolve every legacy-owner origin through GitHub before adoption, update only verified canonical matches, and verify the configured fetch/push URL before running tracker adoption.
+
+Verification: GitHub reported `tomjseery/cpp` (unarchived) and `tomjseery/agent-starter-kit` (archived); both local origins were updated and read back as the canonical `tomjseery` URLs.

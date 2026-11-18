@@ -1,0 +1,38 @@
+{
+  "candidate_dotnet": "1708d258eec07da19dfd6c2663d84878563899b8",
+  "published_core": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+  "merged_azure": "320779cf68822f13a062f87f01686d3b7276b9db",
+  "proofs": [
+    {
+      "name": "ChainPlain1708",
+      "cloud_azure": false,
+      "scaffold_exit": 0,
+      "selected": {
+        "base-agents/base": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+        "base-agents/engineering": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+        "base-agents/machine": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+        "dotagents/dotnet": "1708d258eec07da19dfd6c2663d84878563899b8"
+      },
+      "file_count": 21,
+      "post_scaffold_check_repeat_check": "passed",
+      "all_files_byte_unchanged_on_repeat": true
+    },
+    {
+      "name": "ChainAzure1708",
+      "cloud_azure": true,
+      "scaffold_exit": 0,
+      "selected": {
+        "azure-agents/azure": "320779cf68822f13a062f87f01686d3b7276b9db",
+        "base-agents/base": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+        "base-agents/engineering": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+        "base-agents/machine": "9341db876dee3c57d3e7e83e518e3dd64cb27813",
+        "dotagents/dotnet": "1708d258eec07da19dfd6c2663d84878563899b8"
+      },
+      "file_count": 45,
+      "post_scaffold_check_repeat_check": "passed",
+      "all_files_byte_unchanged_on_repeat": true
+    }
+  ],
+  "native_host_loading": "not_claimed",
+  "real_app_builds": "owned_by_exact_head_CI"
+}

@@ -1,5 +1,11 @@
 # Reduce time to useful progress
 
+<!-- BEGIN plan-tracker-migration -->
+Current work is tracked through the selected Personal GitHub provider. This document retains design, decisions and historical evidence. Recording does not change implementation authority or existing delivery ownership.
+
+- [Reconcile reduce time to useful progress](https://github.com/tj-agents/docs/issues/18)
+<!-- END plan-tracker-migration -->
+
 Status: improvement proposal; preserve the existing review and delivery gates.
 Updated: 2026-10-11.
 
@@ -26,3 +32,18 @@ Faster token generation alone cannot fix a blocked launch or conflicting instruc
 
 Select one measured cause for a bounded improvement after reconciling its existing owner; do not launch
 a generic rewrite of all process skills.
+
+## Recorded naming debt (2026-10-11)
+
+Tommy called out terminal titles and worktree/branch names that do not explain the current task.
+Canonical debt records are `core/.agents/machine/TECH_DEBT.md` (D-MACHINE-TASK-TITLES) and
+`core/.agents/engineering/policy/git-branching/TECH_DEBT.md` (D-ENGINEERING-WORKTREE-NAMES).
+The latter records this coordinator's scope change under the old SessionGuidanceHandoffCompliance name.
+The intended user-facing description is **Launch, reuse or defer repair handoffs**. Those source-owned
+records contain the evidence and resolution conditions; this plan links them rather than copying a
+second backlog. Naming changes must preserve the existing native context and active work ownership.
+
+On 2026-10-12, Tommy clarified that visible names literally say `Read handoff...`. The native Codex index
+confirms that failure for both recent handoffs despite descriptive launcher/registry titles. The concrete
+repair is now recorded as `core/BUGS.md` B006; the existing terminal naming debt links it. Acceptance must
+check the native session list and visible terminal labels after startup/resume, not only launcher metadata.

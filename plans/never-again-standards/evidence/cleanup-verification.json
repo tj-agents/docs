@@ -1,0 +1,12 @@
+{
+  "owned_worktrees_absent": [
+    "dotnet/.worktrees/Feature-RepositoryStandardsInjection",
+    "core/.worktrees/Feature-CatalogComposer",
+    "core/.worktrees/Docs-RepositoryStandardsInitialization",
+    "azure/.worktrees/Fix-AzureDeclaredDependency"
+  ],
+  "other_checkouts_preserved": true,
+  "cleanup_gates": "canonical cleanup_proof.py; only per-call timeout extended after actual timeouts",
+  "source_pr": 51,
+  "source_head": "1708d258eec07da19dfd6c2663d84878563899b8"
+}

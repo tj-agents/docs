@@ -1,0 +1,365 @@
+﻿{
+    "started_utc":  "2026-10-14T10:54:26.2803276Z",
+    "approved_count":  27,
+    "approved_bytes":  97218003,
+    "removed_count":  0,
+    "removed_bytes":  0,
+    "skipped_count":  27,
+    "branch_deleted_count":  0,
+    "branch_preserved_count":  0,
+    "outcomes":  [
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/azure/.worktrees/Fix-TemplateWorkflowRepository",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\azure",
+                         "branch":  "Fix/TemplateWorkflowRepository",
+                         "approved_head":  "682acf75015799b306df15089ecd340676bf2eb9",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/github-actions/.worktrees/Fix-TemplateWorkflowRepository",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\github-actions",
+                         "branch":  "Fix/TemplateWorkflowRepository",
+                         "approved_head":  "706a817563f1cb27b5b6db90375a5388b482cfd0",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/nvim/.worktrees/Refactor-KitLayout",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\nvim",
+                         "branch":  "Refactor/KitLayout",
+                         "approved_head":  "d99ce72e5250902b89131ef2a099550e9413a211",
+                         "class":  "ghost",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/react/.worktrees/Fix-TemplateWorkflowRepository",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\react",
+                         "branch":  "Fix/TemplateWorkflowRepository",
+                         "approved_head":  "d746b647d0d9f4ceb38838d61bac2ba161d4a01b",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/react/.worktrees/Refactor-KitLayout",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\react",
+                         "branch":  "Refactor/KitLayout",
+                         "approved_head":  "88ebf33621f6788e758ac33985d4534687da05a8",
+                         "class":  "ghost",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/dotnet/.worktrees/Feature-ScriptedScaffold/.worktrees/HostsRepair",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+                         "branch":  "Fix/ScaffoldHostsQualification",
+                         "approved_head":  "081e83184f9f5158e5b20d49b1e37b0ec768b7e1",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/dotnet/.worktrees/Fix-DomainEventDispatcher",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+                         "branch":  "Fix/DomainEventDispatcher",
+                         "approved_head":  "08f9c41275105e6eac01009301cbbb9edfc8acdf",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/dotnet/.worktrees/Fix-TemplateWorkflowRepository",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+                         "branch":  "Fix/TemplateWorkflowRepository",
+                         "approved_head":  "4cb90a2cd0dcdfd34bcae9614a6dc5b9309c52ad",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/dotnet/.worktrees/Fix-ValuesStructTest",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+                         "branch":  "Fix/ValuesStructTest",
+                         "approved_head":  "60623180f8e14dac2aa615dac5948b955ec4a362",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/dotnet/.worktrees/Refactor-KitLayout",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\dotnet",
+                         "branch":  "Refactor/KitLayout",
+                         "approved_head":  "9f8e918812f12e4e75ea66e7bc6506bc8250ebfa",
+                         "class":  "ghost",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/rust/.worktrees/Fix-TemplateWorkflowRepository",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\rust",
+                         "branch":  "Fix/TemplateWorkflowRepository",
+                         "approved_head":  "579f95d539215d493c1f20ea8372343a7a16bde5",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/rust/.worktrees/Refactor-KitLayout",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\rust",
+                         "branch":  "Refactor/KitLayout",
+                         "approved_head":  "f4a23a4f3febe61659dbef66153e36f997396336",
+                         "class":  "ghost",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/work/.worktrees/Fix-TemplateWorkflowRepository",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\work",
+                         "branch":  "Fix/TemplateWorkflowRepository",
+                         "approved_head":  "3b021cab6943a422870772de88266b9323d494d9",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/template/.worktrees/Feature-SkillFamilies",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\template",
+                         "branch":  "Feature/SkillFamilies",
+                         "approved_head":  "51a8a1dfd54cdbdd9d63747c3cc3d4e249fb343a",
+                         "class":  "ghost",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/template/.worktrees/Fix-ReadTokenSecret",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\template",
+                         "branch":  "Fix/ReadTokenSecret",
+                         "approved_head":  "b0c549de03be7c0faef122c68427e2ab71d4484e",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/template/.worktrees/Refactor-KitTaxonomyVocabulary",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\template",
+                         "branch":  "Refactor/KitTaxonomyVocabulary",
+                         "approved_head":  "b085210d06e42c10d840cf7f969c7484b730f945",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Docs-StandardsCompositionDesign",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  "Fix/LanePromptBoundary",
+                         "approved_head":  "04c9604b1c70ef80c447b86cc3f86e53e6319a26",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Feature-SelfRepair",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  "Feature/SelfRepair",
+                         "approved_head":  "86e9b1dedfdf5ab16f52c0e8da05d7d61343dee1",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Feature-WorkItemSessions",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  "Feature/WorkItemSessions",
+                         "approved_head":  "856d2d925a42ff61504ab3874c6f73658a025ac6",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "Access to the path \u0027C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core\\.worktrees\\Feature-WorkItemSessions\\.pytest_cache\u0027 is denied."
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-CodexMergeCleanupStop",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  "Fix/CodexMergeCleanupFallback",
+                         "approved_head":  "efbd52e0f4543f6704a0900ff1b683ca3bf9269b",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-ContinuationHeartbeatMetadata",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  "Fix/ContinuationHeartbeatMetadata",
+                         "approved_head":  "5481a79f9ac66c3167f675d23ba6b0d0c0bdec8e",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-ContinueAuthorizedGoal",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  "Fix/ContinueAuthorizedGoal",
+                         "approved_head":  "18cc0870200da0c8d6c938b435bdbebab47edaea",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-ConventionApprovalConfiguration",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  null,
+                         "approved_head":  "3b41211db4b6349ca74036e0df3a6d8bc91784f2",
+                         "class":  "detached-safe",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "branch changed: "
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-HandoffWorkflowGrant",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  "Fix/HandoffWorkflowGrant",
+                         "approved_head":  "8b5aedd4bb16769704c8e5471889132c63b3e0a4",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-HookCacheRecovery",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  "Fix/HookCacheRecovery",
+                         "approved_head":  "e0c59ff863bef7acdb7156806c73fe7fb938e716",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core/.worktrees/Fix-PeerCliUnderScope",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  null,
+                         "approved_head":  "8b5aedd4bb16769704c8e5471889132c63b3e0a4",
+                         "class":  "detached-safe",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "branch changed: "
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     },
+                     {
+                         "path":  "C:/Users/TommySeery/source/repos/tj-agents/core.worktrees/Feature-PrReadinessMonitor",
+                         "repo":  "C:\\Users\\TommySeery\\source\\repos\\tj-agents\\core",
+                         "branch":  "Feature/PrReadinessMonitor",
+                         "approved_head":  "a715da39dbd3fbfe780a505d66c26525a20abe14",
+                         "class":  "merged",
+                         "status":  "skipped",
+                         "guards":  [
+                                        "warning: unable to access \u0027C:\\Users\\TommySeery/.config/git/ignore\u0027: Permission denied"
+                                    ],
+                         "removed_bytes":  0,
+                         "branch_action":  "none"
+                     }
+                 ],
+    "cache":  null,
+    "disk":  null
+}

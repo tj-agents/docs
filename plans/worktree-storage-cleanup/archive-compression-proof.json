@@ -1,0 +1,7 @@
+{
+  "action": "NTFS compression of reproducible Git tree.tar archives",
+  "exit": 0,
+  "probe_sha256_before": "14B209065569A309BC55F017E4A52E5F6F3A744485F8BB469CA93AE3B7481918",
+  "probe_sha256_after": "14B209065569A309BC55F017E4A52E5F6F3A744485F8BB469CA93AE3B7481918",
+  "bytes_unchanged": true
+}

@@ -1,6 +1,184 @@
 # Bug, mistake and debt skills
 
-Status on 18 October 2026: GitHub work-items tooling and Core integration delivered; personal-repository adoption and existing-record migration remain unfinished. The former PR #269 dependency has merged.
+## Completion checkpoint - 21 October 2026
+
+Status: routing/store cutover COMPLETE. Recorded 2026-10-21T20:15:27.237684+00:00. This checkpoint
+supersedes older caller/install, reader and source delivery holds for this cutover.
+The separately held workflow-removal batch and obsolete-PR closure retain their
+existing approval requirements; neither is represented as completed here.
+
+are merged. Core342 retired the selectable WorkItems roster; Core343 corrected
+the dummy-process fixture's completion sequencing and its causal main CI passed
+on Windows and Linux (run39663680348). Marketplace19 retired both host catalogs
+last; its causal main CI passed. Exact reviewed heads, normal merge permissions
+and private review evidence were verified. No admin, billing or credential change.
+
+Final roster landing: fd4d476a9da53839ad42a0414bfb0f8df4ee184f.
+Fixture landing: 8c45d86feceddba018e071d62808bf967f1c315e.
+Marketplace landing: 063a604c86051388cc3889eefe8734a22f19010d.
+
+Actual installed acceptance: 12 Codex/Claude payloads match published source;
+eight fresh native profile checks pass; seven actual Personal provider roots
+Both native marketplace checkouts match the final published catalog and contain
+no WorkItems entry. Neither native host retains an installed/enabled WorkItems
+The supported native selectors reject the retired capability without writes.
+
+Core334 reader closure is complete for the captured bound readers. Immutable
+snapshots were not edited. The published installed Windows launcher migrated the
+live SQLite store from schema3 to4 after backup: all93 original session identities,
+all12 work items, owner/reference relationships and all19 request receipts remain;
+integrity and foreign-key checks pass. Linux source, package and launcher coverage
+passed actual CI. No installed Linux native CLI is in use on this workstation.
+
+Routing is explicit: personal:work-item reads GitHub issues,
+personal:create-work-item records them, personal:address-work-item starts Core's
+Core owns the shared agent store/lifecycle and does not choose or inject a tracker.
+Work remains neutral employer communications/review. Work scope excludes Personal.
+
+Five personal primary checkouts are at reviewed landings; Docs received only its
+reviewed configuration while preserving divergent history. The explicitly adopted
+retired WorkItems primary has a local configuration checkpoint422ef8b and preserves
+its historical source/data. Historical dirty worktrees remain preserved. The foreign
+closed; no Personal policy or broader employer credential scope was substituted.
+
+No bulk plan-to-issue conversion or feature/project hierarchy automation is claimed.
+Those future product choices are separate. Agent Workboard was excluded throughout
+completion and is not a dependency of Core's store. Keep this session open for BTW.
+
+Separate known policy cleanup: Marketplace main policy run39664443513 fails because
+the existing .github/workflows/check-personal-policy.yml is expected to remove itself
+under published Personal policy. Its bytes are identical at the pre-retirement base
+and final landing. The prior explicit workflow-removal approval hold was preserved;
+no check was deleted, disabled or bypassed. Catalog CI39664442209 passes both OSes.
+Evidence: Temp/tj-held-policy-workflow-provenance-20261021.json. This is separate
+from provider/native-catalog/store acceptance and remains pending its held approval.
+
+Acceptance artifacts: Temp/tj-final-installed-content-acceptance-20261021.json,
+Temp/tj-live-installed-store-acceptance-20261021.json,
+Temp/tj-final-native-catalog-acceptance-20261021.json,
+Temp/tj-close-fixture-main-ci-20261021.json and
+Temp/tj-final-marketplace-main-ci-20261021.json.
+
+## Current takeover and provider cutover - 21 October 2026
+
+### Current scope and private CI correction - 21 October 2026
+
+on21October2026T16:56:30Z. Reviewed source head3c9c0dd and landing commit have identical
+Git trees; refreshed origin/main contains the landing and manual-only/read-only/five-minute CI
+workflow. Exact remote PR head and source ref were verified. All48 local tests and payload check
+passed; native and independent workflow/security reviews passed with private proof recorded.
+No admin flag, auth widening, billing/account change or employer API call was used. The old
+billing-failed run is historical and no longer a gate under Tommy's requested private-CI policy.
+The primary checkout is on unrelated Feature/WorkCommunications with preserved untracked work;
+it was only fetched, not switched or reset. Keep the delivered checkout while the coordinated
+source/install goal still needs its provider payload; no unrelated worktree cleanup was attempted.
+
+Agent Workboard remains outside this task. Core's agent store is independent of that UI. Do not
+treat its archived PR, checkout or publication as a dependency or ask to unarchive it for this goal.
+
+Tommy clarified that Agent Workboard is outside this task. Core's SQLite agent execution/session
+store has no Agent Workboard dependency; Agent Workboard is an optional UI consumer. Do not edit,
+publish, unarchive or migrate that repository further for this goal. Its prior local candidate is
+preserved, and its archived source publication is not a gate for Core's agent store or routing.
+
+Tommy explicitly requested reducing private-repository CI burden after the billing failure.
+of test volume. Candidate3c9c0dda801bfaeba093a825f79f1336e459042a integrates current
+main c307122 and changes this verified PRIVATE tooling repository to workflow_dispatch only,
+read-only contents and a five-minute job limit. AGENTS/README retain local checks, exact-commit
+review and normal merge permissions; no Personal merge policy or employer product protections
+are changed. All48 local tests passed in17.634seconds; payload check passed. Native and fresh
+independent workflow/security reviews completed clean. PR12 is merged with normal permissions;
+do not reintroduce the superseded billing-CI hold or use an admin override. No account or credential
+change is authorized or needed. This is a policy change for this repository, not a claim that all
+private production repositories have been changed.
+
+Core exact-head CI39634262991 completed successfully at a30110f4, including Windows,
+Linux and ci-required. The monitor first timed out while Windows was still running; a direct
+read after that wake confirmed success. Core's remaining gates concern actual caller/install
+cutover, not CI or Agent Workboard. Source334 native-writer activation remains separately held
+until reader closure. Initial immutable-hook inventory found Base and Machine snapshots, but
+the recorded Engineering snapshot is absent; already-loaded Engineering acceptance is not
+proved. Do not migrate the live database from disposable fixture evidence alone.
+
+Tommy explicitly answered "Yes—take over and finish the migration" to transferring the closed
+repo-configuration migration owner. The supported predecessor claim succeeded: native owner
+codex:01a15674-78c1-7703-8f6f-53e59ab10e57 replaced closed predecessor
+codex:01a14ec8-5bdd-70a3-90c1-9d31a71289cf for problem-management/personal-policy.
+This same session also owns the source-delivery work linked from Core's tracker-aware-skills goal;
+the native registry now tracks this consumer slice. No second owner or session was started.
+
+The current approved destination supersedes the historical optional WorkItems package below:
+Migrate existing configuration and installed bindings, preserving issue IDs, native types and
+idempotency receipts. Do not bulk-convert plan contents, create test issues, infer Personal scope
+from an account name, or enable Personal in work. Existing unrelated dirty docs remain preserved.
+Current action: inventory actual declared callers and migrate their owning configurations through
+the current profile and selection utilities, followed by read-only provider and host verification.
+
+### Reviewed publication checkpoint - 21 October 2026
+
+All eight final candidates completed native Codex review and a fresh independent
+workflow/dependency review. Private review receipts and both-host source coverage are recorded
+at each exact candidate. The first-pass missing Engineering dependency is fixed in all seven
+selection excludes Personal. Core's focused adoption suite passed all 16 tests; generation
+and source checks passed. Source review does not establish installed activation.
+
+Seven non-force pushes were verified against both refreshed origin refs and owning PR heads:
+
+| Repository | Owning PR | Verified published head |
+| --- | --- | --- |
+| tomjseery/cpp | https://github.com/tomjseery/cpp/pull/6 | `a22fd55a649aa21237779b69f35d89f3b3bb9211` |
+| tomjseery/marketplace-car-hunter | https://github.com/tomjseery/marketplace-car-hunter/pull/2 | `c4d8455e04302677e3a1ebe7ba8b4239ff45bc00` |
+| tomjseery/onsite-sealants | https://github.com/tomjseery/onsite-sealants/pull/3 | `4ac915d2b34353aacd9453dac57cfc0820ca0bd2` |
+| tomjseery/Reunion | https://github.com/tomjseery/Reunion/pull/26 | `ee04e8ab2076dec0a89a1f8c7119d7b30cc1263f` |
+| tomjseery/termboard | https://github.com/tomjseery/termboard/pull/2 | `9fafcceb80b329ad719c7abb46791d95aa8aa303` |
+| tj-agents/docs | https://github.com/tj-agents/docs/pull/7 | `2bd15be516f0988a1c858cc04d702114c3e8408b` |
+| tj-agents/core | https://github.com/tj-agents/core/pull/298 | `a30110f4440f2808ab44dbb4c78fdc6c102c62eb` |
+
+All remain draft during the coordinated caller/install cutover. No issue or Azure item was
+created or changed. Existing repository/type mappings and request receipts remain intact;
+the current Personal request journal uses the same durable namespace and request-key hash
+as the retired implementation. Nineteen receipts in the retired WorkItems primary remain
+preserved. Existing plans were not converted into issues.
+
+Agent Workboard's reviewed candidate is committed locally at
+577523ad54c11d213b117434371732c517d1e058 in the restored existing checkout
+C:/Users/TommySeery/source/repos/agent-workboard. Its push was rejected with HTTP403:
+the repository is archived/read-only. GitHub confirms archivedAt=2026-10-21T14:53:55Z;
+PR4 remains at 6cf61745c560e760901f240c84d6ff03adff28b3. No retry, unarchive or
+permission change was attempted. Tommy subsequently excluded Agent Workboard from this task. Preserve its prior reviewed
+commit and history; do not edit, publish, unarchive or migrate it for this goal. Its archived
+publication is not a Core dependency. Published installed Windows
+Personal successfully resolved this primary and read existing closed bug2 before this failure;
+that proves a read route, not remote publication or native host activation.
+
+Exact-head CI observed after publication: Marketplace Car Hunter39633663939,
+Reunion39633761753 and Termboard39633782069 completed successfully. Cpp, Onsite and
+Docs had no Actions run on their configuration-only heads; do not describe this absence as
+a passing suite. Core39634262991 completed successfully after the monitor timeout; it is bound
+to the shared reconnect-safe monitor under profile-engineering-repair-20261021, exact head
+a30110f4440f2808ab44dbb4c78fdc6c102c62eb. The earlier843a6d34 run39628272418 passed
+both supported OS jobs and ci-required, but does not substitute for the new run.
+
+manual hosted execution, required local validation and review, normal merge permissions.
+Its old billing failure no longer gates this delivery. Work10, marketplace19 and Core334
+retain their actual caller/install and reader-closure gates. Core298 user merge authorization
+and exact-head CI are cleared; actual cutover checks remain unfinished. The rejected WorkItems
+roster removal has not been retried ahead of caller/install closure.
+
+Remaining caller work includes old primary and historical worktree declarations inventoried
+in Temp/tj-routing-consumer-inventory-20261021.json and tj-routing-consumer-details-20261021.json.
+Preserve dirty historical checkouts and request receipts. Refresh primary/native bindings only
+through supported selection/install utilities after source delivery; check immutable loaded
+hook readers before schema4 activation. Ten existing native-reported registrations already
+accepted disposable schema4 fixtures; no live database migration or fresh model session ran.
+The separate upstream close-watcher relative-path defect remains recorded below/with Core.
+GitHub hierarchy/Projects automation is an approved target, not implemented by this cutover.
+
+Checkpoint UTC: 2026-10-21T16:26:39.301562+00:00
+
+### Historical rollout record - 18 October 2026
+
+Status on 18 October 2026: GitHub work-items tooling and Core integration delivered; personal-repository adoption and existing-record migration remain unfinished. The former PR #269 dependency has merged. Cpp, Agent Workboard, Marketplace Car Hunter, Onsite Sealants, Reunion and Termboard adoption are delivered; 17 eligible-repository candidates remain.
 Shared design owner: tj-agents/docs. Implementation owners: tj-agents/work-items (new optional tracker package), Core (generic workflow integration), marketplace/machine (selection), and personal consumer repositories (adoption).
 
 ## Full rollout transfer - 18 October 2026
@@ -21,13 +199,19 @@ The work-items legacy records now have canonical managed issues: B001 is closed 
 
 Native review completed without findings for docs commit `9e76f3f` against `0d74933ff0889251f6228c96d81b7553ed95a736` and for work-items commit `34aeadf` against `881eb5b0df7204ba53cf49a93f556f7d341910ea`. One initial work-items review invocation used the wrong checkout; it was recorded as new evidence on M002 and contributes no review result. The correct rerun from `Chore/AdoptWorkItemsTracker` is the retained review evidence.
 
-Native review completed without findings for docs commit `9e76f3f` against `0d74933ff0889251f6228c96d81b7553ed95a736` and for work-items commit `34aeadf` against `881eb5b0df7204ba53cf49a93f556f7d341910ea`. One initial work-items review invocation used the wrong checkout; it was recorded as new evidence on M002 and contributes no review result. The correct rerun from `Chore/AdoptWorkItemsTracker` is the retained review evidence.
+The 18 October local-origin refresh found 29 unique GitHub repositories instead of the historical 35. Twenty-five are currently writable, unarchived, and issue-enabled; docs and work-items are adopted, leaving 23 candidates for per-repository instruction and active-owner checks. `tomjseery/agent-starter-kit` and `tomjseery/agent-utilities` are archived. `chan27-2/vel` is unavailable and `yanchikpiypiy/nvim-wsl` is a foreign origin, so neither is an eligible personal adoption candidate. The absent six historical identities need reconciliation from their prior inventory evidence; absence from this local refresh is not adoption or an exclusion decision.
 
-### Pilot checkpoint — 18 October 2026
+The canonical GitHub-owner audit found two stale local `ThomasSeery` origins. GitHub confirmed their canonical identities as `tomjseery/cpp` and archived `tomjseery/agent-starter-kit`; both local origins were corrected and read back. Cpp was then adopted from isolated branch `Chore/AdoptWorkItemsTracker`: selected configuration and tracker/provider declarations are committed in `42e6863`, the feature list returned empty successfully, native review returned no findings against `6a659605804234cf424c3048fca1821a7870d4ec`, and PR #5 merged at `e3b8d8125280966528c0eafdb9df1d89e707982a`. The observation and its prevention rule are retained as new evidence on work-items M002 (#16).
 
-The docs pilot now selects `work-items@work-items-agents` from `tj-agents/work-items`, with generated Codex and Claude settings, a GitHub tracker declaration for `tj-agents/docs`, and the Core problem-record provider declaration. Its feature listing returned an empty readable tracker. The work-items pilot uses isolated `Chore/AdoptWorkItemsTracker` from fetched `origin/main` at `881eb5b0df7204ba53cf49a93f556f7d341910ea`; it migrated its legacy schema-3 lock to the versionless selection, adopted `tj-agents/work-items`, and read its tracker successfully.
+Agent Workboard's inherited main CI baseline was repaired in PR #3, squash-merged at `2bca92e` after the exact hosted run `39135954035` passed Rust, nightly fuzz and Windows release checks. The repair makes installer and updater SHA-256 verification independent of unavailable no-profile cmdlets and canonicalizes manifest paths before containment checks; a complete local Windows package smoke test also exited successfully. Tracker adoption PR #1 then rebased to `8b5a8c1` on repaired main and squash-merged at `668ad0e` after exact hosted run `39136652023` passed the same checks. The dedicated CI-baseline bug #2 is closed with this repair and verification evidence.
 
-The work-items legacy records now have canonical managed issues: B001 is closed as #14, M001 is closed as #15, and M002 remains open as #16. Each creation used a durable migration request ID; B001 and M001 were read back after closure with their legacy identity, source links, states, and verification evidence intact. The legacy untracked `BUGS.md` and `MISTAKES.md` in the historical primary checkout remain untouched until their retained records and links can be reconciled by that checkout's owner. Codex installed-host discovery is still unverified because the Codex app server stopped during initialization; the exact merged tracker artifact was used after its files were verified byte-identical to the #13 landing.
+Marketplace Car Hunter preserved its existing Python plugin selection while adopting the tracker. Its empty feature listing and native review succeeded; PR #1 passed both Windows and Ubuntu Python checks and squash-merged at `0b31223c002196d58048c2b571b65d35ac2d6433`.
+
+Onsite Sealants adopted the tracker from an isolated branch with an empty feature listing. Its native review and Cloudflare Pages deployment check succeeded; PR #1 squash-merged at `a18b7ef095811a27f82f1c22828be72a406d1932`.
+
+Reunion adopted the tracker from an isolated branch with an empty feature listing and clean native review. Its required build-and-test check succeeded; PR #25 squash-merged into `master` at `2331a356ac87a8dbfc3ce20784705c9534042590`.
+
+Termboard adopted the tracker from an isolated configuration-only branch with an empty feature listing and clean native review. PR #1 passed Windows and Ubuntu Rust checks before squash-merging at `676f597d3f9d62494bd4d40421e869176ce4e8ff`.
 
 ## Current conclusion and rollout handoff — 18 October 2026
 
