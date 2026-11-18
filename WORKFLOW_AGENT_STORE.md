@@ -53,13 +53,20 @@ Sessions without a work item remain visible, and native identity does not requir
 
 Genuine pending work is recorded with `tj wait`; user keep-open requests use a persistent `tj hold`.
 A hold permits result delivery but prevents closure, survives new input and remains in force after recovery.
-New input withdraws pending completion. Failures retain the result and completed step receipts for recovery;
+Submitted native input withdraws pending completion. An unsent draft is not a native turn event.
+Failures retain the result and completed step receipts for recovery;
 retries do not resend a claimed native message or repeat tracker work that already has a receipt.
 
-Agent reads host-native liveness, including Codex threads loaded in its shared daemon. A dead wrapper or an
-ended store row does not prove the native conversation is gone. Cleanup requires verified native state;
-a live or ambiguous owner is retained. Recovery preserves the conversation, relationship and ownership,
-while recording a new launch rather than rewriting its history.
+Agent reads host-native liveness. Managed Codex uses an owned native process; CLI verifies its process
+identity, creation time and wrapper relationship before Agent records that observation. Threads still
+loaded in Codex's shared daemon remain competing evidence. A dead wrapper or an ended store row does not
+prove the native conversation is gone. Recovery refuses a live or ambiguous owner and preserves the
+conversation, relationship and ownership while recording a new launch rather than rewriting its history.
+
+Launch responses distinguish dispatch, verified process startup and a verified first turn. Codex recovery
+can verify the process before the user submits a turn, but that does not prove the native interface has
+loaded the conversation. Agent keeps conversation confirmation pending without submitting synthetic input.
+The [launch and recovery contract](https://github.com/tj-agents/agent#lifecycle) owns these evidence stages.
 
 ## Worktrees and repository state
 
