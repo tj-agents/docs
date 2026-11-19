@@ -16,7 +16,7 @@ Current work is tracked through the selected Personal GitHub provider. This docu
 
 ## Current state
 
-The lifecycle design is implementation-ready after two independent L4 reviews and final bounded correction verification. All six findings are resolved. It specifies owner-local publication, Git-backed retirement and consumer routing, authenticated recovery/owner transfer, global closeout and full-diff conditional CI. This commit records the finished design/readiness milestone for direct publication to docs main. Source evidence is pinned to core 6e2e2db3d1ad48e095ca5c2a9889f1cdfb92c8f5. No proposed runtime, policy or CI mechanism has been installed; the full persistence outcome remains incomplete.
+The lifecycle design is implementation-ready after two independent L4 reviews and final bounded correction verification. All six findings are resolved. It specifies owner-local publication, Git-backed retirement and consumer routing, authenticated recovery/owner transfer, global closeout and full-diff conditional CI. This commit records the finished design/readiness milestone for direct publication to docs main. Source evidence is pinned to core 99670fed799e17b1ac7aef44a15fcaca961e66dc. No proposed runtime, policy or CI mechanism has been installed; the full persistence outcome remains incomplete.
 
 ## Next Steps
 
@@ -42,7 +42,7 @@ Plan graph: 0 errors, 0 warnings; whitespace check passed. Ten Python examples, 
 
 ## Reviews
 
-Independent L4 passes at edca3c37126fda50fc4b6874bdcbcc0efecb1ff6 and f5dcf1a4e5983cc298b7a70c4af5bef7ae260bd9 produced four independent and two parent findings; all are resolved. Both Workflow v2 results validated. Final correction review approved at 2aa42b67b6e6cb0ae873ef652508810b85ac6b63 with no new or open findings, using the supported parent native-general fallback after specialist unavailability. This readiness checkpoint requires only its bounded ledger review before publication; the work order is retired after direct-main delivery, rather than retained as a dangling remote reference.
+Independent L4 passes at ddc7431651b44f22185ec918a315909742de6a1d and e607906520bba6deee8a36147aa6002b65187282 produced four independent and two parent findings; all are resolved. Both Workflow v2 results validated. Final correction review approved at 0d1b8cfbe24098f363823dd218bcdecfc501ee64 with no new or open findings, using the supported parent native-general fallback after specialist unavailability. This readiness checkpoint requires only its bounded ledger review before publication; the work order is retired after direct-main delivery, rather than retained as a dangling remote reference.
 
 ## Execution readiness
 

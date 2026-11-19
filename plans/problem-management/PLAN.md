@@ -15,17 +15,17 @@ Execution is authorized for the remaining optional tracker adoption and migratio
 
 ### Pilot checkpoint — 18 October 2026
 
-The docs pilot now selects `work-items@work-items-agents` from `tj-agents/work-items`, with generated Codex and Claude settings, a GitHub tracker declaration for `tj-agents/docs`, and the Core problem-record provider declaration. Its feature listing returned an empty readable tracker. The work-items pilot uses isolated `Chore/AdoptWorkItemsTracker` from fetched `origin/main` at `881eb5b0df7204ba53cf49a93f556f7d341910ea`; it migrated its legacy schema-3 lock to the versionless selection, adopted `tj-agents/work-items`, and read its tracker successfully.
+The docs pilot now selects `work-items@work-items-agents` from `tj-agents/work-items`, with generated Codex and Claude settings, a GitHub tracker declaration for `tj-agents/docs`, and the Core problem-record provider declaration. Its feature listing returned an empty readable tracker. The work-items pilot uses isolated `Chore/AdoptWorkItemsTracker` from fetched `origin/main` at `6555bbb491f075ff2638c04504f5ac08f44aa03b`; it migrated its legacy schema-3 lock to the versionless selection, adopted `tj-agents/work-items`, and read its tracker successfully.
 
 The work-items legacy records now have canonical managed issues: B001 is closed as #14, M001 is closed as #15, and M002 remains open as #16. Each creation used a durable migration request ID; B001 and M001 were read back after closure with their legacy identity, source links, states, and verification evidence intact. The legacy untracked `BUGS.md` and `MISTAKES.md` in the historical primary checkout remain untouched until their retained records and links can be reconciled by that checkout's owner. Codex installed-host discovery is still unverified because the Codex app server stopped during initialization; the exact merged tracker artifact was used after its files were verified byte-identical to the #13 landing.
 
-Native review completed without findings for docs commit `9e76f3f` against `0d74933ff0889251f6228c96d81b7553ed95a736` and for work-items commit `34aeadf` against `881eb5b0df7204ba53cf49a93f556f7d341910ea`. One initial work-items review invocation used the wrong checkout; it was recorded as new evidence on M002 and contributes no review result. The correct rerun from `Chore/AdoptWorkItemsTracker` is the retained review evidence.
+Native review completed without findings for docs commit `9e76f3f` against `c3aaa0ced01a72ad32ced974f4c9f597af590a50` and for work-items commit `34aeadf` against `6555bbb491f075ff2638c04504f5ac08f44aa03b`. One initial work-items review invocation used the wrong checkout; it was recorded as new evidence on M002 and contributes no review result. The correct rerun from `Chore/AdoptWorkItemsTracker` is the retained review evidence.
 
-Native review completed without findings for docs commit `9e76f3f` against `0d74933ff0889251f6228c96d81b7553ed95a736` and for work-items commit `34aeadf` against `881eb5b0df7204ba53cf49a93f556f7d341910ea`. One initial work-items review invocation used the wrong checkout; it was recorded as new evidence on M002 and contributes no review result. The correct rerun from `Chore/AdoptWorkItemsTracker` is the retained review evidence.
+Native review completed without findings for docs commit `9e76f3f` against `c3aaa0ced01a72ad32ced974f4c9f597af590a50` and for work-items commit `34aeadf` against `6555bbb491f075ff2638c04504f5ac08f44aa03b`. One initial work-items review invocation used the wrong checkout; it was recorded as new evidence on M002 and contributes no review result. The correct rerun from `Chore/AdoptWorkItemsTracker` is the retained review evidence.
 
 ### Pilot checkpoint — 18 October 2026
 
-The docs pilot now selects `work-items@work-items-agents` from `tj-agents/work-items`, with generated Codex and Claude settings, a GitHub tracker declaration for `tj-agents/docs`, and the Core problem-record provider declaration. Its feature listing returned an empty readable tracker. The work-items pilot uses isolated `Chore/AdoptWorkItemsTracker` from fetched `origin/main` at `881eb5b0df7204ba53cf49a93f556f7d341910ea`; it migrated its legacy schema-3 lock to the versionless selection, adopted `tj-agents/work-items`, and read its tracker successfully.
+The docs pilot now selects `work-items@work-items-agents` from `tj-agents/work-items`, with generated Codex and Claude settings, a GitHub tracker declaration for `tj-agents/docs`, and the Core problem-record provider declaration. Its feature listing returned an empty readable tracker. The work-items pilot uses isolated `Chore/AdoptWorkItemsTracker` from fetched `origin/main` at `6555bbb491f075ff2638c04504f5ac08f44aa03b`; it migrated its legacy schema-3 lock to the versionless selection, adopted `tj-agents/work-items`, and read its tracker successfully.
 
 The work-items legacy records now have canonical managed issues: B001 is closed as #14, M001 is closed as #15, and M002 remains open as #16. Each creation used a durable migration request ID; B001 and M001 were read back after closure with their legacy identity, source links, states, and verification evidence intact. The legacy untracked `BUGS.md` and `MISTAKES.md` in the historical primary checkout remain untouched until their retained records and links can be reconciled by that checkout's owner. Codex installed-host discovery is still unverified because the Codex app server stopped during initialization; the exact merged tracker artifact was used after its files were verified byte-identical to the #13 landing.
 
@@ -35,7 +35,7 @@ The approved destination is GitHub Issues in each personal project's existing re
 
 The tooling shipped: work-items foundation #3, GitHub lifecycle #5 and Core adapter #7, together with Core #272/#273 and marketplace #11. Controlled installed-host checks passed on Codex and Claude. That proves the capability, not migration of every personal repository. Existing records have not been claimed migrated. Fresh local inspection found neither `.work-items.json` nor `.problem-records.json` in the docs and work-items primary checkouts, so these consumers still lack the shipped explicit tracker adoption declarations.
 
-Fresh GitHub verification: Core #269 merged on 16 October 2026 at 17:47:07 UTC, landing `2ed865e13f071a573d505dacd59c1a482eb5f2bb`. Core main CI `39094033180` succeeded at `774e2cb8dccf1621f919bc6128b6cf8cb789b2a3` on 18 October. Work-items #13 merged the versionless-plugin update on 17 October at `881eb5b0df7204ba53cf49a93f556f7d341910ea`. The earlier checkpoint's instruction to wait for #269 is superseded; inspect the current published selection contract when resuming instead of reviving versioned adoption.
+Fresh GitHub verification: Core #269 merged on 16 October 2026 at 17:47:07 UTC, landing `ad305cbdef821479174cc30b2009dafbac8ff646`. Core main CI `39094033180` succeeded at `07bc1e73d31c439963d79f4f3b71be4cc8c1dfe2` on 18 October. Work-items #13 merged the versionless-plugin update on 17 October at `6555bbb491f075ff2638c04504f5ac08f44aa03b`. The earlier checkpoint's instruction to wait for #269 is superseded; inspect the current published selection contract when resuming instead of reviving versioned adoption.
 
 The original rollout handoff is [HANDOFF-PERSONAL-POLICY.md](HANDOFF-PERSONAL-POLICY.md), now corrected to point at the executable rollout steps below. It had still pointed at the completed research-only brief. The last chat handoff concerned only the separate validation-efficiency investigation; it did not hand off or complete this rollout. This distinction and stale pointer are corrected here. No new session was launched by this status reconciliation; the registry still identifies this original session as owner of `problem-management/personal-policy`.
 
@@ -107,9 +107,9 @@ in multiple files. Existing repository configuration and the merged convention a
 ## Delivered outcome and next action
 
 PR #206 merged at 2026-10-11T19:55:02Z with landing commit
-`d3fc4d49ca412d9e9811faa3b07aed4d43ff0f70`. Required Windows/Linux CI, generated-path guard and independent
+`ef46664445644c721b7c8f8871606c23e29882b6`. Required Windows/Linux CI, generated-path guard and independent
 review passed. The causal publication run `38170019843` succeeded; publication commit
-`73f1fbcc24efdda8ed1c0b0ccf07dc4064e7782c` contains all eight host entries and the shared problem contract.
+`7ce37574dcfd854be201f7be9c762b9ab20a823f` contains all eight host entries and the shared problem contract.
 The completed source goal is `core/.worktrees/Feature-ProblemSkills/plans/problem-skills/GOAL.md`;
 its owner recorded completion. Existing M001-M007 remain intact. No consumer profile installation is claimed.
 
@@ -187,8 +187,8 @@ tracker, consumer, installation or publication change has been approved or perfo
 
 ### What the evidence establishes
 
-The inspected Core primary checkout is at `1bb1c130b2d1762bce07b599bb0fbb7e311c6749` and is behind the
-locally available `origin/main`, `f2dd95cae5aef351017eea4d7ce3dc39a9fcae76`. Current-source observations
+The inspected Core primary checkout is at `32e905086b6573430380f0ed0139ffb35a60e639` and is behind the
+locally available `origin/main`, `b23509c4d0af38a0c6f39de41b55e9d61042497d`. Current-source observations
 below use `git show` at that latter commit and the installed `base-agents` 2.1.16 definitions. This is a
 dated local/source inspection, not a claim that a network fetch or installed-host acceptance passed.
 
@@ -199,7 +199,7 @@ dated local/source inspection, not a claim that a network fetch or installed-hos
 | Installed engineering `hooks/handoff_admission.py:canonical_problem_record` | Admission checks assume primary-root `BUGS.md`/`MISTAKES.md` and tracked area `TECH_DEBT.md`. An issue-backed record would currently fail that path check. Record resolution, admission and tests must move together; a policy-only redirect is insufficient. |
 | Installed machine `plugin-lock`, its `adopt_plugins.py` and `plugin_roster.json`; Core source `utility/plugin-lock/SKILL.md` | The current interface uses `.agents/plugins.lock.json` schema 2 plus generated Claude/Codex project settings. Adoption preserves selections and rejects unknown roster entries. There is no personal package in the inspected roster. The older primary-checkout `bootstrap-capabilities` interface is not the current installed interface. |
 | [Standards composition](../standards-composition/STANDARDS_COMPOSITION_PLAN.md) and its progress owner | Fine-grained profile resolution remains proposed. Reuse the current project-lock mechanism for a small, explicitly adopted workflow package; do not claim the broader resolver is shipped. Reconcile its source-ownership and catalog dependencies before implementation. |
-| Work README/harness at `3b021cab6943a422870772de88266b9323d494d9`; employer README/tier at `9546906d5358317dd249db901a56e0c2ce9226fe` | Work tooling is selected for work repositories. Employer applicability uses positive remote evidence. A folder name, an installed cache or absence of employer detection does not establish personal adoption. No private employer/product evidence is copied here. |
+| Work README/harness at `01fc6b8bbee8de6c7f8d0b5fb392eb8126a866b0`; employer README/tier at `9546906d5358317dd249db901a56e0c2ce9226fe` | Work tooling is selected for work repositories. Employer applicability uses positive remote evidence. A folder name, an installed cache or absence of employer detection does not establish personal adoption. No private employer/product evidence is copied here. |
 | Marketplace README at `ee868f1966b6e53b4975d6ff88e1378578c78320` | Marketplace discovery is separate from installing/selecting a plugin. A personal source package must be published and added to the catalog/roster before consumers can select it reproducibly. |
 
 Core primary `BUGS.md#B013` remains the separate guessed-path incident. Initial reads in this research
@@ -592,7 +592,7 @@ The optional repository `tj-agents/work-items` exists. Tommy explicitly approved
 tooling public after GitHub refused to start private-repository jobs due to billing/spending limits.
 It is public; no other repository visibility changed. Foundation PR #3 at 8ec0b6a has clean native full
 and incremental review, five tests, 37-file generation/conformance and successful Windows/Linux/host CI.
-Tommy approved its CI-caller stop class; PR #3 merged at 66aadc23819835469e72d8604d5a788da7b74211.
+Tommy approved its CI-caller stop class; PR #3 merged at e8f112d5f3a74f10876649bb516fa608550482ff.
 Its causal main CI 38831521132 passed. Source plan:
 [work-items foundation](../../../work-items/plans/work-items/PLAN.md).
 
@@ -601,7 +601,7 @@ CI and its causal main run passed; immutable v1.6.1 now points to that landing. 
 moved the work-items generator/configuration/CI caller to that release. Template's source repair and
 B001 preserve their evidence in its source repository.
 
-Transport PR #5 merged at 76c2640018326aa3f1ddd4c011c929c488f7d95a. Its reviewed head d7fe04f includes its immediate parent's
+Transport PR #5 merged at c440c45f487b255a86afa5a2aadca2ae5e580ed0. Its reviewed head d7fe04f includes its immediate parent's
 Template pin merged into the child. The first native transport review was clean. Its controlled pilot
 then exposed B001: immediate sequential creates produced issues #1 and #2 for one request ID. Current
 markers parse correctly; the immediate list response was not captured, so a stale list is a reproduced
@@ -623,16 +623,16 @@ evidence: all four entry points pass in an isolated package directory without a 
 The host layouts correctly resolve parents[3]/hooks.
 Generated distribution/catalog files stay outside its authored PR. Its source plan owns implementation:
 [Core provider slice](../../../core/.worktrees/Feature-ProblemRecordBackends/plans/problem-record-backends/PLAN.md).
-Core PR #272 merged at 6aea302b1562b714bc2d1dd9f8e010898bfe2dac. Its causal main CI 38834317856 passed; generated publication is 1509abf8. Installed acceptance remains pending.
+Core PR #272 merged at 068cc1eeb9012b80a1c26ca23a890a35e80221bc. Its causal main CI 38834317856 passed; generated publication is 1509abf8. Installed acceptance remains pending.
 The parent's Rolling Plugin Sync worktree, branch, ownership and goal remain untouched.
 
 The proper dependent Feature/CoreRecordAdapter branch owns the package's current integration progress:
 [adapter plan](../../../work-items/.worktrees/Feature-CoreRecordAdapter/plans/work-items/PLAN.md).
 It adds coordinated explicit tracker/provider declarations, read-only current-record transport and typed
-problem facts/disposition rendering. Thirty-four tests and 53-file generation pass. The adapter at fb463ab passed native and workflow/security review. PR #7 merged at 7c4dcd2147a46005020ee4f2b68db563d71a52a5 and causal main CI 38836538305 passed. Published v0.1.0 resolves to that reviewed landing. Both native hosts loaded the package and admitted live controlled issue #9; stale-callout and recovered-evidence cases were rejected on both hosts. Issue #9 closed with those observations. Consumer adoption remains pending.
+problem facts/disposition rendering. Thirty-four tests and 53-file generation pass. The adapter at fb463ab passed native and workflow/security review. PR #7 merged at 93397ea3eb7a3cee5b0fd6f925894019a2edbbc3 and causal main CI 38836538305 passed. Published v0.1.0 resolves to that reviewed landing. Both native hosts loaded the package and admitted live controlled issue #9; stale-callout and recovered-evidence cases were rejected on both hosts. Issue #9 closed with those observations. Consumer adoption remains pending.
 Core's injector accepts qualified foreign selections and pins, but still forces the aggregate Core triplet. The generic compatibility slice below preserves existing producer identities without global changes; no backend-specific registry is added.
 
-Optional discovery passed 26 tests, both generated catalogs, native Claude marketplace validation and independent review. Marketplace PR #11 merged at 691f795aa0f91c8a8bfd299b5d8c8bf183e4375a; causal main CI 38840748429 passed. It pins the actual v0.1.0 tag and verified peeled commit. Source owner: [discovery slice](../../../marketplace/.worktrees/Feature-WorkItemsPlugin/plans/work-items/PLAN.md).
+Optional discovery passed 26 tests, both generated catalogs, native Claude marketplace validation and independent review. Marketplace PR #11 merged at 84f846f4e3e2524b9b77ba0619f4cb10533f018e; causal main CI 38840748429 passed. It pins the actual v0.1.0 tag and verified peeled commit. Source owner: [discovery slice](../../../marketplace/.worktrees/Feature-WorkItemsPlugin/plans/work-items/PLAN.md).
 
 Task ownership is registered to codex:01a1415f-6448-7123-8b17-c7fb67aee637. Continuation initialization and
 foreground claim succeeded, but scheduler registration failed because the configured inbox powershell.exe
@@ -664,7 +664,7 @@ Read-only inventory deduplicated local clones by canonical GitHub source and fou
 
 ## Delivery and headache checkpoint - 16 October 2026
 
-Delivered: Template PR #12/v1.6.1; work-items foundation #3, transport #5, retained pilot evidence #6, Core adapter #7/v0.1.0, retained delivery incident #8; Core provider #272 and producer-lock compatibility #273; marketplace discovery #11. Work-items #8 landed c52456c7c0d2f407dda8718eb92f0639885c261c with successful main run 38838523809. Core #273 landed 944cc2aac501c7ceef2e5e6d0e8d69c0aaa9b668; its causal main run 38840514845 completed successfully, observed by the exact-run monitor. Generated publication is 8bddc8ef158f02704377656ce7c6dce6dfa44979. No other owned implementation PR remains open.
+Delivered: Template PR #12/v1.6.1; work-items foundation #3, transport #5, retained pilot evidence #6, Core adapter #7/v0.1.0, retained delivery incident #8; Core provider #272 and producer-lock compatibility #273; marketplace discovery #11. Work-items #8 landed 459318bff744fcd9ece948062c5af851a99ef235 with successful main run 38838523809. Core #273 landed a45a0d9547079bb7832f89ee9149138c453c93b1; its causal main run 38840514845 completed successfully, observed by the exact-run monitor. Generated publication is 5e502b73b85ea1254a081cfef301a37cde0bdd07. No other owned implementation PR remains open.
 
 Both native loaders installed Base, Engineering, Machine and work-items in isolated temporary profiles. Codex fetched exact remote commit pins. Claude loaded Core from a verified published checkout and work-items from its remote v0.1.0 tag. Both actual installed admission entry points resolved the installed provider, read current GitHub issue #9, accepted its controlled typed disposition, rejected an unrelated callout, and rejected it after the prerequisite became readable. This was a disposable acceptance fixture, not an actual product defect or dispatched repair. Issue #9 is closed with this verification. Normal user profiles and all consumers are not claimed configured.
 
@@ -687,7 +687,7 @@ Next action: complete causal Core main validation/publication, reconcile the sep
 
 ### Remaining dependency and requested reflection
 
-Core PR #269 is the verified existing Fix/RollingPluginSync delivery at 81dce32ea5f69deb1947ed6136824f33b45132da. Its PR body explicitly replaces versioned locks with unversioned repository selection, migrates schemas 2/3, refreshes actual plugin bytes before launch and preserves current session snapshots. It reports clean review and green CI; its source owner reserves merge to Tommy. This session neither changes nor merges that delivery. Committing versioned adoption to 35 consumers now would conflict with its imminent cutover. Consumer rollout and record migration therefore remain blocked by that concrete dependency, not reported complete. Resolver: PR #269's existing owner/Tommy. Resume condition: #269 is merged, causal generated publication passes and its shipped injector/native refresh contract is available. Next action: adopt work-items and docs through that contract, then the remaining inventoried personal repositories, preserving each existing selection and register history. No employer repository is included.
+Core PR #269 is the verified existing Fix/RollingPluginSync delivery at ddf841610095f10595fc04d5d3ac893d0d5d1787. Its PR body explicitly replaces versioned locks with unversioned repository selection, migrates schemas 2/3, refreshes actual plugin bytes before launch and preserves current session snapshots. It reports clean review and green CI; its source owner reserves merge to Tommy. This session neither changes nor merges that delivery. Committing versioned adoption to 35 consumers now would conflict with its imminent cutover. Consumer rollout and record migration therefore remain blocked by that concrete dependency, not reported complete. Resolver: PR #269's existing owner/Tommy. Resume condition: #269 is merged, causal generated publication passes and its shipped injector/native refresh contract is available. Next action: adopt work-items and docs through that contract, then the remaining inventoried personal repositories, preserving each existing selection and register history. No employer repository is included.
 
 Tommy requests an evidence-based reflection after this delivery: do not presume Core is the cause or that removing hooks is desirable. Distinguish productive implementation, checks that caught real defects, remote CI waiting, environment/CLI friction and avoidable agent orchestration. Discuss specific checks/hooks to retain, simplify, batch or remove, with observed benefits and costs. This is discussion authority, not permission to disable hooks or launch another runtime repair now. Six relevant PR #268 skill files match the active snapshot, so those recent proportionality fixes were in use. The separate versioning work remains with PR #269.
 
@@ -707,7 +707,7 @@ Observed final Core run timings: verify-windows ran 02:27:29-02:46:51 UTC (19m22
 
 ### Validation-efficiency investigation handoff - 16 October 2026
 
-Tommy explicitly requested the bounded follow-up handoff after discussing validation costs. Its source owner is [Core validation-efficiency goal](../../../core/.worktrees/Investigate-ValidationEfficiency/plans/validation-efficiency/GOAL.md), branch Investigate/ValidationEfficiency, from fetched main 8bddc8ef158f02704377656ce7c6dce6dfa44979. Authority is investigation, measurement and recommendations for discussion; no runtime, hooks, CI or consumer changes. One L3 Codex successor is being submitted through the supported launcher. Actual pickup must be recorded in that goal; submission alone is not acknowledgement.
+Tommy explicitly requested the bounded follow-up handoff after discussing validation costs. Its source owner is [Core validation-efficiency goal](../../../core/.worktrees/Investigate-ValidationEfficiency/plans/validation-efficiency/GOAL.md), branch Investigate/ValidationEfficiency, from fetched main 5e502b73b85ea1254a081cfef301a37cde0bdd07. Authority is investigation, measurement and recommendations for discussion; no runtime, hooks, CI or consumer changes. One L3 Codex successor is being submitted through the supported launcher. Actual pickup must be recorded in that goal; submission alone is not acknowledgement.
 
 The existing Fix/RoutineReviewAndImpactCi checkout has unfinished merge-review/auto-merge edits and an overlapping goal. It is preserved as read-only input, not claimed or silently resumed. The successor must compare that proposal with delivered proportionality changes before recommending more work. PR #269 remains with its existing versioning owner. This side investigation neither transfers nor completes the original personal rollout.
 

@@ -22,8 +22,8 @@ Concertable's documentation ownership model. This migration moves the plan, road
 together into tj-agents/docs. The core copies are retired after this repository's planning artifacts land;
 core retains a link to the shared documentation owner. Existing implementation plans stay in their source repositories.
 
-The proposal was published through core PR169, merge `8ea3baae61621668729e12333aaf66b17a31ea6b`,
-reviewed head `9ead6c5a185ba0405e0eaaf7830efaffec9cd385`. Earlier discovery landed through core PR167.
+The proposal was published through core PR169, merge `af27b485943a0d428cd32d5b51169b822dc38c3b`,
+reviewed head `74ffef2fd6567092b7ecaadfce89f2e108f7fd9f`. Earlier discovery landed through core PR167.
 Those PRs retain the original design history. Moving these artifacts does not authorize runtime work.
 
 The proposal uses homogeneous contract skills, an additive package standards manifest, scoped context
