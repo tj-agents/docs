@@ -158,6 +158,7 @@ Four identities stay distinct: the capability lock selects installable packages;
 
 ### Producer manifest
 
+Keep existing `selection.json` and the finite-profile schema unchanged. Add an optional versioned `standards.json` per package. Kit authors it from `.agents/standards/<plugin>.json`; the legacy employer repo authors `plugins/company/standards.json` directly. Core owns the JSON schema and resolver; kit vendors the released schema and fixture version through its existing update mechanism. Schema changes require core/kit parity tests, not a separately authored schema copy.
 
 Proposed `standards.json` fields:
 
@@ -274,7 +275,10 @@ Proposed mixed-stack repository example (illustrative project paths and future c
   "scopes": [
     {
       "root": "services/authz",
+      "providers": ["dotagents/dotnet", "company/company"],
+      "profiles": ["company/company#engineering", "dotagents/dotnet#ddd"],
       "contracts": [],
+      "house": {"employer": "company"},
       "architecture": ["ddd"],
       "adopted_suites": [],
       "choices": []
@@ -289,7 +293,10 @@ Proposed mixed-stack repository example (illustrative project paths and future c
     },
     {
       "root": "app",
+      "providers": ["react-agents/react", "company/company"],
+      "profiles": ["company/company#frontend"],
       "contracts": [],
+      "house": {"employer": "company"},
       "architecture": [],
       "adopted_suites": [],
       "choices": []
@@ -303,6 +310,7 @@ Employer scope also requires its verified tier detection; writing `house.employe
 
 For private work checkouts, the employer-owned published registry may supply this same scoped document as an input layer, keyed by exact host/repository identity. A clone-local excluded file can add reviewed project facts. The resolver records both inputs and reports overlap conflicts; it never reads another checkout's private file. Do not commit personal agent settings to application repositories. A frozen review explicitly captures the allowed private input snapshot as a Git-private artifact; its hash enters the descriptor while its private content stays out of PRs.
 
+Conflicts are resolved by explicit choice, not package order or "generic wins". A `choices` element is `{ "decision": "csharp.private-field-naming", "use": "company/company#naming-fields", "reason": "Repository convention requires underscore fields", "evidence": ["AGENTS.md"] }`. Validate at scope load that its winner belongs to an explicitly adopted contract/profile and declares that decision key. For each target, apply the choice only if that decision has a relevant candidate; then the winner must be among its applicable candidates. A root-scoped C# naming choice is irrelevant to a TypeScript target. Evidence paths are nonempty, contained, existing repository files whose bytes are included in input hashes. A choice cannot suppress universal, technical, architecture or technology contracts, select an unadopted contract, or override a stronger instruction. Conflicting choices on overlapping scopes error even if one root is deeper. Compatible contracts without a decision key accumulate; distinct naming decisions remain independent.
 
 Proposed conflict boundary in core `.agents/hooks/requirement_resolver.py`; `candidates` is an ID-keyed map of validated records after scope/prerequisite checks, and `choices` is the validated decision-keyed map after rejecting overlap duplicates:
 
