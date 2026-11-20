@@ -1,105 +1,87 @@
 # Workflow and Agent Store boundaries
 
-## Decision status
-
-This is the standing architecture decision approved under the 21 October 2026 dispatch. Responsibility
-boundaries and acceptance gates remain distinct from implementation evidence.
-
-As of 23 October 2026, Core's [lifecycle source](https://github.com/tj-agents/core/pull/355) and
-[selection and review cleanup repair](https://github.com/tj-agents/core/pull/356) are merged and their
-causal package publication passed. [Marketplace selection](https://github.com/tj-agents/marketplace/pull/24)
-and [Personal caller guidance](https://github.com/tj-agents/personal/pull/17) are also merged with passing
-publication and native loading evidence. These deliveries do not complete the coordinated caller rollout.
-The remaining repository declarations and caller acceptance stay with
-[Core's Workflow and Agent Store GOAL](https://github.com/tj-agents/core/blob/f2e0b7636b5318c1cfde5e688600e052068d2f93/plans/workflow-agent-store/GOAL.md).
-[Core's continuation incident](https://github.com/tj-agents/core/issues/364) remains open: scheduler
-registration alone does not prove progress through a delayed decision and terminal reporting.
+Managed sessions preserve the provider's native conversation interface through `tj claude` and `tj codex`.
+Agent's installer binds plain shell `claude` and `codex` launches to those managed entry points.
+Foreground launch, handoff and recovery share the same lifecycle. [Agent's lifecycle](https://github.com/tj-agents/agent#lifecycle)
+and [CLI's managed sessions](https://github.com/tj-agents/cli#managed-sessions) own operational procedures.
 
 ## Responsibilities
 
-| Owner | Responsibility | Boundary |
-| --- | --- | --- |
-| Base | Universal entry routing | Routes substantive work to selected Workflow; it does not run a lifecycle. |
-| Agent Store | Recorded execution, session, ownership and reference state | Owns SQLite schema, transactions, identities and atomic claims; an unended row is not process-liveness proof. |
-| Machine | Native observation and host operations | Observes processes, attaches sessions, launches, reopens and operates terminals; it does not reinterpret recorded state as a lifecycle decision. |
-| Workflow | Generic lifecycle | Owns the single whole-goal owner and the public plan, run, resume, status and handoff subjects. |
-| Engineering | Technical operations | Supplies bounded software design, implementation, diagnosis, testing, review and delivery evidence to Workflow. |
-| Personal | GitHub profile operations | Retains Personal's GitHub records, identity checks, factual updates and closure policy. |
-| An organization, such as an employer's (see [Plugin kinds](PLUGINS.md#plugin-kinds)) | That organization's tracker operations | Retains that organization's tracker records, native-type policy, identity checks and company delivery gates. |
+| Owner | Responsibility |
+| --- | --- |
+| Base | Shared behavior and routing to the project's selected capabilities. |
+| Workflow | One owner of the whole authorized goal, including planning, execution, continuation and handoff. |
+| Engineering | Software design, implementation, diagnosis, testing, review and delivery operations. |
+| Agent | Native host interpretation, session launch and recovery, messaging integration, installation and project selection. |
+| CLI | Deterministic processes, terminals, message routing, completion transitions, durable receipts and guarded cleanup. |
+| Agent Store | Session and launch identities, work-item links and atomic worktree claims. |
+| Work Items | Tracker operations through the project's selected provider. |
+| A selected profile and organization | Applicable policy, tracker configuration and delivery gates. |
 
-Workflow has one generic lifecycle owner. `workflow:run` can execute with or without a plan, retains the
-whole goal across phases and delegates bounded technical work where appropriate. Engineering operations
-do not establish a competing whole-goal lifecycle when Workflow has accepted the goal.
+The link store does not infer task completion or process liveness. A profile does not establish another
+whole-goal owner. Repository ownership and installed plugin availability do not establish profile adoption;
+[project selection](PLUGINS.md) owns that distinction. Marketplace owns the dependency graph; Core consumes
+declared, pinned Agent exports without retaining another authored runtime.
 
-The public Workflow surface is `workflow:plan`, `workflow:run`, `workflow:resume`, `workflow:status`
-and `workflow:handoff`. There is no `workflow:review`: plan and run own readiness and completion
-responsibilities, while `engineering:review` remains the code-review operation. Review-only authority
-does not grant repair, execution or publication authority.
+## Ownership and coordination
 
-## Capability graph
+Workflow keeps the whole requested outcome across phases. Bounded delegation returns evidence to that
+owner; an ownership handoff transfers a self-contained goal to another session. Agent handoff defaults
+the parent to the calling session, preserves an explicit override and carries the standing reporting rule.
+An existing work-item link is optional; the launcher does not create an item or require a tracker for an
+unlinked session. [Agent's handoff contract](https://github.com/tj-agents/agent/blob/main/.agents/agent/utility/handoff/SKILL.md)
+owns arguments and parent behavior. Recovery preserves the recorded relationship.
 
-Arrows mean a declared capability requirement. The graph is acyclic.
+[Agent's messaging contract](https://github.com/tj-agents/agent/blob/main/.agents/agent/utility/message/SKILL.md)
+owns transport choice, permitted sends, waits and delivery evidence. Submission or storage alone does
+not prove that the recipient read a message. A parent relationship does not authorize progress messages
+contrary to the task's standing reporting instructions.
 
-```text
-Agent Store -> no lifecycle or host package
-Base        -> no lifecycle package; route substantive work to selected Workflow
-Machine     -> Base, Agent Store
-Workflow    -> Base, Agent Store, Machine
-Engineering -> Base, Workflow, Agent Store, Machine
-```
+## Completion and recovery
 
-Base alone can handle ordinary questions. Generic sustained work selects Workflow and its closure.
-Software work selects Engineering and that same closure. A missing selected capability must be reported;
-entry routing must not imply that tracking or execution occurred when its required package is absent.
+Completion requires the whole authorized outcome and its validation. In a managed session, the agent
+requests `tj finish` and then writes the native final response; intent alone is not completed delivery or
+cleanup. A durable receipt distinguishes result delivery, any linked tracker operation and cleanup.
+Genuine pending work uses `tj wait`, and a user's keep-open request uses `tj hold`.
+[CLI's completion contract](https://github.com/tj-agents/cli#completion-waits-and-keep-open) owns the
+state transitions, parent delivery, hold release and receipt inspection. Workflow owns whether the
+authorized goal is actually complete. A merged PR, tracker Done or native Stop event alone is insufficient.
 
-## State, runtime and profiles
+Agent reads host-native liveness. Managed Codex uses an owned native process with `--no-daemon`;
+threads still loaded in the shared daemon are separate, potentially competing evidence. A dead wrapper
+or ended store row does not prove that the conversation is gone. Recovery reconciles a live or ambiguous
+owner and preserves the conversation and relationship while recording a new launch.
 
-Agent Store records durable state. Machine makes explicit native observations. Workflow status may combine
-recorded state with selected tracker reads and a stated Machine observation, but no layer may treat a
-stored row as proof that a native process is live. Existing atomic ownership rules remain in force: a
-live or ambiguous owner is reconciled, never silently taken over.
+Launch evidence distinguishes dispatch, verified process startup and a verified first turn. Process
+startup alone does not prove that the conversation loaded. Agent keeps missing confirmation visible
+without sending synthetic input. Codex turn completion does not reveal every unsent draft or native
+activity, so its window remains open until normal exit before cleanup is rechecked. The owning
+[Agent lifecycle](https://github.com/tj-agents/agent#lifecycle) and
+[CLI closeout contract](https://github.com/tj-agents/cli#safe-closeout-and-recovery) define these checks.
 
-The canonical runtime is authored once at `.agents/agent-store/runtime/` and embedded unchanged at the
-same package-relative path in each consuming payload. A consuming package loads its own packaged bytes,
-never a sibling plugin cache or author checkout. This keeps payloads self-contained while Agent Store
-remains the API and runtime source owner; it does not introduce a resolver service or a second registry.
+## Worktrees and repository state
 
-Personal and a selected organization are distinct profile layers, not lifecycle owners. Personal
-retains GitHub-specific record operations; an organization retains its own tracker's native
-type handling and company delivery controls. Profile producer dependencies and repository
-ownership never establish profile adoption. A reconciled profile item enters Workflow with the
-same canonical identity and its existing mapped Engineering technical operation; Workflow reuses
-or acquires the sole goal owner, and Engineering returns technical evidence.
+[Core's shared creator](https://github.com/tj-agents/core/blob/main/.agents/engineering/operation/open-worktree/SKILL.md)
+owns managed worktree creation under `<repository-root>/.worktrees/<name>`. Agent binds the native
+session and launch, and Agent Store records exact claims. CLI verifies ownership, repository integration,
+authored changes and competing writers before cleanup. Primary checkouts and unfinished or unverified
+work are preserved.
 
-## Gates and caller acceptance
+Preparation checks repository settings by default. Explicit adoption, installer reconciliation or
+`tj prepare --write` applies authorized configuration changes. Local-only adoption validates plugin
+availability while preserving the owner's instruction files. [Project selection](PLUGINS.md) describes
+scope and freshness evidence; Agent owns the concrete commands and failure handling.
 
-Three gates remain separate:
+## Verification boundaries
 
-| Gate | What it proves | What it does not prove |
-| --- | --- | --- |
-| Source | Canonical sources, generated mirrors, manifests and tests agree | Selected packages are installed or active on a host. |
-| Declaration | Plugin selection declarations express the required closure | A host has accepted, installed or activated that selection. |
-| Native activation | A fresh supported host resolves selected installed entry points | Source or declaration work was sufficient on another host. |
+| Evidence | What it establishes |
+| --- | --- |
+| Source checks | Canonical code, generated payloads, declarations and fixtures agree. |
+| Publication | The intended revision was generated and distributed by its source owner. |
+| Native inventory | The selected dependency closure is installed, enabled and accepted by the current loader. |
+| Executing hook package | Which Agent hook package is executing; other cached session content remains unverified. |
+| Installed behavior | A supported entry point performs the required lifecycle operation. |
 
-Known callers must be accepted together: Core lifecycle callers and adapters, Marketplace plugin
-roster and project declarations, Personal GitHub guidance, a selected organization's tracker
-guidance, and affected already-bound readers. Source generation, a passing test suite, a plugin
-entry, or a selection declaration alone is not that acceptance. Each caller needs its applicable
-source, declaration and native gate evidence.
-
-Publication follows the coordinated order recorded by Core: source stack, generated-package publication,
-then marketplace exposure. Installed Windows and Linux host acceptance remain explicit evidence gates.
-No decision here authorizes a launch, package installation, profile adoption, tracker operation or native
-host activation.
-
-## Sources
-
-- [Canonical Core implementation plan](https://github.com/tj-agents/core/blob/f2e0b7636b5318c1cfde5e688600e052068d2f93/plans/workflow-agent-store/GOAL.md)
-- [S1 source evidence: `5e815d06`](https://github.com/tj-agents/core/commit/5e815d0658597f031c332e9d2a3e3bb35d886e8a)
-- [S2 source evidence: `7c77e7d5`](https://github.com/tj-agents/core/commit/7c77e7d5b1dc6c419b5096431018079e7c530026)
-- [Status source evidence: `995f5e45`](https://github.com/tj-agents/core/commit/995f5e45caf269ca71ffd7235b4b1e520b9cc940)
-
-- [Lifecycle source snapshot: `a6123ed9`](https://github.com/tj-agents/core/commit/a6123ed93061b9c8d816691ac69f71f711ca2c8a)
-
-These commits identify source snapshots. The linked Core PR and goal own current implementation, review
-and acceptance evidence; a source reference does not establish publication or activation.
+These are separate gates. Source checks, a selection file or a version command do not establish that a
+running session loaded every updated plugin. Publication and installed acceptance remain with the source
+delivery; this reference does not replace their evidence.
