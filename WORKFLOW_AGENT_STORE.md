@@ -58,8 +58,8 @@ picker switch. A matching directory or inherited server environment does not est
 
 Launch evidence distinguishes dispatch, verified process startup and a verified first turn. Process
 startup alone does not prove that the conversation loaded. Agent keeps missing confirmation visible
-without sending synthetic input. Codex turn completion does not reveal every unsent draft or native
-activity, so its window remains open until normal exit before cleanup is rechecked. The owning
+without sending synthetic input. After a verified completion, TJ can close the owned frontend and
+recheck cleanup. Use `tj hold` when the session needs to stay open. The owning
 [Agent lifecycle](https://github.com/tj-agents/agent#lifecycle) and
 [CLI closeout contract](https://github.com/tj-agents/cli#safe-closeout-and-recovery) define these checks.
 
