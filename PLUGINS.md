@@ -1,15 +1,20 @@
 # Plugins and project selection
 
-`tj-agents/marketplace` owns the `tj-agents` plugin identity, the set of available plugins, each
-plugin's source repository, and the plugin dependency graph. Its authored `plugins.json` generates
-the Claude and Codex marketplace manifests. Producer repositories own their plugin contents.
+`tj-agents/marketplace` owns the `tj-agents` plugin identity, the set of available plugins, and each
+plugin's source repository, kind and published revision in `plugins.json`. Producers own their plugin
+contents and declare dependencies in the published `.claude-plugin/plugin.json` manifest. Marketplace
+reads those manifests at the roster's pinned revisions, validates the dependency graph and generates
+both host catalogs. Dependencies are included in the generated Claude catalog; they are not authored
+again in the roster. The [Marketplace contract](https://github.com/tj-agents/marketplace#readme) owns
+the manifest and publication requirements.
 
 Agent owns the generic project selector (`agent:plugins`). A project's `.agents/plugins.json` retains its
-explicit choices; generated native settings include their transitive dependencies. Its
-offline plugins snapshot is generated from a recorded Marketplace commit, never maintained as
-another plugin roster. The selector may know the Marketplace location, but does not decide whether a
-project is personal or work based on its owner or path. Profile owners such as Personal own their
-specific adoption rules.
+explicit choices; generated native settings include their transitive dependencies. Codex does not resolve
+catalog dependencies itself, so Agent expands the selected closure for both hosts. Agent's offline
+snapshot joins roster kinds and producer pins with the generated Claude catalog's dependencies from one
+recorded Marketplace commit; it is not another authored roster or dependency graph. The selector may
+know the Marketplace location, but does not decide whether a project is personal or work based on its
+owner or path. Profile owners such as Personal own their specific adoption rules.
 
 Every repository selecting a `*@tj-agents` plugin declares `tj-agents/marketplace` in
 `.agents/plugins.json`. A source repository can publish elsewhere when that is its explicit
@@ -52,9 +57,10 @@ Agent hook package with the valid installed Agent root. Neither native inventory
 proves the versions of every plugin or skill already cached in the session. Missing loaded-version evidence
 is reported as unverified, with reload or restart required before relying on updated instructions.
 Claude's native bridge reloads through its command API with a receipt while preserving an unsent draft.
-Managed Codex runs with `--no-daemon`; refreshing a shared daemon cannot refresh that embedded session,
-which reports restart-needed. Agent's [lifecycle](https://github.com/tj-agents/agent#lifecycle) owns these
-diagnostics and refresh procedures.
+The current managed Codex adapter uses `--no-daemon` and reports restart-needed because its refresh
+operation does not reach the running session. A shared-daemon refresh is not evidence that this session
+reloaded. Agent's [lifecycle](https://github.com/tj-agents/agent#lifecycle) owns host-specific refresh
+support, diagnostics and procedures.
 
 ## Plugin kinds
 
@@ -68,33 +74,36 @@ reference and how to add each kind.
 | `profile` | How the repository is worked on: `personal` or `work` | At most one; selected explicitly or required by an organization |
 | `organization` | One organization's layer on one profile: tracker settings, context, standards, declarations and enrollment | At most one, with its profile |
 
-An organization declares `"extends": "<profile>"` and lists that profile in `requires`, so
-selecting the organization brings its profile. Shared plugins and profiles are generic: they name
-no organization, person, repository or user path, and Marketplace CI rejects a generic plugin whose
-pinned source names an organization. An organization is specific.
+An organization's roster entry declares `"extends": "<profile>"`, and its producer manifest declares
+that profile as a dependency, so selecting the organization brings its profile. Shared plugins and
+profiles are generic: they name no organization, person, repository or user path, and Marketplace CI
+rejects a generic plugin whose pinned source names an organization. An organization is specific.
 
 Agent's selector (`agent:plugins`, adoption and `tj install` reconciliation) enforces selection. It
-refuses more than one profile after `requires` expansion. It also refuses any profile other than the
+refuses more than one profile after dependency expansion. It also refuses any profile other than the
 one an organization extends, such as `personal`, in a repository that organization's installed
 employer declaration matches by Git origin or names as its own source repository.
 
 ```json
-{ "name": "work", "repository": "work", "revision": "...", "requires": ["engineering", "teams"], "kind": "profile" },
-{ "name": "example-employer", "repository": "example-employer", "revision": "...", "requires": ["work"], "kind": "organization", "extends": "work" }
+[
+  { "name": "work", "repository": "work", "revision": "<published 40-character commit>", "kind": "profile" },
+  { "name": "example-employer", "repository": "example-employer", "revision": "<published 40-character commit>", "kind": "organization", "extends": "work" }
+]
 ```
 
 ## Plugins change
 
-1. Edit only Marketplace's `plugins.json` for plugin names, sources, and dependencies; regenerate
-   both host marketplace manifests and validate them.
-2. Regenerate Agent's pinned offline snapshot from the merged Marketplace commit with
-   `.agents/agent/utility/plugins/scripts/update_marketplace_plugins.py`. The snapshot records that source commit. Keep Agent's
-   `plugin_stacks.json` for curated project types; every stack entry must name a plugin.
-3. Verify selection of the changed plugins and the native settings written in a fresh project.
-   Publish the Marketplace change before the Agent snapshot update that refers to it.
+1. Change dependencies in the producer's plugin manifest and publish the payload before Marketplace
+   activates its revision. Producer repositories own the plugin content and prerequisite declarations.
+2. Change Marketplace's `plugins.json` for plugin identities, sources, kinds and published revisions.
+   Follow the [Marketplace publication procedure](https://github.com/tj-agents/marketplace#readme) to
+   regenerate and validate both catalogs from the pinned producer manifests.
+3. Regenerate Agent's pinned offline snapshot from the published Marketplace commit, joining the
+   roster with the generated Claude catalog. Verify selection and generated native settings for both
+   hosts through [Agent's project selection contract](https://github.com/tj-agents/agent/blob/main/.agents/agent/utility/plugins/SKILL.md#repository-selection).
 
 Do not create a second authored plugin registry in a producer repository. Agent consumes the same
-Marketplace plugin roster; Agent owns installation and repository selection.
+Marketplace roster and generated dependencies; Agent owns installation and repository selection.
 
 ## Skill ownership
 
@@ -112,6 +121,7 @@ lifecycle. [Workflow and Agent Store boundaries](WORKFLOW_AGENT_STORE.md) descri
 recorded identity. The [Agent Store repository](https://github.com/tj-agents/agent-store) owns its database
 and binary; Agent's inspection skill consumes that API.
 
-Marketplace owns the acyclic dependency graph. Core consumes staged, pinned Agent runtime exports where
-its hooks require them, without retaining another authored implementation. Generated plugin payloads
-remain publication output; source changes alone do not establish native activation or installed behavior.
+Marketplace validates the acyclic dependency graph derived from producer manifests. Core consumes
+staged, pinned Agent runtime exports where its hooks require them, without retaining another authored
+implementation. Generated plugin payloads remain publication output; source changes alone do not
+establish native activation or installed behavior.

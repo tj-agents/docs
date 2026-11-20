@@ -20,8 +20,9 @@ and [CLI's managed sessions](https://github.com/tj-agents/cli#managed-sessions) 
 
 The link store does not infer task completion or process liveness. A profile does not establish another
 whole-goal owner. Repository ownership and installed plugin availability do not establish profile adoption;
-[project selection](PLUGINS.md) owns that distinction. Marketplace owns the dependency graph; Core consumes
-declared, pinned Agent exports without retaining another authored runtime.
+[project selection](PLUGINS.md) owns that distinction. Producers declare plugin dependencies; Marketplace
+validates and publishes that graph. Core consumes declared, pinned Agent exports without retaining
+another authored runtime.
 
 ## Ownership and coordination
 
@@ -47,7 +48,7 @@ Genuine pending work uses `tj wait`, and a user's keep-open request uses `tj hol
 state transitions, parent delivery, hold release and receipt inspection. Workflow owns whether the
 authorized goal is actually complete. A merged PR, tracker Done or native Stop event alone is insufficient.
 
-Agent reads host-native liveness. Managed Codex uses an owned native process with `--no-daemon`;
+Agent reads host-native liveness. The current managed Codex adapter uses an owned process with `--no-daemon`;
 threads still loaded in the shared daemon are separate, potentially competing evidence. A dead wrapper
 or ended store row does not prove that the conversation is gone. Recovery reconciles a live or ambiguous
 owner and preserves the conversation and relationship while recording a new launch.
