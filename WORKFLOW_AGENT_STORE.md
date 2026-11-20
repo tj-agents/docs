@@ -48,10 +48,13 @@ Genuine pending work uses `tj wait`, and a user's keep-open request uses `tj hol
 state transitions, parent delivery, hold release and receipt inspection. Workflow owns whether the
 authorized goal is actually complete. A merged PR, tracker Done or native Stop event alone is insufficient.
 
-Agent reads host-native liveness. The current managed Codex adapter uses an owned process with `--no-daemon`;
-threads still loaded in the shared daemon are separate, potentially competing evidence. A dead wrapper
-or ended store row does not prove that the conversation is gone. Recovery reconciles a live or ambiguous
-owner and preserves the conversation and relationship while recording a new launch.
+Agent reads host-native liveness. Managed Codex owns the frontend process and explicitly connects it to
+the native default local daemon. Process evidence identifies that transport; loaded daemon threads and
+any separate embedded engines remain distinct observations, including when they share a conversation UUID.
+A dead wrapper or ended store row does not prove that the conversation is gone. Recovery reconciles a live
+or ambiguous owner and preserves the conversation and relationship while recording a new launch.
+The shared daemon does not expose which thread a particular frontend currently displays after an internal
+picker switch. A matching directory or inherited server environment does not establish that relationship.
 
 Launch evidence distinguishes dispatch, verified process startup and a verified first turn. Process
 startup alone does not prove that the conversation loaded. Agent keeps missing confirmation visible
@@ -81,6 +84,7 @@ scope and freshness evidence; Agent owns the concrete commands and failure handl
 | Publication | The intended revision was generated and distributed by its source owner. |
 | Native inventory | The selected dependency closure is installed, enabled and accepted by the current loader. |
 | Executing hook package | Which Agent hook package is executing; other cached session content remains unverified. |
+| Loaded Codex hooks | The thread's hook declarations, trust and build paths; a declaration-only hash does not attest file contents. |
 | Installed behavior | A supported entry point performs the required lifecycle operation. |
 
 These are separate gates. Source checks, a selection file or a version command do not establish that a

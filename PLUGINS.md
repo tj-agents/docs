@@ -57,9 +57,12 @@ Agent hook package with the valid installed Agent root. Neither native inventory
 proves the versions of every plugin or skill already cached in the session. Missing loaded-version evidence
 is reported as unverified, with reload or restart required before relying on updated instructions.
 Claude's native bridge reloads through its command API with a receipt while preserving an unsent draft.
-The current managed Codex adapter uses `--no-daemon` and reports restart-needed because its refresh
-operation does not reach the running session. A shared-daemon refresh is not evidence that this session
-reloaded. Agent's [lifecycle](https://github.com/tj-agents/agent#lifecycle) owns host-specific refresh
+Managed Codex frontends attach to the native default local daemon. Refresh reaches that engine while
+the frontend stays open; activation verifies loaded hook declarations, trust and build paths against
+the installed inventory. Native loaded-thread hashes can omit the content component, so declaration
+agreement alone does not attest in-place file contents. An embedded engine is separate evidence even
+when it uses the same conversation UUID; refreshing the daemon does not refresh that engine.
+Agent's [lifecycle](https://github.com/tj-agents/agent#lifecycle) owns host-specific refresh
 support, diagnostics and procedures.
 
 ## Plugin kinds
