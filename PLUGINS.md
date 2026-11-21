@@ -30,11 +30,11 @@ Agent checks the current checkout's native plugin settings from its selection be
 A checkout's own `.agents/plugins.json` takes precedence. When it is absent in a linked worktree, readers
 use the primary checkout's selection through Git's worktree metadata. This includes selections kept out
 of version control in employer repositories. Invalid local selections remain errors; they do not silently
-inherit another selection. Explicit adoption, installer reconciliation or `tj prepare --write` applies
-authorized settings changes to the current checkout. Preparation checks settings by default; local-only
-adoption preserves the owner's instruction files. Reading an inherited selection leaves its primary copy
-unchanged. CLI owns the shared filesystem resolver; Agent's launch,
-adoption and permission generation and Core's context readers consume it.
+inherit another selection. Apply authorized settings in the current checkout through explicit adoption,
+installer reconciliation or `tj prepare --host codex --write`. Use `--host claude` for Claude.
+Preparation checks settings by default. Local-only adoption preserves the owner's instruction files.
+Reading an inherited selection leaves its primary copy unchanged. CLI owns the shared filesystem resolver.
+Agent's launch, adoption and permission generation and Core's context readers consume it.
 
 Configuration scope follows the selection and explicit adoption request, not the repository owner's name.
 Agent's [repository selection contract](https://github.com/tj-agents/agent/blob/main/.agents/agent/utility/plugins/SKILL.md#repository-selection) owns the

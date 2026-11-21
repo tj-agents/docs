@@ -71,10 +71,9 @@ session and launch, and Agent Store records exact claims. CLI verifies ownership
 authored changes and competing writers before cleanup. Primary checkouts and unfinished or unverified
 work are preserved.
 
-Preparation checks repository settings by default. Explicit adoption, installer reconciliation or
-`tj prepare --write` applies authorized configuration changes. Local-only adoption validates plugin
-availability while preserving the owner's instruction files. [Project selection](PLUGINS.md) describes
-scope and freshness evidence; Agent owns the concrete commands and failure handling.
+Preparation checks repository settings by default. [Project selection](PLUGINS.md#standards-loading-and-worktrees)
+describes how to apply settings, verify plugin availability and preserve local instruction files.
+Agent owns the commands and failure handling.
 
 ## Verification boundaries
 
